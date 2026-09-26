@@ -6,7 +6,7 @@
 
 [![Python 3.13](https://img.shields.io/badge/Python-3.13-3776AB?style=flat-square)](https://www.python.org/) [![MIT License](https://img.shields.io/badge/License-MIT-2D8A6E?style=flat-square)](https://github.com/Sixian-Li/f1-quali/blob/main/LICENSE) [![Selected model v6](https://img.shields.io/badge/Model-v6-E10600?style=flat-square)](https://github.com/Sixian-Li/f1-quali/blob/main/docs/method.md)
 
-[Driver ratings](#driver-ratings) · [Current ratings](#current-driver-ratings-2026) · [Quick start](#quick-start) · [Results](#results) · [Documentation](#documentation)
+[Latest ratings](https://github.com/Sixian-Li/f1-quali/blob/main/ratings/README.md) · [Rating method](#driver-ratings) · [Quick start](#quick-start) · [Results](#results) · [Documentation](#documentation)
 
 </div>
 
@@ -43,41 +43,10 @@ separately available. Sunday race results are not rating targets.
 
 ### Current driver ratings (2026)
 
-The 22 drivers of the 2026 season, sorted from highest to lowest **composite
-qualifying rating**. Snapshot taken before Round 15 (Azerbaijan): it includes all
-qualifying through **R14 Spain** (data cutoff 2026-09-15 00:00 UTC). The roster is
-the R14 entry list; the R15 entry list was not yet confirmed.
-
-| # | Driver | Team | Composite rating | Driver ability |
-| ---: | --- | --- | ---: | ---: |
-| 1 | Max Verstappen | Red Bull | **92.9** | 88.3 |
-| 2 | Charles Leclerc | Ferrari | **81.0** | 75.5 |
-| 3 | Lando Norris | McLaren | **78.4** | 71.9 |
-| 4 | Carlos Sainz Jr. | Williams | **77.9** | 75.9 |
-| 5 | Lewis Hamilton | Ferrari | **75.5** | 67.1 |
-| 6 | Fernando Alonso | Aston Martin | **73.3** | 72.8 |
-| 7 | Oliver Bearman | Haas | **73.0** | 73.0 |
-| 8 | George Russell | Mercedes | **72.7** | 68.1 |
-| 9 | Gabriel Bortoleto | Audi | **69.6** | 69.6 |
-| 10 | Pierre Gasly | Alpine | **69.4** | 69.4 |
-| 11 | Oscar Piastri | McLaren | **68.1** | 61.9 |
-| 12 | Arvid Lindblad | Racing Bulls | **66.0** | 65.4 |
-| 13 | Nico Hülkenberg | Audi | **65.9** | 65.9 |
-| 14 | Kimi Antonelli | Mercedes | **65.7** | 60.9 |
-| 15 | Sergio Pérez | Cadillac | **57.0** | 56.9 |
-| 16 | Esteban Ocon | Haas | **56.9** | 56.9 |
-| 17 | Alexander Albon | Williams | **56.0** | 56.0 |
-| 18 | Valtteri Bottas | Cadillac | **55.2** | 54.3 |
-| 19 | Liam Lawson | Red Bull | **46.4** | 46.4 |
-| 20 | Yuki Tsunoda | Racing Bulls | **39.1** | 39.1 |
-| 21 | Franco Colapinto | Alpine | **37.5** | 37.5 |
-| 22 | Lance Stroll | Aston Martin | **32.8** | 32.8 |
-
-Both columns use the 1&nbsp;–&nbsp;100 scales above: they rank drivers relative to
-each other and are not win percentages. The composite rating includes some car
-effects; driver ability is the teammate-relative part alone. The values come from the fixed v6 rating chain; this package's rating
-code reproduces them exactly from the verified source cache (see
-[Data and reproduction](#data-and-reproduction)).
+> **[View all 22 driver ratings — after 2026 Round 14 →](https://github.com/Sixian-Li/f1-quali/blob/main/ratings/README.md)**
+>
+> Spanish Grand Prix · sorted by composite rating, highest first · includes
+> teammate ability, team and the snapshot cutoff.
 
 ## How predictions work
 

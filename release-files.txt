@@ -20,6 +20,8 @@ docs/results_and_limitations.md
 examples/README.md
 examples/expected_demo_summary.json
 pyproject.toml
+ratings/2026-round-14.json
+ratings/README.md
 release-files.txt
 requirements.lock
 scripts/report_benchmarks.py
