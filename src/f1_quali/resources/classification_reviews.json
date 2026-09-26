@@ -1,0 +1,163 @@
+[
+  {
+    "season": 2023,
+    "round": 10,
+    "driver_id": "valtteri-bottas",
+    "classification_status": "DSQ",
+    "evidence_key": "fia_bottas_dsq",
+    "source": "https://www.fia.com/sites/default/files/decision-document/2023%20British%20Grand%20Prix%20-%20Infringement%20-%20Car%2077%20-%20Failure%20to%20provide%20a%20fuel%20sample.pdf",
+    "reason": "technical_disqualification_insufficient_fuel_sample",
+    "decision_signed_at": "2023-07-08T16:58:00Z",
+    "time_basis": "fia_decision_signed_time_not_observed_publication"
+  },
+  {
+    "season": 2018,
+    "round": 5,
+    "driver_id": "brendon-hartley",
+    "classification_status": "NOT_PARTICIPATED",
+    "reason": "fp3_accident_damage",
+    "evidence_key": "qgap_2018_spain",
+    "source": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-spain-2018.eglZIIkfwACyKeQye6cKq",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2018,
+    "round": 6,
+    "driver_id": "max-verstappen",
+    "classification_status": "NOT_PARTICIPATED",
+    "reason": "fp3_accident_damage",
+    "evidence_key": "qgap_2018_monaco",
+    "source": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-monaco-2018.3iHWqNOOMMImYoMaceeoSG",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2018,
+    "round": 7,
+    "driver_id": "romain-grosjean",
+    "classification_status": "NO_TIME",
+    "reason": "engine_failure_leaving_garage_no_qualifying_lap",
+    "evidence_key": "qgap_2018_canada",
+    "source": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-canada.250OkUNcna4eScM2Yei4EW",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2018,
+    "round": 10,
+    "driver_id": "brendon-hartley",
+    "classification_status": "NOT_PARTICIPATED",
+    "reason": "fp3_suspension_failure_accident_damage",
+    "evidence_key": "qgap_2018_britain",
+    "source": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-great-britain-2018.6fenCsDc40q6aUcA40CKUG",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2019,
+    "round": 3,
+    "driver_id": "alexander-albon",
+    "classification_status": "NOT_PARTICIPATED",
+    "reason": "fp3_accident_damage",
+    "evidence_key": "qgap_2019_china",
+    "source": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-china-2019.17JXAyQFFK1qzIgfgyhVDb",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2021,
+    "round": 5,
+    "driver_id": "mick-schumacher",
+    "classification_status": "NOT_PARTICIPATED",
+    "reason": "fp3_accident_damage",
+    "evidence_key": "qgap_2021_monaco",
+    "source": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-monaco-2021.3nP0Et7KdxuHn8nOBI4pnt",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2021,
+    "round": 11,
+    "driver_id": "mick-schumacher",
+    "classification_status": "NOT_PARTICIPATED",
+    "reason": "fp3_accident_damage",
+    "evidence_key": "qgap_2021_hungary",
+    "source": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-hungary-2021.6ztAqMScCOLZEhvWHN5ND5",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2022,
+    "round": 5,
+    "driver_id": "esteban-ocon",
+    "classification_status": "NOT_PARTICIPATED",
+    "reason": "fp3_cracked_chassis",
+    "evidence_key": "qgap_2022_miami",
+    "source": "https://www.formula1.com/en/latest/article/ocon-to-miss-miami-gp-qualifying-after-fp3-crash.1qhngMj54zVeyz1jPsMrjo",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2024,
+    "round": 15,
+    "driver_id": "logan-sargeant",
+    "classification_status": "NOT_PARTICIPATED",
+    "reason": "fp3_accident_fire_damage",
+    "evidence_key": "qgap_2024_dutch",
+    "source": "https://www.formula1.com/en/latest/article/we-havent-seen-the-real-mick-wolff-insists-schumacher-deserves-potential.4mKw9fVyYLH01JBB4XTwzm",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2025,
+    "round": 21,
+    "driver_id": "gabriel-bortoleto",
+    "classification_status": "NOT_PARTICIPATED",
+    "reason": "sprint_accident_damage",
+    "evidence_key": "qgap_2025_brazil",
+    "source": "https://www.formula1.com/en/latest/article/qualifying-strategies.f8ERFOmm4mkrFEtR2JZNp",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2026,
+    "round": 1,
+    "driver_id": "max-verstappen",
+    "classification_status": "NO_TIME",
+    "reason": "q1_accident_before_setting_a_time",
+    "evidence_key": "qgap_2026_australia",
+    "source": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-australia-2026.1AEHjqax6Bpqhazh1MneR7",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2026,
+    "round": 1,
+    "driver_id": "carlos-sainz-jr",
+    "classification_status": "NOT_PARTICIPATED",
+    "reason": "power_unit_reliability_issue",
+    "evidence_key": "qgap_2026_australia",
+    "source": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-australia-2026.1AEHjqax6Bpqhazh1MneR7",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2026,
+    "round": 1,
+    "driver_id": "lance-stroll",
+    "classification_status": "NOT_PARTICIPATED",
+    "reason": "power_unit_issue_repairs_not_complete",
+    "evidence_key": "qgap_2026_australia",
+    "source": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-australia-2026.1AEHjqax6Bpqhazh1MneR7",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2026,
+    "round": 14,
+    "driver_id": "lance-stroll",
+    "classification_status": "NO_TIME",
+    "reason": "water_pressure_issue_no_qualifying_time",
+    "evidence_key": "qgap_2026_spain",
+    "source": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-spain-2026.014qyfNipmqu7dP0ZuCvfc",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  },
+  {
+    "season": 2026,
+    "round": 14,
+    "driver_id": "oliver-bearman",
+    "classification_status": "NOT_PARTICIPATED",
+    "reason": "fp3_accident_damage",
+    "evidence_key": "qgap_2026_spain",
+    "source": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-spain-2026.014qyfNipmqu7dP0ZuCvfc",
+    "time_basis": "post_session_participation_report_not_a_numeric_classification"
+  }
+]

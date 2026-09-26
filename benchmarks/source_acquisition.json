@@ -1,0 +1,13 @@
+{
+  "mode": "empty_cache_remote_acquisition",
+  "passed": false,
+  "failure": "downloaded_byte_checksum_mismatch",
+  "first_failed_url": "https://www.formula1.com/en/latest/article/bad-weather-prevents-any-fp2-running-in-china.39xNtTFjHy2SsYsSIWkQ84",
+  "expected_sha256": "8f7fd7337499e3fc2210ec1103a25050640660dd17ab9ae42c7b88d9c39664e9",
+  "replacement_admitted": false,
+  "remaining_sources_exhaustively_checked": false,
+  "exact_historical_reproduction": "requires_original_verified_raw_snapshots",
+  "offline_cached_reconstruction_verified": true,
+  "synthetic_demo_requires_real_sources": false,
+  "checked_on_utc": "2026-09-26"
+}

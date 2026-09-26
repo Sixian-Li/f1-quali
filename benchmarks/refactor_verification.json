@@ -1,0 +1,104 @@
+{
+  "canonical_rows": {
+    "calendar": 237,
+    "drivers": 82,
+    "early_achievements": 1655,
+    "early_pairs": 1298,
+    "entries": 4629,
+    "events": 228,
+    "practice": 12614,
+    "qualifying": 4629,
+    "sessions": 1150
+  },
+  "changed_metadata": "New rating provenance hashes; fitted numerical inputs preserved",
+  "feature_rows": 4629,
+  "limits": {
+    "feature_atol": 1e-12,
+    "feature_rtol": 1e-10,
+    "prediction_atol": 1e-06
+  },
+  "maximum_feature_difference": 0.0,
+  "maximum_probability_difference": 0.0,
+  "passed": true,
+  "rating_snapshots": 228,
+  "remote_ci_executed": false,
+  "years": [
+    {
+      "entrants": 462,
+      "events": 21,
+      "hard_predictions_equal": true,
+      "maximum_probability_difference": 0.0,
+      "year": 2016
+    },
+    {
+      "entrants": 400,
+      "events": 20,
+      "hard_predictions_equal": true,
+      "maximum_probability_difference": 0.0,
+      "year": 2017
+    },
+    {
+      "entrants": 420,
+      "events": 21,
+      "hard_predictions_equal": true,
+      "maximum_probability_difference": 0.0,
+      "year": 2018
+    },
+    {
+      "entrants": 420,
+      "events": 21,
+      "hard_predictions_equal": true,
+      "maximum_probability_difference": 0.0,
+      "year": 2019
+    },
+    {
+      "entrants": 340,
+      "events": 17,
+      "hard_predictions_equal": true,
+      "maximum_probability_difference": 0.0,
+      "year": 2020
+    },
+    {
+      "entrants": 440,
+      "events": 22,
+      "hard_predictions_equal": true,
+      "maximum_probability_difference": 0.0,
+      "year": 2021
+    },
+    {
+      "entrants": 440,
+      "events": 22,
+      "hard_predictions_equal": true,
+      "maximum_probability_difference": 0.0,
+      "year": 2022
+    },
+    {
+      "entrants": 440,
+      "events": 22,
+      "hard_predictions_equal": true,
+      "maximum_probability_difference": 0.0,
+      "year": 2023
+    },
+    {
+      "entrants": 479,
+      "events": 24,
+      "hard_predictions_equal": true,
+      "maximum_probability_difference": 0.0,
+      "year": 2024
+    },
+    {
+      "entrants": 480,
+      "events": 24,
+      "hard_predictions_equal": true,
+      "maximum_probability_difference": 0.0,
+      "year": 2025
+    },
+    {
+      "entrants": 308,
+      "events": 14,
+      "hard_predictions_equal": true,
+      "maximum_probability_difference": 0.0,
+      "year": 2026
+    }
+  ]
+}

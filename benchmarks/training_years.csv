@@ -1,0 +1,12 @@
+season,training_years,training_cutoff,four_task_training_events,four_task_training_rows,q2_training_events,q2_training_rows,q2_kind,q3_training_events,q3_training_rows,q3_kind,top3_training_events,top3_training_rows,top3_kind,pole_training_events,pole_training_rows,pole_kind
+2016,,2016-01-01T00:00:00+00:00,0,0,0,0,quota_prior,0,0,quota_prior,0,0,quota_prior,0,0,quota_prior
+2017,2016,2017-01-01T00:00:00+00:00,9,198,9,198,quota_prior,9,198,quota_prior,9,198,quota_prior,9,198,quota_prior
+2018,2016–2017,2018-01-01T00:00:00+00:00,19,398,20,418,logistic,20,418,logistic,19,398,logistic,19,398,softmax
+2019,2016–2018,2019-01-01T00:00:00+00:00,32,658,33,678,logistic,33,678,logistic,32,658,logistic,32,658,softmax
+2020,2016–2019,2020-01-01T00:00:00+00:00,41,838,42,858,logistic,42,858,logistic,41,838,logistic,41,838,softmax
+2021,2016–2020,2021-01-01T00:00:00+00:00,53,1078,54,1098,logistic,54,1098,logistic,53,1078,logistic,53,1078,softmax
+2022,2016–2021,2022-01-01T00:00:00+00:00,66,1338,67,1358,logistic,67,1358,logistic,66,1338,logistic,66,1338,softmax
+2023,2016–2022,2023-01-01T00:00:00+00:00,83,1678,84,1698,logistic,84,1698,logistic,83,1678,logistic,83,1678,softmax
+2024,2016–2023,2024-01-01T00:00:00+00:00,96,1938,97,1958,logistic,97,1958,logistic,96,1938,logistic,96,1938,softmax
+2025,2016–2024,2025-01-01T00:00:00+00:00,111,2238,112,2258,logistic,112,2258,logistic,111,2238,logistic,111,2238,softmax
+2026,2016–2025,2026-01-01T00:00:00+00:00,124,2498,125,2518,logistic,125,2518,logistic,124,2498,logistic,124,2498,softmax
