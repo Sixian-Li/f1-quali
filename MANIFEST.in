@@ -3,6 +3,7 @@ recursive-include docs *.md
 recursive-include configs *.json
 recursive-include benchmarks *.md *.csv *.json
 recursive-include examples *.md *.json
+recursive-include ratings *.md *.json
 recursive-include tests *.py
 recursive-include scripts *.py
 recursive-include .github *.yml

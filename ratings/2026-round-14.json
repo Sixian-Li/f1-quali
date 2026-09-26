@@ -1,0 +1,262 @@
+{
+  "schema": "f1-quali.rating-leaderboard.v1",
+  "method": "memory_h12_mean_median_50_50",
+  "research_lock": "763e7f1871a6a6d3",
+  "season": 2026,
+  "after_round": 14,
+  "after_event_id": 1163,
+  "event_name": "Spanish Grand Prix",
+  "circuit_layout_id": "madring-1",
+  "roster_basis": "entrants_in_the_latest_included_qualifying_event",
+  "roster_event_id": 1163,
+  "driver_count": 22,
+  "cutoff_exclusive": "2026-09-15T00:00:00+00:00",
+  "latest_qualifying_start": "2026-09-12T14:00:00+00:00",
+  "max_label_available_at": "2026-09-12T16:00:00+00:00",
+  "published_at": "2026-09-26T07:28:12.369511+00:00",
+  "sort": {
+    "key": "composite_rating",
+    "direction": "descending",
+    "tie_breaker": "driver_id"
+  },
+  "display_decimals": 2,
+  "rating_definition": "teammate ability plus bounded final-qualifying achievement bonus; includes car/seat effects",
+  "circuit_effect_included_in_leaderboard": false,
+  "sources": {
+    "f1db": {
+      "version": "v2026.14.0",
+      "sha256": "8a92b898bc237bd3b0a86fe5665ebe0e8f8328f126e2422ca9946d175d66dfb4",
+      "release_published_at": "2026-09-13T17:19:19Z"
+    },
+    "attribution": "F1DB and contributors, CC BY 4.0; source facts normalized and reviewed by this project",
+    "canonical_dataset_manifest_sha256": "f0753d11757243a00948944ac48d6dac759242cbdd2760979d5a555c4edbbba8",
+    "sealed_rating_file_sha256": "57a4a6ffdec9d5e9a5656071fb93699bf3131bce40e5b122d74263521a2dc595",
+    "sealed_rating_bundle_sha256": "3326081245f6f083286ad79a7fbb2bd3f96cf0067c50b21bb29265ac634e5c8f",
+    "independent_refit_maximum_score_difference": 0.0,
+    "history_start_year": 2010,
+    "results_through_round": 14,
+    "original_raw_cache_distributed": false
+  },
+  "drivers": [
+    {
+      "rank": 1,
+      "driver_id": "max-verstappen",
+      "driver": "Max Verstappen",
+      "constructor_id": "red-bull",
+      "team": "Red Bull",
+      "composite_rating": 92.85005625992125,
+      "teammate_ability": 88.32511097075005,
+      "teammate_comparisons": 236
+    },
+    {
+      "rank": 2,
+      "driver_id": "charles-leclerc",
+      "driver": "Charles Leclerc",
+      "constructor_id": "ferrari",
+      "team": "Ferrari",
+      "composite_rating": 81.04854674328753,
+      "teammate_ability": 75.46921632467965,
+      "teammate_comparisons": 186
+    },
+    {
+      "rank": 3,
+      "driver_id": "lando-norris",
+      "driver": "Lando Norris",
+      "constructor_id": "mclaren",
+      "team": "McLaren",
+      "composite_rating": 78.38642440824144,
+      "teammate_ability": 71.90010826621173,
+      "teammate_comparisons": 165
+    },
+    {
+      "rank": 4,
+      "driver_id": "carlos-sainz-jr",
+      "driver": "Carlos Sainz Jr.",
+      "constructor_id": "williams",
+      "team": "Williams",
+      "composite_rating": 77.91000076005986,
+      "teammate_ability": 75.8977907976366,
+      "teammate_comparisons": 240
+    },
+    {
+      "rank": 5,
+      "driver_id": "lewis-hamilton",
+      "driver": "Lewis Hamilton",
+      "constructor_id": "ferrari",
+      "team": "Ferrari",
+      "composite_rating": 75.45199545754406,
+      "teammate_ability": 67.10045669829682,
+      "teammate_comparisons": 337
+    },
+    {
+      "rank": 6,
+      "driver_id": "fernando-alonso",
+      "driver": "Fernando Alonso",
+      "constructor_id": "aston-martin",
+      "team": "Aston Martin",
+      "composite_rating": 73.31872177947896,
+      "teammate_ability": 72.83393005544598,
+      "teammate_comparisons": 291
+    },
+    {
+      "rank": 7,
+      "driver_id": "oliver-bearman",
+      "driver": "Oliver Bearman",
+      "constructor_id": "haas",
+      "team": "Haas",
+      "composite_rating": 72.99724100948553,
+      "teammate_ability": 72.99724100948553,
+      "teammate_comparisons": 38
+    },
+    {
+      "rank": 8,
+      "driver_id": "george-russell",
+      "driver": "George Russell",
+      "constructor_id": "mercedes",
+      "team": "Mercedes",
+      "composite_rating": 72.74478984912916,
+      "teammate_ability": 68.0783934296441,
+      "teammate_comparisons": 164
+    },
+    {
+      "rank": 9,
+      "driver_id": "gabriel-bortoleto",
+      "driver": "Gabriel Bortoleto",
+      "constructor_id": "audi",
+      "team": "Audi",
+      "composite_rating": 69.63401649544748,
+      "teammate_ability": 69.63401649544748,
+      "teammate_comparisons": 37
+    },
+    {
+      "rank": 10,
+      "driver_id": "pierre-gasly",
+      "driver": "Pierre Gasly",
+      "constructor_id": "alpine",
+      "team": "Alpine",
+      "composite_rating": 69.42066835081819,
+      "teammate_ability": 69.42066835081819,
+      "teammate_comparisons": 183
+    },
+    {
+      "rank": 11,
+      "driver_id": "oscar-piastri",
+      "driver": "Oscar Piastri",
+      "constructor_id": "mclaren",
+      "team": "McLaren",
+      "composite_rating": 68.14112746953091,
+      "teammate_ability": 61.898532863341146,
+      "teammate_comparisons": 84
+    },
+    {
+      "rank": 12,
+      "driver_id": "arvid-lindblad",
+      "driver": "Arvid Lindblad",
+      "constructor_id": "racing-bulls",
+      "team": "Racing Bulls",
+      "composite_rating": 66.00179426606755,
+      "teammate_ability": 65.41175488365695,
+      "teammate_comparisons": 14
+    },
+    {
+      "rank": 13,
+      "driver_id": "nico-hulkenberg",
+      "driver": "Nico Hülkenberg",
+      "constructor_id": "audi",
+      "team": "Audi",
+      "composite_rating": 65.90516128925368,
+      "teammate_ability": 65.90516128925368,
+      "teammate_comparisons": 263
+    },
+    {
+      "rank": 14,
+      "driver_id": "kimi-antonelli",
+      "driver": "Kimi Antonelli",
+      "constructor_id": "mercedes",
+      "team": "Mercedes",
+      "composite_rating": 65.65632977049414,
+      "teammate_ability": 60.894736473255676,
+      "teammate_comparisons": 38
+    },
+    {
+      "rank": 15,
+      "driver_id": "sergio-perez",
+      "driver": "Sergio Pérez",
+      "constructor_id": "cadillac",
+      "team": "Cadillac",
+      "composite_rating": 56.97356719240746,
+      "teammate_ability": 56.853839328332164,
+      "teammate_comparisons": 294
+    },
+    {
+      "rank": 16,
+      "driver_id": "esteban-ocon",
+      "driver": "Esteban Ocon",
+      "constructor_id": "haas",
+      "team": "Haas",
+      "composite_rating": 56.870304629560664,
+      "teammate_ability": 56.870304629560664,
+      "teammate_comparisons": 188
+    },
+    {
+      "rank": 17,
+      "driver_id": "alexander-albon",
+      "driver": "Alexander Albon",
+      "constructor_id": "williams",
+      "team": "Williams",
+      "composite_rating": 55.97286778779521,
+      "teammate_ability": 55.97286778779521,
+      "teammate_comparisons": 130
+    },
+    {
+      "rank": 18,
+      "driver_id": "valtteri-bottas",
+      "driver": "Valtteri Bottas",
+      "constructor_id": "cadillac",
+      "team": "Cadillac",
+      "composite_rating": 55.2042035333172,
+      "teammate_ability": 54.325035081251784,
+      "teammate_comparisons": 256
+    },
+    {
+      "rank": 19,
+      "driver_id": "liam-lawson",
+      "driver": "Liam Lawson",
+      "constructor_id": "red-bull",
+      "team": "Red Bull",
+      "composite_rating": 46.40014687246949,
+      "teammate_ability": 46.40014687246949,
+      "teammate_comparisons": 48
+    },
+    {
+      "rank": 20,
+      "driver_id": "yuki-tsunoda",
+      "driver": "Yuki Tsunoda",
+      "constructor_id": "racing-bulls",
+      "team": "Racing Bulls",
+      "composite_rating": 39.09120398594306,
+      "teammate_ability": 39.09120398594306,
+      "teammate_comparisons": 112
+    },
+    {
+      "rank": 21,
+      "driver_id": "franco-colapinto",
+      "driver": "Franco Colapinto",
+      "constructor_id": "alpine",
+      "team": "Alpine",
+      "composite_rating": 37.45895350222811,
+      "teammate_ability": 37.45895350222811,
+      "teammate_comparisons": 41
+    },
+    {
+      "rank": 22,
+      "driver_id": "lance-stroll",
+      "driver": "Lance Stroll",
+      "constructor_id": "aston-martin",
+      "team": "Aston Martin",
+      "composite_rating": 32.75601905522331,
+      "teammate_ability": 32.75601905522331,
+      "teammate_comparisons": 199
+    }
+  ]
+}
