@@ -1,0 +1,674 @@
+[
+  {
+    "key": "cancel_2017_china",
+    "path": "data/raw/evidence/cancel_2017_china.html",
+    "url": "https://www.formula1.com/en/latest/article/bad-weather-prevents-any-fp2-running-in-china.39xNtTFjHy2SsYsSIWkQ84",
+    "sha256": "8f7fd7337499e3fc2210ec1103a25050640660dd17ab9ae42c7b88d9c39664e9",
+    "retrieved_at": "2026-09-16T04:09:54.778446+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "cancel_2019_japan",
+    "path": "data/raw/evidence/cancel_2019_japan.html",
+    "url": "https://www.formula1.com/en/latest/article/saturday-running-cancelled-in-japan-full-revised-timetable-for-sunday.7bCNvGLXjco9zJUIEKgtvu",
+    "sha256": "cc371d85b38e7e088373aa70246e79b45da506e4efb069c2d3dbcb3e362275a8",
+    "retrieved_at": "2026-09-16T04:09:55.144686+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "cancel_2020_eifel",
+    "path": "data/raw/evidence/cancel_2020_eifel.html",
+    "url": "https://api.fia.com/news/f1-bottas-quickest-action-finally-commences-nurburging",
+    "sha256": "aa551b298cb220a3c6d7f00f0a1392cdabd66e5b674e2405ca0abc9b9120faf2",
+    "retrieved_at": "2026-09-16T04:10:26.287761+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "cancel_2020_styria",
+    "path": "data/raw/evidence/cancel_2020_styria.html",
+    "url": "https://www.formula1.com/en/latest/article/styrian-grand-prix-fp3-session-cancelled-due-to-torrential-rain-in-austria.OMAxTZygBnTN1d2umh4Ts",
+    "sha256": "1140760cfdc53c16cc09cabe5e6e1aebbfe43fb5c225a31a5013dfdec1e89817",
+    "retrieved_at": "2026-09-16T04:09:55.635905+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "cancel_2021_russia",
+    "path": "data/raw/evidence/cancel_2021_russia.html",
+    "url": "https://www.formula1.com/en/latest/article/final-practice-session-for-the-russian-grand-prix-cancelled-due-to-heavy.5M2CsqmNkudVMRbsfu4EIT",
+    "sha256": "8ae1b82f8d2054703469bbb827a8ca9e89d3021d2142b2b41c9f47113dc1422d",
+    "retrieved_at": "2026-09-16T04:10:26.764258+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "entry_2017_hungary",
+    "path": "data/raw/evidence/entry_2017_hungary.html",
+    "url": "https://www.formula1.com/en/latest/article/di-resta-to-stand-in-for-unwell-massa-in-hungary.1BD3lzz8P2GemAGWaYWisw",
+    "sha256": "d8a866d0a0e43e6b529aef43de4e10529e016ef8f9041b7bd2643fb671301314",
+    "retrieved_at": "2026-09-16T03:45:26.133136+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "entry_2020_eifel",
+    "path": "data/raw/evidence/entry_2020_eifel.html",
+    "url": "https://www.formula1.com/en/latest/article/breaking-super-sub-hulkenberg-drafted-in-to-replace-unwell-stroll-eifel.1wem3IoVVPhHijg8h3f041.1wem3IoVVPhHijg8h3f041",
+    "sha256": "b21fbf7d32a90059a7e7f3bef032355ebbb73329988763f2f528202d91fa5b10",
+    "retrieved_at": "2026-09-16T03:54:19.777419+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "entry_2020_sakhir",
+    "path": "data/raw/evidence/entry_2020_sakhir.html",
+    "url": "https://www.formula1.com/en/latest/article/breaking-george-russell-to-replace-hamilton-at-mercedes-for-sakhir-grand.5vMOKRppSzFMz7RZzdzmxs",
+    "sha256": "2983e65ff1c5b6e5d625c8b018a78888a1f852e5b70e60d152155156ab78d499",
+    "retrieved_at": "2026-09-16T03:45:26.142277+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "entry_2021_dutch",
+    "path": "data/raw/evidence/entry_2021_dutch.html",
+    "url": "https://www.formula1.com/en/latest/article/breaking-raikkonen-ruled-out-of-dutch-gp-after-positive-covid-19-test-kubica.2Z6iYWiBCeqIzDVvIhVBBx",
+    "sha256": "b41d773645a9bd8315bfba1364715ba330ab151bec486e11721ad62b3b59713a",
+    "retrieved_at": "2026-09-16T03:45:26.116360+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "entry_2021_italy",
+    "path": "data/raw/evidence/entry_2021_italy.html",
+    "url": "https://www.formula1.com/en/latest/article/raikkonen-ruled-out-of-italian-grand-prix-with-kubica-set-to-deputise-again.4y6i0KS8Fm7AEeYdzFJSmX",
+    "sha256": "2657250edbbe0527c8056f8816d7b155fd94092e3b499b6877088c3768268f36",
+    "retrieved_at": "2026-09-16T03:45:26.439476+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "entry_2022_italy",
+    "path": "data/raw/evidence/entry_2022_italy.html",
+    "url": "https://www.formula1.com/en/latest/article/breaking-albon-ruled-out-of-italian-grand-prix-with-appendicitis-as.5TjaGYJohrzYVyKqLvSy5Y",
+    "sha256": "309fca4efb49473d7fe1cd7941dd3c8731d741169999a94797d61ebfa62b0be0",
+    "retrieved_at": "2026-09-16T03:45:26.478488+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "entry_2023_dutch",
+    "path": "data/raw/evidence/entry_2023_dutch.html",
+    "url": "https://www.formula1.com/en/latest/article/breaking-ricciardo-to-be-replaced-by-lawson-for-remainder-of-dutch-gp.5JCEAa5XnnUsjZ1SE7lXFX",
+    "sha256": "6d4a66dc4f61ee65453a8b897d1a0cf670355a827582742370dbe9c1d070a62a",
+    "retrieved_at": "2026-09-16T03:45:26.817567+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "entry_2024_australia",
+    "path": "data/raw/evidence/entry_2024_australia.html",
+    "url": "https://www.formula1.com/en/latest/article/breaking-albon-to-take-over-sargeants-car-for-remainder-of-australia-gp.7ChNFI7T7TVDLhfythuOzg",
+    "sha256": "362b3ca13a4e8871d994916fb48abb1183212004fc6a6ac94a2a9aa354ac7c93",
+    "retrieved_at": "2026-09-16T03:47:17.627729+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "entry_2024_baku",
+    "path": "data/raw/evidence/entry_2024_baku.html",
+    "url": "https://www.formula1.com/en/latest/article/bearman-to-replace-banned-magnussen-at-haas-for-azerbaijan-grand.AkCoDVRDHBHPpNdlyqMzv",
+    "sha256": "e3f6a2af88c817c8db26e30bd309c7732dd44837c366ca6502fd6b0dadfd5431",
+    "retrieved_at": "2026-09-16T03:47:17.276818+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "entry_2024_brazil",
+    "path": "data/raw/evidence/entry_2024_brazil.html",
+    "url": "https://www.formula1.com/en/latest/article/haas-confirm-magnussen-out-for-remainder-of-sao-paulo-grand-prix.3FquZlQeYmFxwIoWhlfDE7",
+    "sha256": "5956f5dbec072975e7b1145a4c79c2d6165d3e60cf9c3227449008c14eb28826",
+    "retrieved_at": "2026-09-16T03:45:27.162771+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "entry_2024_colapinto",
+    "path": "data/raw/evidence/entry_2024_colapinto.html",
+    "url": "https://www.formula1.com/en/latest/article/breaking-f2-racer-colapinto-replaces-sargeant-at-williams-for-rest-of-2024.2CghqWgB0vxJoZK8wWoMPj",
+    "sha256": "d53cf44f6281ebb6ae6eb257a27949482ebed2f39dee5ee3e56b4d7da02af3db",
+    "retrieved_at": "2026-09-16T03:45:26.985820+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "entry_2024_doohan",
+    "path": "data/raw/evidence/entry_2024_doohan.html",
+    "url": "https://www.formula1.com/en/latest/article/breaking-alpine-confirm-doohan-to-race-in-abu-dhabi-as-ocon-is-released.5rrOqcBxVZooeD6B38GWi0",
+    "sha256": "e4e816942455e793991ca213c2a4ce468d586cfa5c5984b6fd9f911207705f7f",
+    "retrieved_at": "2026-09-16T03:45:27.303777+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "entry_2024_saudi",
+    "path": "data/raw/evidence/entry_2024_saudi.html",
+    "url": "https://www.formula1.com/en/latest/article/breaking-sainz-ruled-out-of-saudi-arabian-gp-with-appendicitis-as-f2-racer.2JzIonRBBDEjEb2AlkdVfl",
+    "sha256": "8f537289756b3b726a3472305b20d919de8ef13776e7c955293ce4ce32d3bf5b",
+    "retrieved_at": "2026-09-16T03:45:26.991406+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "fia_2016_06_timetable",
+    "path": "data/raw/evidence/fia_2016_06_timetable.png",
+    "url": "https://www.fia.com/sites/default/files/styles/content_details/public/page_6.png?itok=5L7umD6f",
+    "sha256": "a0f896b245732973f4ce93cf04472e7fe45a94c55cfa1767ee6a6004bfa73969",
+    "retrieved_at": "2026-09-16T03:48:10.963904+00:00",
+    "content_type": "image/png"
+  },
+  {
+    "key": "fia_2016_07_timetable",
+    "path": "data/raw/evidence/fia_2016_07_timetable.png",
+    "url": "https://www.fia.com/sites/default/files/styles/content_details/public/preview_doc_6.png?itok=AxNFvVgL",
+    "sha256": "bff498b1c9f84ff5554ca497ddb58c42e7b57222b4ce5bb959daf731b903c662",
+    "retrieved_at": "2026-09-16T03:48:11.650965+00:00",
+    "content_type": "image/png"
+  },
+  {
+    "key": "fia_2016_08_timetable",
+    "path": "data/raw/evidence/fia_2016_08_timetable.png",
+    "url": "https://www.fia.com/sites/default/files/styles/content_details/public/unnamed_5_2.png?itok=muKcIpCl",
+    "sha256": "d69b7b80b9287a2b1e03424a106fad00dedb46e7cd3536c81b5191fd343bf509",
+    "retrieved_at": "2026-09-16T03:48:12.023612+00:00",
+    "content_type": "image/png"
+  },
+  {
+    "key": "fia_2016_abudhabi_preview",
+    "path": "data/raw/evidence/fia_2016_abudhabi_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/preview_ad_2016.pdf",
+    "sha256": "dc0a120a1b2683ac3828b2363e0ec25f8a560f0cdc53eeb038815568d4268d7f",
+    "retrieved_at": "2026-09-16T03:41:46.875082+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_0_preview",
+    "path": "data/raw/evidence/fia_2016_timing_0_preview.pdf",
+    "url": "https://www.fia.com/file/39339/download?token=3uPYrHma",
+    "sha256": "c455391278882ad11876526b122a7ac829b74420dab5a2a6d75340b1f93086bc",
+    "retrieved_at": "2026-09-16T03:44:51.030037+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_10_preview",
+    "path": "data/raw/evidence/fia_2016_timing_10_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/preview_hungary_0.pdf",
+    "sha256": "cacc9f66e61e6e250f26688252f648c53b88f1156ec50244c36de046e7b8d77a",
+    "retrieved_at": "2026-09-16T03:47:17.086243+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_11_preview",
+    "path": "data/raw/evidence/fia_2016_timing_11_preview.pdf",
+    "url": "https://www.fia.com/file/45718/download?token=EmZJVugh",
+    "sha256": "013c45632fe41255eccb9d18e3c2dcb46d70982fa7fae7391b5ad52626b889ee",
+    "retrieved_at": "2026-09-16T03:44:59.189715+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_12_preview",
+    "path": "data/raw/evidence/fia_2016_timing_12_preview.pdf",
+    "url": "https://www.fia.com/file/46746/download?token=2-Z2yVdL",
+    "sha256": "818ad5ef80086d258ea27d8fa19027b4bd0748a8ef490895a20f81bd91cb54ef",
+    "retrieved_at": "2026-09-16T03:44:58.864381+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_13_preview",
+    "path": "data/raw/evidence/fia_2016_timing_13_preview.pdf",
+    "url": "https://www.fia.com/file/47126/download?token=E5b8o8Ea",
+    "sha256": "19d0ced947eddf7c43148efeeb5ebc3cac1278dee5c98ba151da703e90638b39",
+    "retrieved_at": "2026-09-16T03:45:00.185414+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_14_preview",
+    "path": "data/raw/evidence/fia_2016_timing_14_preview.pdf",
+    "url": "https://www.fia.com/file/47598/download?token=PRgZfZGw",
+    "sha256": "c56eaff51aeaad3e863ce3374177640d778349f98f9e59ba86d70a1c9ef35ab0",
+    "retrieved_at": "2026-09-16T03:45:00.887283+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_15_preview",
+    "path": "data/raw/evidence/fia_2016_timing_15_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/preview_5.pdf",
+    "sha256": "9f035e55e52e30f6741337016ee7f527253bad562b4c8f651706e57a9a83188d",
+    "retrieved_at": "2026-09-16T03:47:16.865707+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_16_preview",
+    "path": "data/raw/evidence/fia_2016_timing_16_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/japanese_preview.pdf",
+    "sha256": "1ede7ba61375122a6624f687212b7bc88810f3c96343f4d239755c7d733a2dbe",
+    "retrieved_at": "2026-09-16T03:47:17.491234+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_17_preview",
+    "path": "data/raw/evidence/fia_2016_timing_17_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/preview_6.pdf",
+    "sha256": "5b8a8aff8afe0943ba01236861e2e7dfc218016c2a95b7b5d2281cbb80461272",
+    "retrieved_at": "2026-09-16T03:47:17.776352+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_18_preview",
+    "path": "data/raw/evidence/fia_2016_timing_18_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/preview_7.pdf",
+    "sha256": "cd3360b5a9109de8f376c55a1ef9c3108cfe427016ce55d4acd7bfb4a4af9ed2",
+    "retrieved_at": "2026-09-16T03:47:17.928999+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_19_preview",
+    "path": "data/raw/evidence/fia_2016_timing_19_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/previewbrazil2016.pdf",
+    "sha256": "d746bfc8459369a4db0ce8de9b9a9bc1cfa33693d32b63e0a7b6d2e802233e0e",
+    "retrieved_at": "2026-09-16T03:47:18.394047+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_1_preview",
+    "path": "data/raw/evidence/fia_2016_timing_1_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2016_bahrain_preview.pdf",
+    "sha256": "c807c422b52f50db9da42374e941612b45aaee98a51e974a8806e98ddd8e777c",
+    "retrieved_at": "2026-09-16T03:47:16.657326+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_2_preview",
+    "path": "data/raw/evidence/fia_2016_timing_2_preview.pdf",
+    "url": "https://www.fia.com/file/40192/download?token=A78RO5Vq",
+    "sha256": "18a6cbec28c293d35b894a87c813e76f7a6668a16dab710a1cf239b857a4a9c4",
+    "retrieved_at": "2026-09-16T03:44:52.265106+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_3_preview",
+    "path": "data/raw/evidence/fia_2016_timing_3_preview.pdf",
+    "url": "https://www.fia.com/file/40855/download?token=o-TNemmy",
+    "sha256": "271bb447f3ff3e4f643c5e1dda6df2443c7a08a19a810d97fcd56cd248647f27",
+    "retrieved_at": "2026-09-16T03:44:51.205761+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_4_preview",
+    "path": "data/raw/evidence/fia_2016_timing_4_preview.pdf",
+    "url": "https://www.fia.com/file/41536/download?token=trLOfmtK",
+    "sha256": "3b72591519b73b68e9ecb8b93224c01faab9cda9235bb24042c2f1d02bc824e1",
+    "retrieved_at": "2026-09-16T03:44:52.883800+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_8_preview",
+    "path": "data/raw/evidence/fia_2016_timing_8_preview.pdf",
+    "url": "https://www.fia.com/file/44233/download?token=rXCiL_Sl",
+    "sha256": "7d0f4a513064139ec2f88180bf2b476bb47074fe0148edc69aa331cf2f4a5515",
+    "retrieved_at": "2026-09-16T03:44:54.538483+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2016_timing_9_preview",
+    "path": "data/raw/evidence/fia_2016_timing_9_preview.pdf",
+    "url": "https://www.fia.com/file/44692/download?token=s2zzCR5O",
+    "sha256": "5c3ab9ca8350704b10d0c15a69f8c0d82e74557c70738a95f0389109f93da951",
+    "retrieved_at": "2026-09-16T03:44:57.303081+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_australia_sub",
+    "path": "data/raw/evidence/fia_2017_australia_sub.pdf",
+    "url": "https://www.fia.com/sites/default/files/25.03_-_stewards_decision_doc14_-_p.wehrlein.pdf",
+    "sha256": "bcc974b2c1b03aa29394da492cffacd17d9be8ae1e1eccb5c0f8f6b0ad7078a7",
+    "retrieved_at": "2026-09-16T03:40:56.967285+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_hungary_sub",
+    "path": "data/raw/evidence/fia_2017_hungary_sub.pdf",
+    "url": "https://www.fia.com/sites/default/files/29.07_-_technical_report_doc22_-_paul_di_resta.pdf",
+    "sha256": "e5f29a9c8ccd0592b25b44f3977cef2f2eedad0be4281a394401e1d72a6534cf",
+    "retrieved_at": "2026-09-16T03:50:33.549244+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_20_preview",
+    "path": "data/raw/evidence/fia_2017_timing_20_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/preview_australia.pdf",
+    "sha256": "eb8dacb234b77e958d90904b7a90ee8fafc4ce70c41e4a8fb57f8b334ca0f36e",
+    "retrieved_at": "2026-09-16T03:47:21.917923+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_21_preview",
+    "path": "data/raw/evidence/fia_2017_timing_21_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/bahrain_preview.pdf",
+    "sha256": "15943af8752907af15ab03afca222e5ad88aefa915780f69850849ada2e0dd37",
+    "retrieved_at": "2026-09-16T03:47:22.115978+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_22_preview",
+    "path": "data/raw/evidence/fia_2017_timing_22_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_spanish_grand_prix_preview.pdf",
+    "sha256": "d0a917a3d7bb7d28a958b8cb6b978d8331bb6ad5889384df4b7eaba8be0bb304",
+    "retrieved_at": "2026-09-16T03:47:22.247269+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_23_preview",
+    "path": "data/raw/evidence/fia_2017_timing_23_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_monaco_preview.pdf",
+    "sha256": "830160fd51c4da6e834eac66ce074852c3dc9c56f5e3e52f005fa046c4349c81",
+    "retrieved_at": "2026-09-16T03:47:22.205141+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_24_preview",
+    "path": "data/raw/evidence/fia_2017_timing_24_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_british_gp_preview.pdf",
+    "sha256": "d1802a5df9c86760d92c9d2f369306291ccb04e1fac8baff232f392b173e9522",
+    "retrieved_at": "2026-09-16T03:47:22.387348+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_26_preview",
+    "path": "data/raw/evidence/fia_2017_timing_26_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_italian_preview.pdf",
+    "sha256": "0dd5751c55f9df6e3efa7e7c930be82e2206c23ef38cbae9cec713d32f3f8883",
+    "retrieved_at": "2026-09-16T03:47:22.593344+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_28_preview",
+    "path": "data/raw/evidence/fia_2017_timing_28_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_china_preview.pdf",
+    "sha256": "98f0d46e1aecd698461826a92f6fdfc568a1b716cc63976b158e046209f48c7a",
+    "retrieved_at": "2026-09-16T03:47:22.815833+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_29_preview",
+    "path": "data/raw/evidence/fia_2017_timing_29_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_russian_preview.pdf",
+    "sha256": "d3f927b5c731882ab984b3f3e22d27ba3ff63135a8a9dedb81dc0a72cef0ba6c",
+    "retrieved_at": "2026-09-16T03:47:22.901183+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_30_preview",
+    "path": "data/raw/evidence/fia_2017_timing_30_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_canadian_preview.pdf",
+    "sha256": "745f4a4a9a65da110e8cb38c14caeb6076e62c37423c2421e5cbe8db0e6ae0ae",
+    "retrieved_at": "2026-09-16T03:47:23.005501+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_31_preview",
+    "path": "data/raw/evidence/fia_2017_timing_31_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017azerbaijangp_preview.pdf",
+    "sha256": "d2152699e20a450314ee860fed49661bb5d2132329e6556a056a8a9708dc8413",
+    "retrieved_at": "2026-09-16T03:47:23.134824+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_32_preview",
+    "path": "data/raw/evidence/fia_2017_timing_32_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_austrian_preview.pdf",
+    "sha256": "444ce1eb7f270c978b3ea4b4b94bd5728f80cda7d29eeec1b9dd987e8da8d832",
+    "retrieved_at": "2026-09-16T03:47:23.245567+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_33_preview",
+    "path": "data/raw/evidence/fia_2017_timing_33_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_hungarian_preview.pdf",
+    "sha256": "6143d1846b5e16cad919357869c7be3cab58e3d8fb5c77f4629f2b9c1932c1c5",
+    "retrieved_at": "2026-09-16T03:47:23.286832+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_34_preview",
+    "path": "data/raw/evidence/fia_2017_timing_34_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_singapore_preview_1.pdf",
+    "sha256": "509a0ffab63f75ef9271c437f8dcfd7017849c3b63fcbe5366fff244449a7863",
+    "retrieved_at": "2026-09-16T03:47:23.438254+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_3_preview",
+    "path": "data/raw/evidence/fia_2017_timing_3_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_malaysian_preview_1.pdf",
+    "sha256": "8e69019310407507fb3ae50094acb0f577b03950745da1acadf98d164943f4b5",
+    "retrieved_at": "2026-09-16T03:47:18.974188+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_4_preview",
+    "path": "data/raw/evidence/fia_2017_timing_4_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_abu_dhabi_gp_1.pdf",
+    "sha256": "c2b5e641067e9f357570e9a34c81e0f32857249008db9b3960c9ba63af422ffc",
+    "retrieved_at": "2026-09-16T03:47:19.275378+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_5_preview",
+    "path": "data/raw/evidence/fia_2017_timing_5_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/mexican_preview.pdf",
+    "sha256": "a66ed7460966a1df4167d21945ebdcf892d04013987db91a79232e23d26d841b",
+    "retrieved_at": "2026-09-16T03:47:19.435243+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_6_preview",
+    "path": "data/raw/evidence/fia_2017_timing_6_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_brazilian_preview.pdf",
+    "sha256": "b36a87ef7c6340abd9d960c9d7db701425d70f5b1c2a87d84aed420bbe48c4e6",
+    "retrieved_at": "2026-09-16T03:47:19.457016+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_7_preview",
+    "path": "data/raw/evidence/fia_2017_timing_7_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_usa_preview_0.pdf",
+    "sha256": "3b68698c551cd5b83e9b88c4238dc07571077cd6d4e19fcda4aafcf02bf479e0",
+    "retrieved_at": "2026-09-16T03:47:20.166750+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_8_preview",
+    "path": "data/raw/evidence/fia_2017_timing_8_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_japan_preview.pdf",
+    "sha256": "8aa7d0b0f7c77f4bfb296d29c1257294bdac908ca9ac9943583716061596cccc",
+    "retrieved_at": "2026-09-16T03:47:19.739968+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2017_timing_9_preview",
+    "path": "data/raw/evidence/fia_2017_timing_9_preview.pdf",
+    "url": "https://www.fia.com/sites/default/files/2017_belgian_preview.pdf",
+    "sha256": "ee196b479f6ca50344216928cddeba393dda0aee21c935f669e1e16bd9a9d9ea",
+    "retrieved_at": "2026-09-16T03:47:20.284324+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "fia_2021_16_timetable",
+    "path": "data/raw/evidence/fia_2021_16_timetable.png",
+    "url": "https://www.fia.com/sites/default/files/styles/content_details/public/2021_turkish_grand_prix_-_preview6.png?itok=KzHa2Pzm",
+    "sha256": "ff9d42d9bb1a3e89d0bde7ff695f5286034da00d4e9a082336d2b22a64f9b5d1",
+    "retrieved_at": "2026-09-16T03:43:51.748188+00:00",
+    "content_type": "image/png"
+  },
+  {
+    "key": "fia_bottas_dsq",
+    "path": "data/raw/evidence/fia_bottas_dsq.pdf",
+    "url": "https://www.fia.com/sites/default/files/decision-document/2023%20British%20Grand%20Prix%20-%20Infringement%20-%20Car%2077%20-%20Failure%20to%20provide%20a%20fuel%20sample.pdf",
+    "sha256": "b27a38d6054469bd5e7a996d0f8f620f3f8552338b0c1abaef2a1697c0aa2a61",
+    "retrieved_at": "2026-09-16T03:47:17.905449+00:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "key": "format_2020_imola",
+    "path": "data/raw/evidence/format_2020_imola.html",
+    "url": "https://www.formula1.com/en/latest/article/drivers-to-face-unique-challenge-at-imola-as-organisers-confirm-race-will.5yXq3rFEENsdBvvEYXR3ts",
+    "sha256": "55bb93b381700b6170d7c2168ad513679bb39ee090be099dc7a0a92f8c7bbf9d",
+    "retrieved_at": "2026-09-16T04:10:27.177262+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "qgap_2018_britain",
+    "path": "data/raw/evidence/qgap_2018_britain.html",
+    "url": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-great-britain-2018.6fenCsDc40q6aUcA40CKUG",
+    "sha256": "c168518d963e726900657a8116680e8fe1860e6fbd1eb8106dbe219c210560c5",
+    "retrieved_at": "2026-09-16T04:02:23.362619+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "qgap_2018_canada",
+    "path": "data/raw/evidence/qgap_2018_canada.html",
+    "url": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-canada.250OkUNcna4eScM2Yei4EW",
+    "sha256": "17ea5543a6afad52e0dbb5f365afd814fabbaf7276ea60cf75e7f55be30c5ee4",
+    "retrieved_at": "2026-09-16T04:02:23.067449+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "qgap_2018_monaco",
+    "path": "data/raw/evidence/qgap_2018_monaco.html",
+    "url": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-monaco-2018.3iHWqNOOMMImYoMaceeoSG",
+    "sha256": "ee4fad57deb8640382185f6ec79fee35aeb5c593dc1be1e5e8bbaacb59726245",
+    "retrieved_at": "2026-09-16T04:02:23.027982+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "qgap_2018_spain",
+    "path": "data/raw/evidence/qgap_2018_spain.html",
+    "url": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-spain-2018.eglZIIkfwACyKeQye6cKq",
+    "sha256": "71e788633bf9ec202f41dfb1d401e469b5fd9a61d369fd7bfa0ef16f3d6322de",
+    "retrieved_at": "2026-09-16T04:02:23.102198+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "qgap_2019_china",
+    "path": "data/raw/evidence/qgap_2019_china.html",
+    "url": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-china-2019.17JXAyQFFK1qzIgfgyhVDb",
+    "sha256": "f55482bc69a184342fc70d7a4417f085bf02b520a645e3f545b565f7c90d32b7",
+    "retrieved_at": "2026-09-16T04:02:23.425636+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "qgap_2021_hungary",
+    "path": "data/raw/evidence/qgap_2021_hungary.html",
+    "url": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-hungary-2021.6ztAqMScCOLZEhvWHN5ND5",
+    "sha256": "0de0adc974998f07188f1b978c8cd672c3836342739ca7b2bd0e0f0f80da0c82",
+    "retrieved_at": "2026-09-16T04:02:23.767214+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "qgap_2021_monaco",
+    "path": "data/raw/evidence/qgap_2021_monaco.html",
+    "url": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-monaco-2021.3nP0Et7KdxuHn8nOBI4pnt",
+    "sha256": "a4098d9fcfb25d20230d5f39f78c1fa869bd5485f5cac42d147f3854a2e80e91",
+    "retrieved_at": "2026-09-16T04:02:23.470261+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "qgap_2022_miami",
+    "path": "data/raw/evidence/qgap_2022_miami.html",
+    "url": "https://www.formula1.com/en/latest/article/ocon-to-miss-miami-gp-qualifying-after-fp3-crash.1qhngMj54zVeyz1jPsMrjo",
+    "sha256": "53a4e9e93396fbd879231a4892e2c52af0cfa1c41de74f08d2e118924cadc32e",
+    "retrieved_at": "2026-09-16T04:02:23.767244+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "qgap_2024_dutch",
+    "path": "data/raw/evidence/qgap_2024_dutch.html",
+    "url": "https://www.formula1.com/en/latest/article/we-havent-seen-the-real-mick-wolff-insists-schumacher-deserves-potential.4mKw9fVyYLH01JBB4XTwzm",
+    "sha256": "4ea9ab6375176f1af27955f82ab47bf2ebba69f634b43ef2ca40cc8a4151c430",
+    "retrieved_at": "2026-09-16T04:02:23.812081+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "qgap_2025_brazil",
+    "path": "data/raw/evidence/qgap_2025_brazil.html",
+    "url": "https://www.formula1.com/en/latest/article/qualifying-strategies.f8ERFOmm4mkrFEtR2JZNp",
+    "sha256": "06724c9eb31ac0b384eba168743616e4ba4875eb52419ff7eee3ca5efafeaba2",
+    "retrieved_at": "2026-09-16T04:02:24.132799+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "qgap_2026_australia",
+    "path": "data/raw/evidence/qgap_2026_australia.html",
+    "url": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-australia-2026.1AEHjqax6Bpqhazh1MneR7",
+    "sha256": "1299626ceaf3d6df938cbce3cd6b26e76f0100bb36637efcb6a0aeb578eec061",
+    "retrieved_at": "2026-09-16T04:02:24.156895+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "qgap_2026_spain",
+    "path": "data/raw/evidence/qgap_2026_spain.html",
+    "url": "https://www.formula1.com/en/latest/article/what-the-teams-said-qualifying-in-spain-2026.014qyfNipmqu7dP0ZuCvfc",
+    "sha256": "7f60cd3768c2c8582b4dc4e7acbcc967166f50ac48fffc5b69143c366341e277",
+    "retrieved_at": "2026-09-16T04:02:24.298274+00:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "key": "timing_2018_05_FP3_RaceControlMessages",
+    "path": "data/raw/evidence/timing_2018_05_FP3_RaceControlMessages.jsonStream",
+    "url": "https://livetiming.formula1.com/static/2018/2018-05-13_Spanish_Grand_Prix/2018-05-12_Practice_3/RaceControlMessages.jsonStream",
+    "sha256": "e6cce3dd968c7a45546f26c3d248459c38de1c1fae773ebc7da3f736fca672a1",
+    "retrieved_at": "2026-09-16T03:51:39.541261+00:00",
+    "content_type": "application/octet-stream"
+  },
+  {
+    "key": "timing_2020_11_FP3_RaceControlMessages",
+    "path": "data/raw/evidence/timing_2020_11_FP3_RaceControlMessages.jsonStream",
+    "url": "https://livetiming.formula1.com/static/2020/2020-10-11_Eifel_Grand_Prix/2020-10-10_Practice_3/RaceControlMessages.jsonStream",
+    "sha256": "5c7c3a1eaacffb2c733dd0251781b9ae55798718dc4de79c9fe83bd27c22acf4",
+    "retrieved_at": "2026-09-16T03:51:44.338636+00:00",
+    "content_type": "application/octet-stream"
+  },
+  {
+    "key": "timing_2021_12_Q_RaceControlMessages",
+    "path": "data/raw/evidence/timing_2021_12_Q_RaceControlMessages.jsonStream",
+    "url": "https://livetiming.formula1.com/static/2021/2021-08-29_Belgian_Grand_Prix/2021-08-28_Qualifying/RaceControlMessages.jsonStream",
+    "sha256": "5021673e8faa40970fb339c23932f0e4bd5e9c4ffee30e50759fa83cbe940526",
+    "retrieved_at": "2026-09-16T03:51:49.580469+00:00",
+    "content_type": "application/octet-stream"
+  },
+  {
+    "key": "timing_2022_04_FP1_RaceControlMessages_mirror",
+    "path": "data/raw/evidence/timing_2022_04_FP1_RaceControlMessages_mirror.jsonStream",
+    "url": "https://livetiming-mirror.fastf1.dev/static/2022/2022-04-24_Emilia_Romagna_Grand_Prix/2022-04-22_Practice_1/RaceControlMessages.jsonStream",
+    "sha256": "5f567371bafd844b0f77814f1847ad43168f9ce624e3fda3763dc9e694d08a53",
+    "retrieved_at": "2026-09-16T03:57:48.005312+00:00",
+    "content_type": null
+  },
+  {
+    "key": "timing_2022_21_FP1_RaceControlMessages_mirror",
+    "path": "data/raw/evidence/timing_2022_21_FP1_RaceControlMessages_mirror.jsonStream",
+    "url": "https://livetiming-mirror.fastf1.dev/static/2022/2022-11-13_S\u00e3o_Paulo_Grand_Prix/2022-11-11_Practice_1/RaceControlMessages.jsonStream",
+    "sha256": "62a0312c1813b2ec1acdedb63fa088ae87ae7497255fb2de7afdc7734d2b623e",
+    "retrieved_at": "2026-09-16T03:57:56.232840+00:00",
+    "content_type": null
+  },
+  {
+    "key": "timing_2023_04_FP1_RaceControlMessages",
+    "path": "data/raw/evidence/timing_2023_04_FP1_RaceControlMessages.jsonStream",
+    "url": "https://livetiming.formula1.com/static/2023/2023-04-30_Azerbaijan_Grand_Prix/2023-04-28_Practice_1/RaceControlMessages.jsonStream",
+    "sha256": "6784b0ef2cd88b553bbd7c137314e273f31c69b9905c6896f1c8b6617290186b",
+    "retrieved_at": "2026-09-16T03:51:54.585059+00:00",
+    "content_type": "application/octet-stream"
+  },
+  {
+    "key": "timing_2024_01_FP3_RaceControlMessages",
+    "path": "data/raw/evidence/timing_2024_01_FP3_RaceControlMessages.jsonStream",
+    "url": "https://livetiming.formula1.com/static/2024/2024-03-02_Bahrain_Grand_Prix/2024-03-01_Practice_3/RaceControlMessages.jsonStream",
+    "sha256": "8aafe6d6c5a24f172c99cc4d976d03a5e22ddf403b71d5d558ea210591dc19ca",
+    "retrieved_at": "2026-09-16T03:51:58.486751+00:00",
+    "content_type": "application/octet-stream"
+  },
+  {
+    "key": "timing_2024_02_FP2_RaceControlMessages",
+    "path": "data/raw/evidence/timing_2024_02_FP2_RaceControlMessages.jsonStream",
+    "url": "https://livetiming.formula1.com/static/2024/2024-03-09_Saudi_Arabian_Grand_Prix/2024-03-07_Practice_2/RaceControlMessages.jsonStream",
+    "sha256": "1c67fcfe37728f9b5b0b91199d2af2527933f317e59c63c0bb26835d341db095",
+    "retrieved_at": "2026-09-16T03:51:59.451164+00:00",
+    "content_type": "application/octet-stream"
+  }
+]

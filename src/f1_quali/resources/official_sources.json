@@ -1,0 +1,612 @@
+[
+  {
+    "path": "data/raw/early_qualifying_results/2015/australia_saturday_quotes.html",
+    "sha256": "663c21ea0adcd2fe462ff20b9b6e21e4389477e9992b587b94d6e485b78f8075",
+    "url": "https://www.formula1.com/en/latest/article/in-quotes-saturday-in-melbourne.3Y2BM3LQ6yOFfndN88KhRS"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/index.html",
+    "sha256": "8c8cc541a76995af720411b22876e339d9a01eb674c60ff588f830d102b2e7a4",
+    "url": "https://www.formula1.com/en/results/2010/races"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/821_qualifying.html",
+    "sha256": "155f82dcb41b283883675c7e54f507dd4a385e2cdc03025797d0d0a48c108846",
+    "url": "https://www.formula1.com/en/results/2010/races/860/bahrain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/822_qualifying.html",
+    "sha256": "6fc22a3f28e92062420c478823dd202f7c0817f905aa648b3ff26160dd795086",
+    "url": "https://www.formula1.com/en/results/2010/races/861/australia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/823_qualifying.html",
+    "sha256": "72b2ed5779587d506d95c74de5e7f20443efe5d5d1c89c7f605f2072b2fe6071",
+    "url": "https://www.formula1.com/en/results/2010/races/862/malaysia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/824_qualifying.html",
+    "sha256": "94c123c0e809c11624b1b047940c4876100f7ee2822f3aab69dd7bbfc16aa93d",
+    "url": "https://www.formula1.com/en/results/2010/races/863/china/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/825_qualifying.html",
+    "sha256": "51fa824d1e9f9f703ce630e46b31b6f1584998a59adb3c09d25b78740a679f68",
+    "url": "https://www.formula1.com/en/results/2010/races/864/spain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/826_qualifying.html",
+    "sha256": "60d6922ee710a3b550ced87f0aa3576962638159d1c8da245103c24d2ed0c9dd",
+    "url": "https://www.formula1.com/en/results/2010/races/865/monaco/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/827_qualifying.html",
+    "sha256": "79e7e4a213c5e02f084f0941e35b1559b3fe2ff3c57769c13e8ecc260b71cf98",
+    "url": "https://www.formula1.com/en/results/2010/races/866/turkey/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/828_qualifying.html",
+    "sha256": "80be3470242ee0be6243a6f73efb6fbdb856fbea80933f3b9e250dfc49fa22b2",
+    "url": "https://www.formula1.com/en/results/2010/races/867/canada/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/829_qualifying.html",
+    "sha256": "72b6e0786cf440dc675904c7150ff0b152970c53d36dff3bc9d86b04edfa1fc8",
+    "url": "https://www.formula1.com/en/results/2010/races/868/europe/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/830_qualifying.html",
+    "sha256": "0d5a71602a1385e5f27799144cc32814c5f1949668a5535cdbb780e5380e0432",
+    "url": "https://www.formula1.com/en/results/2010/races/869/great-britain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/831_qualifying.html",
+    "sha256": "86efaaac2a2acf6ef43c3ac0a5ebd74c5b769c9e36de1b20ec37a3b2f81a266b",
+    "url": "https://www.formula1.com/en/results/2010/races/870/germany/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/832_qualifying.html",
+    "sha256": "409c4843df7659317619a421b69f4e914d839bee2ed54205639db52006e8f727",
+    "url": "https://www.formula1.com/en/results/2010/races/871/hungary/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/833_qualifying.html",
+    "sha256": "12cf7ba3391201416dc56a9a0e9610138a096d936a1a2042bbfaf0aa31e13e21",
+    "url": "https://www.formula1.com/en/results/2010/races/872/belgium/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/834_qualifying.html",
+    "sha256": "7f48ac5e4a795d62ee3d93ecf720a351b40efc1317a60563205e4701bd205df8",
+    "url": "https://www.formula1.com/en/results/2010/races/873/italy/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/835_qualifying.html",
+    "sha256": "fedca79943f2f7e5289f5f0dea7c98114e38f37092bb852776dbd00d4b71c361",
+    "url": "https://www.formula1.com/en/results/2010/races/874/singapore/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/836_qualifying.html",
+    "sha256": "f4a2be469ecb78c70ecaef378665b1e7772a174d243923527edc4d46d64d6ff5",
+    "url": "https://www.formula1.com/en/results/2010/races/875/japan/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/837_qualifying.html",
+    "sha256": "c5166d9689d340220abc796049a11fb6f7cc3ecc22cbe33ee8c8f7e9fcd802bf",
+    "url": "https://www.formula1.com/en/results/2010/races/876/south-korea/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/838_qualifying.html",
+    "sha256": "13d5d8bf6cffcb9b80509eebe84a33eb830af4f6e1c91fee3809a7fcab337d1b",
+    "url": "https://www.formula1.com/en/results/2010/races/877/brazil/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2010/839_qualifying.html",
+    "sha256": "f118fb8ab9f28da3d2ca4806edafd0824fe8536693d0c06f88e92f50dac8b6bb",
+    "url": "https://www.formula1.com/en/results/2010/races/878/abu-dhabi/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/index.html",
+    "sha256": "008cad456fc00db282b787570d760e3da65689607f217323dd82ca99f11e0bef",
+    "url": "https://www.formula1.com/en/results/2011/races"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/840_qualifying.html",
+    "sha256": "a733771d39613881abe00f1574f59d8d1f26c938a41d542f292163fb36e762e0",
+    "url": "https://www.formula1.com/en/results/2011/races/28/australia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/841_qualifying.html",
+    "sha256": "c15ae902d8dd34fb703cc69cf4d5abd617cecde03e5b5e8dcf6dd7d6259066f4",
+    "url": "https://www.formula1.com/en/results/2011/races/29/malaysia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/842_qualifying.html",
+    "sha256": "e115a985670ecbddc431e7e5d84e8181f13bf674a24c5956a39e48c37938493a",
+    "url": "https://www.formula1.com/en/results/2011/races/30/china/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/843_qualifying.html",
+    "sha256": "fd69cff82e561117eaf94ff3b3e831ffccdb2a697b5ca2bc578909fc070a1ebf",
+    "url": "https://www.formula1.com/en/results/2011/races/31/turkey/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/844_qualifying.html",
+    "sha256": "f81f2e79d5ccebd78e1ad50035ca4952c16fc26a2b35ff984b9ecbbaea62e6a2",
+    "url": "https://www.formula1.com/en/results/2011/races/32/spain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/845_qualifying.html",
+    "sha256": "56343b350a4590b1e4ed46a3e6bb2aeb4d83af6c1e27be067c593698f3ba1785",
+    "url": "https://www.formula1.com/en/results/2011/races/33/monaco/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/846_qualifying.html",
+    "sha256": "2ba9e8840d90221b906b6ff01b8b96887b1373c5f6eed08664cac8a5cff7fc34",
+    "url": "https://www.formula1.com/en/results/2011/races/34/canada/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/847_qualifying.html",
+    "sha256": "70e34a4f25511c77c31f3f2f4f6b913d9a7ca895cd8ebe8872aee150fdeacdd4",
+    "url": "https://www.formula1.com/en/results/2011/races/35/europe/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/848_qualifying.html",
+    "sha256": "94ede09c70b84644d492397c0979094b70d2a8b2adc6dd7359c85b9718c9f181",
+    "url": "https://www.formula1.com/en/results/2011/races/36/great-britain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/849_qualifying.html",
+    "sha256": "cbe073440b489f269c83c79cf726b881b8af4078a7bf14421dcec494cc11fb52",
+    "url": "https://www.formula1.com/en/results/2011/races/37/germany/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/850_qualifying.html",
+    "sha256": "78bf3b78fbae746ddb6720d0d8064f2c347caf8379361108186c3ccb976fb609",
+    "url": "https://www.formula1.com/en/results/2011/races/38/hungary/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/851_qualifying.html",
+    "sha256": "02644b0a23289786e2625f59bffe616f7c0ca1ac5cfa37598da200358ae3d4ce",
+    "url": "https://www.formula1.com/en/results/2011/races/39/belgium/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/852_qualifying.html",
+    "sha256": "6eae84817c2fd384954b6d080079e33d57a03c2d86f901046c742b896eb976d8",
+    "url": "https://www.formula1.com/en/results/2011/races/40/italy/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/853_qualifying.html",
+    "sha256": "b8368a8270f53dea364d941f40f3bd5f3513b91308b4e6e3063ab2dce69bb596",
+    "url": "https://www.formula1.com/en/results/2011/races/41/singapore/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/854_qualifying.html",
+    "sha256": "3aa82644bf457a75d4b2b6ef745577a9138fc7fa52efabf6efd213911399a5e3",
+    "url": "https://www.formula1.com/en/results/2011/races/42/japan/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/855_qualifying.html",
+    "sha256": "f25dbc14727c5a3700bda5690a1207aaa34c98e30ab645d31b93ff91ac6744ba",
+    "url": "https://www.formula1.com/en/results/2011/races/43/south-korea/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/856_qualifying.html",
+    "sha256": "834f12545daacfb73670e675f32b2cdbd44da46acbb411bca6cdec87b7871d8c",
+    "url": "https://www.formula1.com/en/results/2011/races/44/india/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/857_qualifying.html",
+    "sha256": "6f91c38a8e03ef1d1c9534ab87a96e392c7dcd983053c58e908701cffce5a980",
+    "url": "https://www.formula1.com/en/results/2011/races/45/abu-dhabi/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2011/858_qualifying.html",
+    "sha256": "1109112321bfbfa4668b864faee4734b2806079383763f550167c5729b2ce6d9",
+    "url": "https://www.formula1.com/en/results/2011/races/46/brazil/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/index.html",
+    "sha256": "be4dc67c1ac6680f688683afdea496917c01be8629a1357b969132e2593d1b1d",
+    "url": "https://www.formula1.com/en/results/2012/races"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/869_qualifying.html",
+    "sha256": "d9c2b8bb7d8e1dd8e6e5c46539cb8e56a450c380874b5bf014ab93abb587baff",
+    "url": "https://www.formula1.com/en/results/2012/races/1/hungary/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/859_qualifying.html",
+    "sha256": "4206ec81e73af493083e97616568791231975bab0c3a4e669a8ca24a4d07368e",
+    "url": "https://www.formula1.com/en/results/2012/races/10/australia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/860_qualifying.html",
+    "sha256": "769b3d4e5dd66f2c1ae365de35f71b626e3c9bafc1e19e2ca7d66373c2108cbf",
+    "url": "https://www.formula1.com/en/results/2012/races/11/malaysia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/861_qualifying.html",
+    "sha256": "189591cf8a27e56cd2b5985fee979bdedf29fc8f05def30a38acd537eb33f16e",
+    "url": "https://www.formula1.com/en/results/2012/races/12/china/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/862_qualifying.html",
+    "sha256": "202571913571ce72e58b7f07b8acb4d9d836b5432a6c4f07f7a6fe2eeb225bb2",
+    "url": "https://www.formula1.com/en/results/2012/races/13/bahrain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/863_qualifying.html",
+    "sha256": "5cd31ed7ca727a2c654e713ece7a69774b4b2f59b87b9130a7981d0ea001eccb",
+    "url": "https://www.formula1.com/en/results/2012/races/14/spain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/864_qualifying.html",
+    "sha256": "12b84d6656a5eff28aa4bbf0a450d5419a2f636fffe2e79b0bcc7358070b38f8",
+    "url": "https://www.formula1.com/en/results/2012/races/15/monaco/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/865_qualifying.html",
+    "sha256": "a8d69c948c17430e4094ff6942feb51f96a5f029fa08c04879e20474c082b56e",
+    "url": "https://www.formula1.com/en/results/2012/races/16/canada/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/866_qualifying.html",
+    "sha256": "d03616aa43446a03cf5c68101e195d260780a945b350ad82af4ff7783d8bdbad",
+    "url": "https://www.formula1.com/en/results/2012/races/17/europe/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/868_qualifying.html",
+    "sha256": "9af88d179e2e1989323cf9de6ef68e7380e57e5cb945e3b092ebedc7247b887d",
+    "url": "https://www.formula1.com/en/results/2012/races/18/germany/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/870_qualifying.html",
+    "sha256": "fc2ef1324a8e5c45f1f75a163af97d81c0b3ff0f1712ba3c761467b53c021e06",
+    "url": "https://www.formula1.com/en/results/2012/races/19/belgium/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/871_qualifying.html",
+    "sha256": "8950fa57ef47fde428b46f84ea16feabb70c595569028ce9b26994f75f9ce682",
+    "url": "https://www.formula1.com/en/results/2012/races/20/italy/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/872_qualifying.html",
+    "sha256": "ee43cbb7871e1472de3e1f06b3c86418ae2cd4918e5d991323d7964d3ff99dfb",
+    "url": "https://www.formula1.com/en/results/2012/races/21/singapore/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/873_qualifying.html",
+    "sha256": "dbd9a93be83d069025faa1ad70173facd59c5dd35eed655f9aae9e4ddfaf3d96",
+    "url": "https://www.formula1.com/en/results/2012/races/22/japan/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/874_qualifying.html",
+    "sha256": "e79d0a36b7112b567e440598d33de1fca9735e9465adc26ec7352aaac03c62ae",
+    "url": "https://www.formula1.com/en/results/2012/races/23/south-korea/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/875_qualifying.html",
+    "sha256": "a602fcd8012c93100d7a8dc9ac266e0942165c4ece6e86addaba985d9c9c88ee",
+    "url": "https://www.formula1.com/en/results/2012/races/24/india/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/876_qualifying.html",
+    "sha256": "57c7dde1389674394cfa751d33ac2e5f816c28edaac6250993e93493fea17a98",
+    "url": "https://www.formula1.com/en/results/2012/races/25/abu-dhabi/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/877_qualifying.html",
+    "sha256": "39ee7973ed2a5af8784c3535aee6262e81aa04cd8c92f09e2bcfec25bf63cce9",
+    "url": "https://www.formula1.com/en/results/2012/races/26/united-states/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/878_qualifying.html",
+    "sha256": "560df17d0b24d07d31f6cb5b897430a9aecaf41f417b2da131ae44015d59fc48",
+    "url": "https://www.formula1.com/en/results/2012/races/27/brazil/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2012/867_qualifying.html",
+    "sha256": "1084fbf43192d9bdfad363b0312a77e7d350c1f8d6157dc1b97bb62ba990e14f",
+    "url": "https://www.formula1.com/en/results/2012/races/4/great-britain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/index.html",
+    "sha256": "6daa97d3193afc68d93764ec642039981cec56aeb09c94ca01c766890479f836",
+    "url": "https://www.formula1.com/en/results/2013/races"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/879_qualifying.html",
+    "sha256": "fe36f64b26b61cb09d6057c94a6ff7d0454d7027b62d13caa5909402e6b96025",
+    "url": "https://www.formula1.com/en/results/2013/races/879/australia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/880_qualifying.html",
+    "sha256": "d735fb7b24e266dfe603543b479fdb514b9f2374b1fdbcb51512cf8adb33bbd4",
+    "url": "https://www.formula1.com/en/results/2013/races/880/malaysia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/881_qualifying.html",
+    "sha256": "e6f62ad47e6d8da1437c81daae10b7c116a10d7d00ee2178464ffce36fd707a5",
+    "url": "https://www.formula1.com/en/results/2013/races/881/china/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/882_qualifying.html",
+    "sha256": "9ec47a3bf08086bc99131d4225782a2dae0cff9755cf6e59dad0478f312f819a",
+    "url": "https://www.formula1.com/en/results/2013/races/882/bahrain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/883_qualifying.html",
+    "sha256": "9ea14702a0bf8caa6ad997f3bdb3a508852f94993b0690f3be31436a6ee9d984",
+    "url": "https://www.formula1.com/en/results/2013/races/883/spain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/884_qualifying.html",
+    "sha256": "23f505e75ea65efe22f930622ac7444f0c42979558e32faa38005c54a05325eb",
+    "url": "https://www.formula1.com/en/results/2013/races/884/monaco/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/885_qualifying.html",
+    "sha256": "c0ed41799a4fb5841569b95de936de076261a5956a690c1a0704a99b5fe058df",
+    "url": "https://www.formula1.com/en/results/2013/races/885/canada/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/886_qualifying.html",
+    "sha256": "d3273d0d58f0a177afef7969f4d270a5e910f0c2aeb6b378e9a227672e5fb8c2",
+    "url": "https://www.formula1.com/en/results/2013/races/886/great-britain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/887_qualifying.html",
+    "sha256": "80fb96be09da928e49e6162e4b7921aa76e9983f933745ced46b6d4e51cef6df",
+    "url": "https://www.formula1.com/en/results/2013/races/887/germany/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/888_qualifying.html",
+    "sha256": "b0208de80eda867a99fe234a6d715453eb1fe2f37f7045753f993e4f7890aa4e",
+    "url": "https://www.formula1.com/en/results/2013/races/888/hungary/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/889_qualifying.html",
+    "sha256": "bec073604079455e752814ad904997743655039a01b90751dbba8d1a59fcab01",
+    "url": "https://www.formula1.com/en/results/2013/races/889/belgium/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/890_qualifying.html",
+    "sha256": "bfc198cc9eb650cf3e4da5e519ff73600681bfbde3b03d9af8a840372adaabd7",
+    "url": "https://www.formula1.com/en/results/2013/races/890/italy/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/891_qualifying.html",
+    "sha256": "5c3ae62d44ebcc4424cd322605008724498488c4c20933277f717f03d7aa11cf",
+    "url": "https://www.formula1.com/en/results/2013/races/891/singapore/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/892_qualifying.html",
+    "sha256": "238d2241f35f2abaf83702853712f86395f5852e6f49c6b52a017488657feed4",
+    "url": "https://www.formula1.com/en/results/2013/races/892/south-korea/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/893_qualifying.html",
+    "sha256": "6eda7b061f4af6a90373f1bae9b44bc1739b13cc543b026a1245ed39be6a7457",
+    "url": "https://www.formula1.com/en/results/2013/races/893/japan/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/894_qualifying.html",
+    "sha256": "6350e498fb9db4a8ff64139f0f00e47a375e413b9d6705d45630846b719aa5ab",
+    "url": "https://www.formula1.com/en/results/2013/races/894/india/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/895_qualifying.html",
+    "sha256": "6ab898de3c3c4ba3880b4ef0ad4ad7bca0f8490cfe53929dc7374247c7ec4e37",
+    "url": "https://www.formula1.com/en/results/2013/races/895/abu-dhabi/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/896_qualifying.html",
+    "sha256": "5ff81db81fe2d01f8afca085401c901ec40b747d332b620f0b04f5c5969defc7",
+    "url": "https://www.formula1.com/en/results/2013/races/896/united-states/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2013/897_qualifying.html",
+    "sha256": "87821d2c3010a35213e229a0517983f45f22fbabdca06ac8b2a8c0cdb42e9ad1",
+    "url": "https://www.formula1.com/en/results/2013/races/897/brazil/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/index.html",
+    "sha256": "0b54f14b1cd501de57a28f737ef136c9179c90b64938c4bed66c691e750647dc",
+    "url": "https://www.formula1.com/en/results/2014/races"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/898_qualifying.html",
+    "sha256": "36bdb06014e2873fa8b43791bc07dd9582b8ce601930a0e77c82957fdeb5b249",
+    "url": "https://www.formula1.com/en/results/2014/races/898/australia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/899_qualifying.html",
+    "sha256": "403d8b9118271d230af368742b9eaa74330eec079bdb72b75ef3280f03f38fbc",
+    "url": "https://www.formula1.com/en/results/2014/races/899/malaysia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/900_qualifying.html",
+    "sha256": "a9a9fb9d08f3437b5c70f038bfa4dba17de72fae8dbb787327a6c25dca0cd5d8",
+    "url": "https://www.formula1.com/en/results/2014/races/900/bahrain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/901_qualifying.html",
+    "sha256": "09e35e4c4c5192a27dcd1878b61c36e2df5143a2fc56e6e36589d50b92b2543e",
+    "url": "https://www.formula1.com/en/results/2014/races/901/china/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/902_qualifying.html",
+    "sha256": "21ea553143756bc4b7f0c6bfe190d56c331ba408ea4aa5a2100c674f485bc4fb",
+    "url": "https://www.formula1.com/en/results/2014/races/902/spain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/903_qualifying.html",
+    "sha256": "3d462643fa4f9351af811f5b6b7094124f355c31efc9682a2a85824e53d6fdb4",
+    "url": "https://www.formula1.com/en/results/2014/races/903/monaco/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/904_qualifying.html",
+    "sha256": "9c1232dd7b2009950a058adc369b315f1153355b5a534c05faf9da1249f3c199",
+    "url": "https://www.formula1.com/en/results/2014/races/904/canada/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/905_qualifying.html",
+    "sha256": "d4cb9869d9fd34ad6a8a87af1afc70eed4d6f2e5363dadd7ac3fc929ca467b91",
+    "url": "https://www.formula1.com/en/results/2014/races/905/austria/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/906_qualifying.html",
+    "sha256": "5bd55e81f11d910c99cd2ab14f1f4847c62338a702c46bea14ce50c0e93cc256",
+    "url": "https://www.formula1.com/en/results/2014/races/906/great-britain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/907_qualifying.html",
+    "sha256": "a6a124f055610014d2534790ecec0c732a2d767582cf6a9d235730b8ca8ca247",
+    "url": "https://www.formula1.com/en/results/2014/races/907/germany/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/908_qualifying.html",
+    "sha256": "b4a2f14230e484d5510944182375d81a1ce02066772206eecf76dfe69896b790",
+    "url": "https://www.formula1.com/en/results/2014/races/908/hungary/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/909_qualifying.html",
+    "sha256": "9a6b1dff3a162318e88bdf79e93a96a6beb7e37fbea11436d1d94801ec77853c",
+    "url": "https://www.formula1.com/en/results/2014/races/909/belgium/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/910_qualifying.html",
+    "sha256": "2f116dab122efc5e800ce11127c96f726607940ed72fefcf2b484897d227a2dc",
+    "url": "https://www.formula1.com/en/results/2014/races/910/italy/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/911_qualifying.html",
+    "sha256": "979c5e36d7f5419def60cb97ccaf58747fe4384cd95e7eb4cb6d7a3508069405",
+    "url": "https://www.formula1.com/en/results/2014/races/911/singapore/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/912_qualifying.html",
+    "sha256": "936264f9a3ac055540b1725251e1ff2ff15fd12087df15aab4cbcbbaa2de8984",
+    "url": "https://www.formula1.com/en/results/2014/races/912/japan/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/913_qualifying.html",
+    "sha256": "a79ee70f7ba1123f17a25758a209fef7a63ebbec6461f53a5729ff034f2aac8c",
+    "url": "https://www.formula1.com/en/results/2014/races/913/russia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/914_qualifying.html",
+    "sha256": "e12b66eb74d71a45451321da50e271b72ccfc1ca0b957cf6eef0a3298fa61f89",
+    "url": "https://www.formula1.com/en/results/2014/races/914/united-states/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/915_qualifying.html",
+    "sha256": "f16732388e066efc4e3586ca25bf065ae7e1915094075a21b06e69b20016c819",
+    "url": "https://www.formula1.com/en/results/2014/races/915/brazil/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2014/916_qualifying.html",
+    "sha256": "ef0dd83acc7fcca0d1932f67808f8ffffdcef56357a5c6d7af23b2e24da4775d",
+    "url": "https://www.formula1.com/en/results/2014/races/916/abu-dhabi/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/index.html",
+    "sha256": "5136559b5b43b41b6472b3b4f67d8a52fb712327c282e51e9c055b0fa23875e8",
+    "url": "https://www.formula1.com/en/results/2015/races"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/917_qualifying.html",
+    "sha256": "56b924350308d22cb2699777c5fd9005b939b2537226390daaa2f859cc8e63d8",
+    "url": "https://www.formula1.com/en/results/2015/races/917/australia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/918_qualifying.html",
+    "sha256": "434383e57507d3d6761147187cd645377fa2764cdd4c26fc156856a4b41b5cef",
+    "url": "https://www.formula1.com/en/results/2015/races/918/malaysia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/919_qualifying.html",
+    "sha256": "da9df4f685307fba16431622c7fba4ee1b8e7832b48e18cd1915422ad3d302dd",
+    "url": "https://www.formula1.com/en/results/2015/races/919/china/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/920_qualifying.html",
+    "sha256": "bd41e556d5c30cc52cdc8084862d6a296abf5b3227559126575b24e8e34c8b11",
+    "url": "https://www.formula1.com/en/results/2015/races/920/bahrain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/921_qualifying.html",
+    "sha256": "11493df1a03287bdc1c76c19a7632572dae5e7b176fb65606536c1ff6fa0c345",
+    "url": "https://www.formula1.com/en/results/2015/races/921/spain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/922_qualifying.html",
+    "sha256": "8ef4b999e5bf68e9c28b962a80889661c7e0bb5fed9adc073e63991b27fc6813",
+    "url": "https://www.formula1.com/en/results/2015/races/922/monaco/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/923_qualifying.html",
+    "sha256": "4d778785582f0b469e5d3f762781e3068da8c1e3449e4e4d684c0326def59662",
+    "url": "https://www.formula1.com/en/results/2015/races/923/canada/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/924_qualifying.html",
+    "sha256": "9ccd99fc6c11ef630db2fc55cd7a9ac91993e7a7d4d75452739fc66ad1d080ea",
+    "url": "https://www.formula1.com/en/results/2015/races/924/austria/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/925_qualifying.html",
+    "sha256": "cf2eaa08a3d51fa96b9f8b16b0cea15214b88d5498d572abcc54f709832fb8eb",
+    "url": "https://www.formula1.com/en/results/2015/races/925/great-britain/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/926_qualifying.html",
+    "sha256": "7e805dbaf50c31749b1fa8d3c3522ad5bfa79cab7b225e3b39c313e0c8e83e39",
+    "url": "https://www.formula1.com/en/results/2015/races/927/hungary/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/927_qualifying.html",
+    "sha256": "493e3c8b23a93018c830270eff7fd49b7e68a51b7c4dba475aad0e97c07c36bb",
+    "url": "https://www.formula1.com/en/results/2015/races/928/belgium/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/928_qualifying.html",
+    "sha256": "58e46157660aac374353e8dde957b4babe79e2a804d514802734686c1f39af76",
+    "url": "https://www.formula1.com/en/results/2015/races/929/italy/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/929_qualifying.html",
+    "sha256": "6e4980b732fd0155b175bddcf8af3f785a2ba1ea880136c33af67e59e6eaab90",
+    "url": "https://www.formula1.com/en/results/2015/races/930/singapore/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/930_qualifying.html",
+    "sha256": "49ea7fc220aa72fdc3fb549e6be33bd6f30e8007d15af33cbc72fd6e94aca1f3",
+    "url": "https://www.formula1.com/en/results/2015/races/931/japan/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/931_qualifying.html",
+    "sha256": "88fd4f5716da8513349cb3910b4bdaa538c22f6809c5850ad30a3ac1eb4343a9",
+    "url": "https://www.formula1.com/en/results/2015/races/932/russia/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/932_qualifying.html",
+    "sha256": "baff69459f95cadb59770e637ea28892e14bf46b6caa556fe351dcb6cff6ab6f",
+    "url": "https://www.formula1.com/en/results/2015/races/933/united-states/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/933_qualifying.html",
+    "sha256": "050b6f76d5ab30fd20005a5368dd4733697563c4f37830b0e1f5d4955712bb77",
+    "url": "https://www.formula1.com/en/results/2015/races/934/mexico/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/934_qualifying.html",
+    "sha256": "9adaf3eb87381c1c2a0ba29b63481e011512b986a7534a7fb032ebc82ad27ac3",
+    "url": "https://www.formula1.com/en/results/2015/races/935/brazil/qualifying"
+  },
+  {
+    "path": "data/raw/early_qualifying_results/2015/935_qualifying.html",
+    "sha256": "0c41828fcf03b9c417b15c287988259ed0a5b8b31556fb00e54827449c7c3dbc",
+    "url": "https://www.formula1.com/en/results/2015/races/936/abu-dhabi/qualifying"
+  }
+]

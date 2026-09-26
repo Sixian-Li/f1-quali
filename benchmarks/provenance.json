@@ -1,0 +1,20 @@
+{
+  "data_cutoff": "2026-09-15T00:00:00Z",
+  "evaluation_status": "all displayed years have already been inspected",
+  "f1db": {
+    "release_published_at": "2026-09-13T17:19:19Z",
+    "sha256": "8a92b898bc237bd3b0a86fe5665ebe0e8f8328f126e2422ca9946d175d66dfb4",
+    "version": "v2026.14.0"
+  },
+  "files": {
+    "baseline_comparison.csv": "b3dc5096c0e4bb501ed10455c67df6320ad78046d00abf30999a09a8e12edae7",
+    "refactor_verification.json": "f52987e6228887d0503a86cd905aecc960c99a840d5df20b6861a4c8ab5fc271",
+    "source_acquisition.json": "6825ef3264930990e6abaec3f8235ef9bf8d799faa50a7d992fd8f1f2c12fc9b",
+    "training_years.csv": "6aa5b88504dfcd12b124b2123381d20ad202f6f0d64d6d5cad546e90cf9bad0b",
+    "v6_yearly.csv": "2392808cd05553dd851a1113f06b9c12faa9e28b479f9f5d5ea3e990672a5e6d"
+  },
+  "method": "memory_h12_mean_median_50_50",
+  "raw_data_distributed": false,
+  "research_lock": "763e7f1871a6a6d3",
+  "source_scorecard_manifest_sha256": "c931600e62e46fc6bcb0b5e2fb0208a19ce1c08c2e1964ae2722170d7e586a06"
+}

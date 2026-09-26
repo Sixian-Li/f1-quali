@@ -1,0 +1,313 @@
+{
+  "version": 1,
+  "policy": "conservative_warmup_only_2016_onwards",
+  "difference_reviews": [
+    {
+      "race_id": 843,
+      "year": 2011,
+      "driver_id": "kamui-kobayashi",
+      "field": "position_text",
+      "f1db": "24",
+      "official": "NC",
+      "decision": "exclude_numeric_conflict",
+      "reason": "Numeric/non-numeric classification disagreement remains unresolved; neither source supplies an admitted numeric label."
+    },
+    {
+      "race_id": 843,
+      "year": 2011,
+      "driver_id": "kamui-kobayashi",
+      "field": "position_number",
+      "f1db": "24",
+      "official": "",
+      "decision": "exclude_numeric_conflict",
+      "reason": "Numeric/non-numeric classification disagreement remains unresolved; neither source supplies an admitted numeric label."
+    },
+    {
+      "race_id": 849,
+      "year": 2011,
+      "driver_id": "sebastien-buemi",
+      "field": "position_text",
+      "f1db": "EX",
+      "official": "DQ",
+      "decision": "retain_non_numeric_classification",
+      "reason": "Both sources deny a numeric qualifying classification; retain F1DB exclusion identity and official alternative without inventing last place."
+    },
+    {
+      "race_id": 863,
+      "year": 2012,
+      "driver_id": "lewis-hamilton",
+      "field": "position_text",
+      "f1db": "EX",
+      "official": "RT",
+      "decision": "retain_non_numeric_classification",
+      "reason": "Both sources deny a numeric qualifying classification; retain F1DB exclusion identity and official alternative without inventing last place."
+    },
+    {
+      "race_id": 876,
+      "year": 2012,
+      "driver_id": "sebastian-vettel",
+      "field": "position_text",
+      "f1db": "EX",
+      "official": "RT",
+      "decision": "retain_non_numeric_classification",
+      "reason": "Both sources deny a numeric qualifying classification; retain F1DB exclusion identity and official alternative without inventing last place."
+    },
+    {
+      "race_id": 884,
+      "year": 2013,
+      "driver_id": "felipe-massa",
+      "field": "qualifying_row",
+      "f1db": "present",
+      "official": "absent",
+      "decision": "retain_raw_but_exclude_missing_official_row",
+      "reason": "The official page omits this F1DB qualifying row; preserve raw evidence but exclude its numeric label pending an event-specific primary adjudication."
+    },
+    {
+      "race_id": 886,
+      "year": 2013,
+      "driver_id": "paul-di-resta",
+      "field": "position_text",
+      "f1db": "EX",
+      "official": "RT",
+      "decision": "retain_non_numeric_classification",
+      "reason": "Both sources deny a numeric qualifying classification; retain F1DB exclusion identity and official alternative without inventing last place."
+    },
+    {
+      "race_id": 895,
+      "year": 2013,
+      "driver_id": "kimi-raikkonen",
+      "field": "position_text",
+      "f1db": "EX",
+      "official": "RT",
+      "decision": "retain_non_numeric_classification",
+      "reason": "Both sources deny a numeric qualifying classification; retain F1DB exclusion identity and official alternative without inventing last place."
+    },
+    {
+      "race_id": 901,
+      "year": 2014,
+      "driver_id": "pastor-maldonado",
+      "field": "position_text",
+      "f1db": "NC",
+      "official": "22",
+      "decision": "exclude_numeric_conflict",
+      "reason": "Numeric/non-numeric classification disagreement remains unresolved; neither source supplies an admitted numeric label."
+    },
+    {
+      "race_id": 901,
+      "year": 2014,
+      "driver_id": "pastor-maldonado",
+      "field": "position_number",
+      "f1db": "",
+      "official": "22",
+      "decision": "exclude_numeric_conflict",
+      "reason": "Numeric/non-numeric classification disagreement remains unresolved; neither source supplies an admitted numeric label."
+    },
+    {
+      "race_id": 904,
+      "year": 2014,
+      "driver_id": "esteban-gutierrez",
+      "field": "qualifying_row",
+      "f1db": "present",
+      "official": "absent",
+      "decision": "retain_raw_but_exclude_missing_official_row",
+      "reason": "The official page omits this F1DB qualifying row; preserve raw evidence but exclude its numeric label pending an event-specific primary adjudication."
+    },
+    {
+      "race_id": 907,
+      "year": 2014,
+      "driver_id": "marcus-ericsson",
+      "field": "position_text",
+      "f1db": "NC",
+      "official": "22",
+      "decision": "exclude_numeric_conflict",
+      "reason": "Numeric/non-numeric classification disagreement remains unresolved; neither source supplies an admitted numeric label."
+    },
+    {
+      "race_id": 907,
+      "year": 2014,
+      "driver_id": "marcus-ericsson",
+      "field": "position_number",
+      "f1db": "",
+      "official": "22",
+      "decision": "exclude_numeric_conflict",
+      "reason": "Numeric/non-numeric classification disagreement remains unresolved; neither source supplies an admitted numeric label."
+    },
+    {
+      "race_id": 916,
+      "year": 2014,
+      "driver_id": "daniel-ricciardo",
+      "field": "position_text",
+      "f1db": "EX",
+      "official": "NC",
+      "decision": "retain_non_numeric_classification",
+      "reason": "Both sources deny a numeric qualifying classification; retain F1DB exclusion identity and official alternative without inventing last place."
+    },
+    {
+      "race_id": 916,
+      "year": 2014,
+      "driver_id": "sebastian-vettel",
+      "field": "position_text",
+      "f1db": "EX",
+      "official": "NC",
+      "decision": "retain_non_numeric_classification",
+      "reason": "Both sources deny a numeric qualifying classification; retain F1DB exclusion identity and official alternative without inventing last place."
+    },
+    {
+      "race_id": 918,
+      "year": 2015,
+      "driver_id": "will-stevens",
+      "field": "qualifying_row",
+      "f1db": "present",
+      "official": "absent",
+      "decision": "retain_raw_but_exclude_missing_official_row",
+      "reason": "The official page omits this F1DB qualifying row; preserve raw evidence but exclude its numeric label pending an event-specific primary adjudication."
+    },
+    {
+      "race_id": 923,
+      "year": 2015,
+      "driver_id": "jenson-button",
+      "field": "qualifying_row",
+      "f1db": "present",
+      "official": "absent",
+      "decision": "retain_raw_but_exclude_missing_official_row",
+      "reason": "The official page omits this F1DB qualifying row; preserve raw evidence but exclude its numeric label pending an event-specific primary adjudication."
+    },
+    {
+      "race_id": 931,
+      "year": 2015,
+      "driver_id": "carlos-sainz-jr",
+      "field": "qualifying_row",
+      "f1db": "present",
+      "official": "absent",
+      "decision": "retain_raw_but_exclude_missing_official_row",
+      "reason": "The official page omits this F1DB qualifying row; preserve raw evidence but exclude its numeric label pending an event-specific primary adjudication."
+    },
+    {
+      "race_id": 933,
+      "year": 2015,
+      "driver_id": "jenson-button",
+      "field": "qualifying_row",
+      "f1db": "present",
+      "official": "absent",
+      "decision": "retain_raw_but_exclude_missing_official_row",
+      "reason": "The official page omits this F1DB qualifying row; preserve raw evidence but exclude its numeric label pending an event-specific primary adjudication."
+    }
+  ],
+  "rule_sources": [
+    {
+      "season": 2010,
+      "url": "https://argent.fia.com/web/fia-public.nsf/BB8718ACA1D72D8AC12575AF0047162F/%24FILE/1-2010%20F1%20SPORTING%20REGULATIONS%2006-05-2009.pdf",
+      "final_url": "https://argent.fia.com/web/fia-public.nsf/BB8718ACA1D72D8AC12575AF0047162F/%24FILE/1-2010%20F1%20SPORTING%20REGULATIONS%2006-05-2009.pdf",
+      "status_code": 200,
+      "retrieved_at": "2026-09-23T03:08:14.577238+00:00",
+      "sha256": "b018cb93363b7e53bee74c69fad970cb8f5550f9bcd2bb2bfd7c68352327116c",
+      "bytes": 285846,
+      "path": "data/raw/v4_early_rules/2010.pdf",
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 22 Sep 2026 14:09:38 GMT",
+      "article": "33.1",
+      "scope": "nominal field-size stage limits; no actual clock/publication inference"
+    },
+    {
+      "season": 2011,
+      "url": "https://argent.fia.com/web/fia-public.nsf/9A195FD4A47DA4E1C12577F8004AA63E/%24FILE/1-2011%20SPORTING%20REGULATIONS%2010-12-2010.pdf",
+      "final_url": "https://argent.fia.com/web/fia-public.nsf/9A195FD4A47DA4E1C12577F8004AA63E/%24FILE/1-2011%20SPORTING%20REGULATIONS%2010-12-2010.pdf",
+      "status_code": 200,
+      "retrieved_at": "2026-09-23T03:08:14.467156+00:00",
+      "sha256": "468812a287ae26e12fb9f3a464bd8984afff77e30ad6b98637a1f8460eaf6bcf",
+      "bytes": 121644,
+      "path": "data/raw/v4_early_rules/2011.pdf",
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 22 Sep 2026 14:09:38 GMT",
+      "article": "33.1",
+      "scope": "nominal field-size stage limits; no actual clock/publication inference"
+    },
+    {
+      "season": 2012,
+      "url": "https://argent.fia.com/web/fia-public.nsf/81df225ebccca51bc12579c8002d2dec/%24file/1-2012%20sporting%20regulations%2009-03-2012.pdf",
+      "final_url": "https://argent.fia.com/web/fia-public.nsf/81df225ebccca51bc12579c8002d2dec/%24file/1-2012%20sporting%20regulations%2009-03-2012.pdf",
+      "status_code": 200,
+      "retrieved_at": "2026-09-23T03:08:14.685611+00:00",
+      "sha256": "bccdbb0d3c1562789c80ca6dfd3e225cb9fe91497f8d525920279170cbb7c5e2",
+      "bytes": 280150,
+      "path": "data/raw/v4_early_rules/2012.pdf",
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 22 Sep 2026 14:09:38 GMT",
+      "article": "33.1",
+      "scope": "nominal field-size stage limits; no actual clock/publication inference"
+    },
+    {
+      "season": 2014,
+      "url": "https://www.fia.com/sites/default/files/regulation/file/1-2014%20SPORTING%20REGULATIONS%202014-02-28.pdf",
+      "final_url": "https://www.fia.com/sites/default/files/regulation/file/1-2014%20SPORTING%20REGULATIONS%202014-02-28.pdf",
+      "status_code": 200,
+      "retrieved_at": "2026-09-23T03:08:14.359632+00:00",
+      "sha256": "15a8d01f31d20e5d8483413b6aeb87b6eb29ac69b1075b67abefc0ed524749fa",
+      "bytes": 585656,
+      "path": "data/raw/v4_early_rules/2014.pdf",
+      "content_type": "application/pdf",
+      "last_modified": "Wed, 07 Jan 2015 13:31:03 GMT",
+      "article": "33.1",
+      "scope": "nominal field-size stage limits; no actual clock/publication inference"
+    },
+    {
+      "season": 2015,
+      "url": "https://www.fia.com/sites/default/files/regulation/file/2015%20SPORTING%20REGULATIONS%202014-12-03.pdf?gazzettaGold=",
+      "final_url": "https://www.fia.com/sites/default/files/regulation/file/2015%20SPORTING%20REGULATIONS%202014-12-03.pdf?gazzettaGold=",
+      "status_code": 200,
+      "retrieved_at": "2026-09-23T03:08:14.360189+00:00",
+      "sha256": "70936c80520166a6c4ab900fa35bd5e499b31109b4568d694107119999a86600",
+      "bytes": 607428,
+      "path": "data/raw/v4_early_rules/2015.pdf",
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 24 Feb 2015 20:28:32 GMT",
+      "article": "33.1",
+      "scope": "nominal field-size stage limits; no actual clock/publication inference"
+    }
+  ],
+  "rules": {
+    "2010": {
+      "q2_limit": 17,
+      "q3_limit": 10
+    },
+    "2011": {
+      "q2_limit": 17,
+      "q3_limit": 10
+    },
+    "2012": {
+      "q2_limit": 17,
+      "q3_limit": 10
+    },
+    "2013": {
+      "q2_limit": null,
+      "q3_limit": 10,
+      "reason": "Official 2013 regulation URL returned 404; only positive Q3 establishes last participation."
+    },
+    "2014": {
+      "q2_limit": 16,
+      "q3_limit": 10
+    },
+    "2015": {
+      "q2_limit": 15,
+      "q3_limit": 10
+    }
+  },
+  "stage_inference_excluded_event_ids": [
+    914,
+    915,
+    916
+  ],
+  "stage_inference_excluded_reason": "2014 reduced-field end-season exceptions require distinct source-backed rules; positive Q3 remains usable.",
+  "q3_cancelled_event": {
+    "event_id": 932,
+    "source_path": "data/raw/early_rating_timing/ca8ff9df2c79d42d/response.body",
+    "sha256": "d520925d78a8b9607f9b37c6bf09b0600fd226e14d9af3bddf84d4b0b52b87b7",
+    "source_url": "https://www.formula1.com/en/latest/article/watch-four-other-times-qualifying-was-moved-to-sunday.2AZSs8EDhXSNOwfrERenTd",
+    "reason": "Official retrospective explicitly says Q3 cancelled, results taken from Q2; Q2 is the maximum participated stage."
+  },
+  "missing_row_policy": "Keep all post-event union identities; official documented 2015 Australia Manor DNS remains missing numeric rank. Other absent rows remain missing, not inferred DNS.",
+  "availability_policy": "Next January 1 00:00 UTC as conservative reconstructed season-end bound, not actual publication; minimum target season 2016.",
+  "age_policy": "Race date + 36 hours UTC is a conservative upper bound for that local calendar day at any terrestrial UTC offset, used only for approximate recency; actual Q timing remains null.",
+  "event_date_policy": "2014 Russia official heading date conflict does not override fixed F1DB race-date proxy; no precise session time inferred.",
+  "achievement_policy": "Only events with every post-event Q/race/grid union identity holding an admitted unique final qualifying position 1..N."
+}

@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools==84.0.0", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "f1-quali"
+version = "0.1.0"
+description = "Cutoff-aware driver ratings and four-pool Formula 1 qualifying predictions"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+authors = [{name = "Sixian Li"}]
+keywords = ["formula-1", "motorsport", "qualifying", "ratings", "forecasting"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+  "numpy==2.3.5", "pandas==2.3.3", "scipy==1.18.1",
+  "pyarrow==24.0.0", "requests==2.34.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/Sixian-Li/f1-quali"
+Source = "https://github.com/Sixian-Li/f1-quali"
+Issues = "https://github.com/Sixian-Li/f1-quali/issues"
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "ruff==0.16.7", "build==1.6.1", "wheel==0.48.0"]
+
+[project.scripts]
+f1-quali = "f1_quali.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+f1_quali = ["resources/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

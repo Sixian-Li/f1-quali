@@ -1,0 +1,25 @@
+{
+  "as_of": "2026-09-15T00:00:00Z",
+  "year_min": 2016,
+  "year_max": 2026,
+  "f1db": {
+    "version": "v2026.14.0",
+    "sha256": "8a92b898bc237bd3b0a86fe5665ebe0e8f8328f126e2422ca9946d175d66dfb4",
+    "release_published_at": "2026-09-13T17:19:19Z"
+  },
+  "schedules": {
+    "commit": "5c807120ae154922fd0075c3583bc2bbf78b80ff",
+    "sha256": {
+      "2018": "3b68600a96d393068eef8a103b6b8026ada285c4bb78eba06b9e007a9ab9d2c9",
+      "2019": "e0b927da716dc2a6ce8427b160a38974bd730d6ed5d23336098443926f70a9f7",
+      "2020": "4617fafad78d5c12d12f76f110db34c771d5b0533fc1d6241300d698d7340695",
+      "2021": "84a49fbb1d35fb8a4719fbcb56ab694dc138d225935feb7ef6b79365afd7d6de",
+      "2022": "9c300bd30735eec652ae34c4c10a5b9c5e52cead98bdc3028ee2a397acb9e1b6",
+      "2023": "5ead020a62743dda04d62352b55f3ff0da42a58ffa01ca4508f1470d764412aa",
+      "2024": "9c27243d3a60115e980d6bdc5e882cd204efefe2d9a5a3dad1d553163a726999",
+      "2025": "a556e38c2dc1da270ff6d7d1bee2c2762ba292a719ffb419001f9fc1b17ce545",
+      "2026": "f7602b7a753f823b1bdcb1ed99443267101cd8c3ba8ca4fb09442785fa7b7963"
+    }
+  },
+  "availability_buffer_minutes": 120
+}

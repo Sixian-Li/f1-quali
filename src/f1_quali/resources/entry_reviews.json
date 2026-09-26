@@ -1,0 +1,250 @@
+[
+  {
+    "season": 2017,
+    "round": 1,
+    "constructor_id": "sauber",
+    "remove_driver_id": "pascal-wehrlein",
+    "replacement_driver_id": "antonio-giovinazzi",
+    "evidence_key": "fia_2017_australia_sub",
+    "source": "https://www.fia.com/sites/default/files/25.03_-_stewards_decision_doc14_-_p.wehrlein.pdf",
+    "effective_at": "2017-03-25T01:28:00Z",
+    "time_basis": "fia_decision_signed_time_not_observed_publication"
+  },
+  {
+    "season": 2017,
+    "round": 11,
+    "constructor_id": "williams",
+    "remove_driver_id": "felipe-massa",
+    "replacement_driver_id": "paul-di-resta",
+    "evidence_key": "fia_2017_hungary_sub",
+    "source": "https://www.fia.com/sites/default/files/29.07_-_technical_report_doc22_-_paul_di_resta.pdf",
+    "effective_at": "2017-07-29T10:56:00Z",
+    "time_basis": "fia_technical_report_signed_time_not_observed_publication",
+    "supporting_evidence_keys": [
+      "entry_2017_hungary"
+    ],
+    "reason": "Official F1 replacement announcement; FIA doc 22 confirms pre-Q driver check. Article machine date is a 2018 migration date and is not used."
+  },
+  {
+    "season": 2020,
+    "round": 11,
+    "constructor_id": "racing-point",
+    "remove_driver_id": "lance-stroll",
+    "replacement_driver_id": "nico-hulkenberg",
+    "evidence_key": "entry_2020_eifel",
+    "source": "https://www.formula1.com/en/latest/article/breaking-super-sub-hulkenberg-drafted-in-to-replace-unwell-stroll-eifel.1wem3IoVVPhHijg8h3f041.1wem3IoVVPhHijg8h3f041",
+    "effective_at": "2020-10-10T12:11:00Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2020,
+    "round": 16,
+    "constructor_id": "williams",
+    "remove_driver_id": "george-russell",
+    "replacement_driver_id": "jack-aitken",
+    "evidence_key": "entry_2020_sakhir",
+    "source": "https://www.formula1.com/en/latest/article/breaking-george-russell-to-replace-hamilton-at-mercedes-for-sakhir-grand.5vMOKRppSzFMz7RZzdzmxs",
+    "effective_at": "2020-12-02T07:06:15.193Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2021,
+    "round": 13,
+    "constructor_id": "alfa-romeo",
+    "remove_driver_id": "kimi-raikkonen",
+    "replacement_driver_id": "robert-kubica",
+    "evidence_key": "entry_2021_dutch",
+    "source": "https://www.formula1.com/en/latest/article/breaking-raikkonen-ruled-out-of-dutch-gp-after-positive-covid-19-test-kubica.2Z6iYWiBCeqIzDVvIhVBBx",
+    "effective_at": "2021-09-04T07:43:20.491Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2021,
+    "round": 14,
+    "constructor_id": "alfa-romeo",
+    "remove_driver_id": "kimi-raikkonen",
+    "replacement_driver_id": "robert-kubica",
+    "evidence_key": "entry_2021_italy",
+    "source": "https://www.formula1.com/en/latest/article/raikkonen-ruled-out-of-italian-grand-prix-with-kubica-set-to-deputise-again.4y6i0KS8Fm7AEeYdzFJSmX",
+    "effective_at": "2021-09-08T16:11:05.419Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2022,
+    "round": 16,
+    "constructor_id": "williams",
+    "remove_driver_id": "alexander-albon",
+    "replacement_driver_id": "nyck-de-vries",
+    "evidence_key": "entry_2022_italy",
+    "source": "https://www.formula1.com/en/latest/article/breaking-albon-ruled-out-of-italian-grand-prix-with-appendicitis-as.5TjaGYJohrzYVyKqLvSy5Y",
+    "effective_at": "2022-09-10T10:35:05.132Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2023,
+    "round": 13,
+    "constructor_id": "alphatauri",
+    "remove_driver_id": "daniel-ricciardo",
+    "replacement_driver_id": "liam-lawson",
+    "evidence_key": "entry_2023_dutch",
+    "source": "https://www.formula1.com/en/latest/article/breaking-ricciardo-to-be-replaced-by-lawson-for-remainder-of-dutch-gp.5JCEAa5XnnUsjZ1SE7lXFX",
+    "effective_at": "2023-08-25T17:29:26.204Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2024,
+    "round": 2,
+    "constructor_id": "ferrari",
+    "remove_driver_id": "carlos-sainz-jr",
+    "replacement_driver_id": "oliver-bearman",
+    "evidence_key": "entry_2024_saudi",
+    "source": "https://www.formula1.com/en/latest/article/breaking-sainz-ruled-out-of-saudi-arabian-gp-with-appendicitis-as-f2-racer.2JzIonRBBDEjEb2AlkdVfl",
+    "effective_at": "2024-03-08T11:31:38.879Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2024,
+    "round": 3,
+    "constructor_id": "williams",
+    "remove_driver_id": "logan-sargeant",
+    "replacement_driver_id": null,
+    "evidence_key": "entry_2024_australia",
+    "source": "https://www.formula1.com/en/latest/article/breaking-albon-to-take-over-sargeants-car-for-remainder-of-australia-gp.7ChNFI7T7TVDLhfythuOzg",
+    "effective_at": "2024-03-22T09:44:15.822Z",
+    "time_basis": "source_displayed_publication_time",
+    "allow_single_entry": true,
+    "reason": "Withdrawn before Q; Albon uses Sargeant chassis but retains Albon driver identity."
+  },
+  {
+    "season": 2024,
+    "round": 16,
+    "constructor_id": "williams",
+    "remove_driver_id": "logan-sargeant",
+    "replacement_driver_id": "franco-colapinto",
+    "evidence_key": "entry_2024_colapinto",
+    "source": "https://www.formula1.com/en/latest/article/breaking-f2-racer-colapinto-replaces-sargeant-at-williams-for-rest-of-2024.2CghqWgB0vxJoZK8wWoMPj",
+    "effective_at": "2024-08-27T16:09:21.873Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2024,
+    "round": 17,
+    "constructor_id": "williams",
+    "remove_driver_id": "logan-sargeant",
+    "replacement_driver_id": "franco-colapinto",
+    "evidence_key": "entry_2024_colapinto",
+    "source": "https://www.formula1.com/en/latest/article/breaking-f2-racer-colapinto-replaces-sargeant-at-williams-for-rest-of-2024.2CghqWgB0vxJoZK8wWoMPj",
+    "effective_at": "2024-08-27T16:09:21.873Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2024,
+    "round": 18,
+    "constructor_id": "williams",
+    "remove_driver_id": "logan-sargeant",
+    "replacement_driver_id": "franco-colapinto",
+    "evidence_key": "entry_2024_colapinto",
+    "source": "https://www.formula1.com/en/latest/article/breaking-f2-racer-colapinto-replaces-sargeant-at-williams-for-rest-of-2024.2CghqWgB0vxJoZK8wWoMPj",
+    "effective_at": "2024-08-27T16:09:21.873Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2024,
+    "round": 19,
+    "constructor_id": "williams",
+    "remove_driver_id": "logan-sargeant",
+    "replacement_driver_id": "franco-colapinto",
+    "evidence_key": "entry_2024_colapinto",
+    "source": "https://www.formula1.com/en/latest/article/breaking-f2-racer-colapinto-replaces-sargeant-at-williams-for-rest-of-2024.2CghqWgB0vxJoZK8wWoMPj",
+    "effective_at": "2024-08-27T16:09:21.873Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2024,
+    "round": 20,
+    "constructor_id": "williams",
+    "remove_driver_id": "logan-sargeant",
+    "replacement_driver_id": "franco-colapinto",
+    "evidence_key": "entry_2024_colapinto",
+    "source": "https://www.formula1.com/en/latest/article/breaking-f2-racer-colapinto-replaces-sargeant-at-williams-for-rest-of-2024.2CghqWgB0vxJoZK8wWoMPj",
+    "effective_at": "2024-08-27T16:09:21.873Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2024,
+    "round": 21,
+    "constructor_id": "williams",
+    "remove_driver_id": "logan-sargeant",
+    "replacement_driver_id": "franco-colapinto",
+    "evidence_key": "entry_2024_colapinto",
+    "source": "https://www.formula1.com/en/latest/article/breaking-f2-racer-colapinto-replaces-sargeant-at-williams-for-rest-of-2024.2CghqWgB0vxJoZK8wWoMPj",
+    "effective_at": "2024-08-27T16:09:21.873Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2024,
+    "round": 22,
+    "constructor_id": "williams",
+    "remove_driver_id": "logan-sargeant",
+    "replacement_driver_id": "franco-colapinto",
+    "evidence_key": "entry_2024_colapinto",
+    "source": "https://www.formula1.com/en/latest/article/breaking-f2-racer-colapinto-replaces-sargeant-at-williams-for-rest-of-2024.2CghqWgB0vxJoZK8wWoMPj",
+    "effective_at": "2024-08-27T16:09:21.873Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2024,
+    "round": 23,
+    "constructor_id": "williams",
+    "remove_driver_id": "logan-sargeant",
+    "replacement_driver_id": "franco-colapinto",
+    "evidence_key": "entry_2024_colapinto",
+    "source": "https://www.formula1.com/en/latest/article/breaking-f2-racer-colapinto-replaces-sargeant-at-williams-for-rest-of-2024.2CghqWgB0vxJoZK8wWoMPj",
+    "effective_at": "2024-08-27T16:09:21.873Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2024,
+    "round": 24,
+    "constructor_id": "williams",
+    "remove_driver_id": "logan-sargeant",
+    "replacement_driver_id": "franco-colapinto",
+    "evidence_key": "entry_2024_colapinto",
+    "source": "https://www.formula1.com/en/latest/article/breaking-f2-racer-colapinto-replaces-sargeant-at-williams-for-rest-of-2024.2CghqWgB0vxJoZK8wWoMPj",
+    "effective_at": "2024-08-27T16:09:21.873Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2024,
+    "round": 17,
+    "constructor_id": "haas",
+    "remove_driver_id": "kevin-magnussen",
+    "replacement_driver_id": "oliver-bearman",
+    "evidence_key": "entry_2024_baku",
+    "source": "https://www.formula1.com/en/latest/article/bearman-to-replace-banned-magnussen-at-haas-for-azerbaijan-grand.AkCoDVRDHBHPpNdlyqMzv",
+    "effective_at": "2024-09-06T09:00:30.198Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2024,
+    "round": 21,
+    "constructor_id": "haas",
+    "remove_driver_id": "kevin-magnussen",
+    "replacement_driver_id": "oliver-bearman",
+    "evidence_key": "entry_2024_brazil",
+    "source": "https://www.formula1.com/en/latest/article/haas-confirm-magnussen-out-for-remainder-of-sao-paulo-grand-prix.3FquZlQeYmFxwIoWhlfDE7",
+    "effective_at": "2024-11-01T21:32:58.189Z",
+    "time_basis": "source_displayed_publication_time"
+  },
+  {
+    "season": 2024,
+    "round": 24,
+    "constructor_id": "alpine",
+    "remove_driver_id": "esteban-ocon",
+    "replacement_driver_id": "jack-doohan",
+    "evidence_key": "entry_2024_doohan",
+    "source": "https://www.formula1.com/en/latest/article/breaking-alpine-confirm-doohan-to-race-in-abu-dhabi-as-ocon-is-released.5rrOqcBxVZooeD6B38GWi0",
+    "effective_at": "2024-12-02T09:03:03.350Z",
+    "time_basis": "source_displayed_publication_time"
+  }
+]
