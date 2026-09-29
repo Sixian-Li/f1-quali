@@ -36,7 +36,11 @@ def validate(data):
         raise ValueError("entry_known_at requires a timezone-aware column")
     unknown = data.entries.entry_known_at.isna()
     retrospective = data.entries.get("entry_basis", pd.Series("", index=data.entries.index))
-    if (unknown & ~retrospective.eq("retrospective_season_round_membership")).any():
+    known_bases = [
+        "retrospective_season_round_membership",
+        "retrospective_reviewed_actual_roster_NOT_original_entry_snapshot",
+    ]
+    if (unknown & ~retrospective.isin(known_bases)).any():
         raise ValueError("Unknown entry timestamps require explicit retrospective provenance")
     return data
 

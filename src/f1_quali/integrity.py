@@ -63,6 +63,7 @@ REQUIRED_FILES = {
     },
     "forecast": {"predictions.parquet", "ratings.json", "forecast.json"},
     "baselines": {"predictions.parquet", "event_metrics.parquet", "skipped.json"},
+    "ratings": {"ratings.json", "ratings.parquet", "layout_ratings.parquet"},
 }
 
 
@@ -93,6 +94,8 @@ def verify(directory, kind=None):
     required = set(REQUIRED_FILES.get(identity["kind"], ()))
     if identity["kind"] == "dataset" and identity["metadata"].get("warmup"):
         required |= {"early_pairs.parquet", "early_achievements.parquet"}
+    if identity["kind"] == "dataset" and identity["metadata"].get("full_era"):
+        required |= {"early_pairs.parquet"}
     missing = sorted(required - set(identity["sha256"]))
     if missing:
         raise ValueError(f"Manifest does not cover required files: {', '.join(missing)}")

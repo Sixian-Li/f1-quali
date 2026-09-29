@@ -1,4 +1,7 @@
-"""Independent data-to-rating-to-prediction pipeline for the selected v6."""
+"""Data-to-rating-to-prediction pipeline for the previous release method v6.
+
+The selected m1r1 method lives in :mod:`f1_quali.m1r1`; both share these engines.
+"""
 
 import json
 from pathlib import Path

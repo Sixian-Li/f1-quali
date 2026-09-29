@@ -5,7 +5,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from f1_quali import m1r1
 from f1_quali.data.core import Dataset
+from f1_quali.data.full_era import save_full_era
 from f1_quali.data.portable import save_dataset
 from f1_quali.integrity import write_json
 from f1_quali.pipeline import predict_prepared, prepare, train
@@ -108,20 +110,28 @@ def synthetic_dataset(seed=20260926, history_events=20, target_events=6):
     )
 
 
-def run_demo(output, progress=None):
+def run_demo(output, progress=None, *, method="m1r1"):
     output = Path(output)
     data = synthetic_dataset()
-    save_dataset(output / "dataset", data)
-    prepare(output / "dataset", output / "prepared", progress=progress)
-    train(output / "prepared", 2024, output / "model")
-    predict_prepared(output / "prepared", output / "model", output / "evaluation")
+    if method == "m1r1":
+        save_full_era(output / "dataset", data, pd.DataFrame())
+        m1r1.prepare(output / "dataset", output / "prepared", progress=progress)
+        m1r1.train(output / "prepared", 2024, output / "model")
+        m1r1.evaluate(output / "prepared", output / "model", output / "evaluation")
+    elif method == "v6":
+        save_dataset(output / "dataset", data)
+        prepare(output / "dataset", output / "prepared", progress=progress)
+        train(output / "prepared", 2024, output / "model")
+        predict_prepared(output / "prepared", output / "model", output / "evaluation")
+    else:
+        raise ValueError(f"Unknown method: {method}")
     predictions = pd.read_parquet(output / "evaluation/predictions.parquet")
     last = predictions[predictions.event_id.eq(predictions.event_id.max())].sort_values(
         "predicted_rank"
     )
     summary = {
         "kind": "synthetic",
-        "method": "v6",
+        "method": method,
         "year": 2024,
         "events": int(predictions.event_id.nunique()),
         "prediction_rows": len(predictions),

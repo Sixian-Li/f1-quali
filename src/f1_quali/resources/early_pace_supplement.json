@@ -1,0 +1,2951 @@
+{
+ "schema": "f1-quali.early-pace-supplement.v1",
+ "scope": "Admit exactly 136 previously unusable 2013-2014 last-common-stage pace pairs after review of primary stage-rule sources. Final classifications, outcomes, achievements and other evidence are unchanged.",
+ "review_archive": "artifacts/early_rule_increment_c00346eb1ba1",
+ "review_archive_manifest_sha256": "6da08b0b3b9198c934340cd3ae61ca42f8f8356b1d74eb31746eb7719dfb6dc1",
+ "expected_added_by_season": {
+  "2013": 121,
+  "2014": 15
+ },
+ "expected_added_by_stage": {
+  "1": 73,
+  "2": 63
+ },
+ "sources": [
+  {
+   "source_id": "2013_official_index",
+   "url": "https://argent.fia.com/web/fia-public.nsf/wf1?lang=a&openform=",
+   "path": "early_rule_supplement/2013_official_index.html",
+   "sha256": "1fc0eb63c4aa45542c4a1c3c50abaa2897ada23cf85d620521ef6705da5ed457"
+  },
+  {
+   "source_id": "2013_preseason_rules",
+   "url": "https://argent.fia.com/web/fia-public.nsf/28B82A12E7660A7BC1257AA80041DD5A/%24FILE/1-2013%20SPORTING%20REGULATIONS%2031-10-2012.pdf",
+   "path": "early_rule_supplement/2013_preseason_rules.pdf",
+   "sha256": "192bfcbc9759c74c5b90554a55168958246d4857f4c78f82ae459239959538f0"
+  },
+  {
+   "source_id": "2013_postseason_rules",
+   "url": "https://www.fia.com/sites/default/files/regulation/file/1-2013%20SPORTING%20REGULATIONS%2009-12-2013.pdf",
+   "path": "early_rule_supplement/2013_postseason_rules.pdf",
+   "sha256": "ab3e2c1637ded4b0ea5d0754f8e3aec629290cbd5f3c38c6ee5dc487bb28e582"
+  },
+  {
+   "source_id": "2014_usa_report",
+   "url": "https://www.fia.com/news/rosberg-claims-us-grand-prix-pole",
+   "path": "early_rule_supplement/2014_usa_report.html",
+   "sha256": "229ea7d9e0993d732fd7e9c6f364bf5eb1afb8df0342bc0d99957b3948e37233"
+  },
+  {
+   "source_id": "2014_brazil_report",
+   "url": "https://www.fia.com/news/rosberg-takes-pole-position-interlagos",
+   "path": "early_rule_supplement/2014_brazil_report.html",
+   "sha256": "476d06b9f66a00264d521725832dce2efe11b8fd81e51e2d555b98b25db29838"
+  },
+  {
+   "source_id": "2014_brazil_preliminary_classification",
+   "url": "https://www.fia.com/sites/default/files/championship/event_report/documents/Formula%20One%20Brazilian%20Grand%20Prix%202014%20Document%20-%2024.pdf",
+   "path": "early_rule_supplement/2014_brazil_preliminary_classification.pdf",
+   "sha256": "4985e9c363f2b47628471a423341bec82b41a02ba14a90c63aae17865fe82f10"
+  },
+  {
+   "source_id": "2014_abu_dhabi_report",
+   "url": "https://www.fia.com/news/rosberg-pole-title-decider-abu-dhabi",
+   "path": "early_rule_supplement/2014_abu_dhabi_report.html",
+   "sha256": "d93464169451ce1e20706528e90e72d9b18b6c9d08e82e74dba3633171827dd4"
+  }
+ ],
+ "participation_reviews": [
+  {
+   "event_id": 914,
+   "driver_id": "daniel-ricciardo",
+   "participated_stage": 3,
+   "source_id": "2014_usa_report"
+  },
+  {
+   "event_id": 914,
+   "driver_id": "adrian-sutil",
+   "participated_stage": 3,
+   "source_id": "2014_usa_report"
+  },
+  {
+   "event_id": 914,
+   "driver_id": "pastor-maldonado",
+   "participated_stage": 2,
+   "source_id": "2014_usa_report"
+  },
+  {
+   "event_id": 914,
+   "driver_id": "sergio-perez",
+   "participated_stage": 2,
+   "source_id": "2014_usa_report"
+  },
+  {
+   "event_id": 914,
+   "driver_id": "nico-hulkenberg",
+   "participated_stage": 2,
+   "source_id": "2014_usa_report"
+  },
+  {
+   "event_id": 914,
+   "driver_id": "daniil-kvyat",
+   "participated_stage": 2,
+   "source_id": "2014_usa_report"
+  },
+  {
+   "event_id": 914,
+   "driver_id": "jean-eric-vergne",
+   "participated_stage": 1,
+   "source_id": "2014_usa_report"
+  },
+  {
+   "event_id": 914,
+   "driver_id": "esteban-gutierrez",
+   "participated_stage": 1,
+   "source_id": "2014_usa_report"
+  },
+  {
+   "event_id": 914,
+   "driver_id": "sebastian-vettel",
+   "participated_stage": 1,
+   "source_id": "2014_usa_report"
+  },
+  {
+   "event_id": 914,
+   "driver_id": "romain-grosjean",
+   "participated_stage": 1,
+   "source_id": "2014_usa_report"
+  },
+  {
+   "event_id": 915,
+   "driver_id": "esteban-gutierrez",
+   "participated_stage": 2,
+   "source_id": "2014_brazil_report"
+  },
+  {
+   "event_id": 915,
+   "driver_id": "nico-hulkenberg",
+   "participated_stage": 2,
+   "source_id": "2014_brazil_report"
+  },
+  {
+   "event_id": 915,
+   "driver_id": "adrian-sutil",
+   "participated_stage": 2,
+   "source_id": "2014_brazil_report"
+  },
+  {
+   "event_id": 915,
+   "driver_id": "daniil-kvyat",
+   "participated_stage": 2,
+   "source_id": "2014_brazil_report"
+  },
+  {
+   "event_id": 915,
+   "driver_id": "romain-grosjean",
+   "participated_stage": 1,
+   "source_id": "2014_brazil_report"
+  },
+  {
+   "event_id": 915,
+   "driver_id": "jean-eric-vergne",
+   "participated_stage": 1,
+   "source_id": "2014_brazil_report"
+  },
+  {
+   "event_id": 915,
+   "driver_id": "sergio-perez",
+   "participated_stage": 1,
+   "source_id": "2014_brazil_report"
+  },
+  {
+   "event_id": 915,
+   "driver_id": "pastor-maldonado",
+   "participated_stage": 1,
+   "source_id": "2014_brazil_report"
+  },
+  {
+   "event_id": 916,
+   "driver_id": "daniil-kvyat",
+   "participated_stage": 3,
+   "source_id": "2014_abu_dhabi_report"
+  },
+  {
+   "event_id": 916,
+   "driver_id": "jenson-button",
+   "participated_stage": 3,
+   "source_id": "2014_abu_dhabi_report"
+  },
+  {
+   "event_id": 916,
+   "driver_id": "kevin-magnussen",
+   "participated_stage": 2,
+   "source_id": "2014_abu_dhabi_report"
+  },
+  {
+   "event_id": 916,
+   "driver_id": "jean-eric-vergne",
+   "participated_stage": 2,
+   "source_id": "2014_abu_dhabi_report"
+  },
+  {
+   "event_id": 916,
+   "driver_id": "sergio-perez",
+   "participated_stage": 2,
+   "source_id": "2014_abu_dhabi_report"
+  },
+  {
+   "event_id": 916,
+   "driver_id": "nico-hulkenberg",
+   "participated_stage": 2,
+   "source_id": "2014_abu_dhabi_report"
+  },
+  {
+   "event_id": 916,
+   "driver_id": "adrian-sutil",
+   "participated_stage": 2,
+   "source_id": "2014_abu_dhabi_report"
+  },
+  {
+   "event_id": 916,
+   "driver_id": "romain-grosjean",
+   "participated_stage": 1,
+   "source_id": "2014_abu_dhabi_report"
+  },
+  {
+   "event_id": 916,
+   "driver_id": "esteban-gutierrez",
+   "participated_stage": 1,
+   "source_id": "2014_abu_dhabi_report"
+  },
+  {
+   "event_id": 916,
+   "driver_id": "pastor-maldonado",
+   "participated_stage": 1,
+   "source_id": "2014_abu_dhabi_report"
+  },
+  {
+   "event_id": 916,
+   "driver_id": "kamui-kobayashi",
+   "participated_stage": 1,
+   "source_id": "2014_abu_dhabi_report"
+  },
+  {
+   "event_id": 916,
+   "driver_id": "will-stevens",
+   "participated_stage": 1,
+   "source_id": "2014_abu_dhabi_report"
+  }
+ ],
+ "admissions": [
+  {
+   "event_id": 879,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -1.264405288088561,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 879,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.7021258388847397,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 879,
+   "season": 2013,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 3.3135561596098713,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 879,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -1.7276500571401967,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 879,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -0.2669094699519129,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 879,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.2661184587333754,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 880,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.6203406661461924,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 880,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 7.627501981654583,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 880,
+   "season": 2013,
+   "constructor_id": "lotus-f1",
+   "driver_i": "kimi-raikkonen",
+   "driver_j": "romain-grosjean",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 1.02535436822131,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 880,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 1.2498522164279302,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 880,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -1.1107509332724368,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 880,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.4441524768951067,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 880,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.3468081854623119,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 881,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.046167589165711,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 881,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -0.1224752607790455,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 881,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.763427922601802,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 881,
+   "season": 2013,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.5518030846914712,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 881,
+   "season": 2013,
+   "constructor_id": "red-bull",
+   "driver_i": "mark-webber",
+   "driver_j": "sebastian-vettel",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -1.391529676822793,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 881,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -1.0309105277472,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 881,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.9728336750633554,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 881,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.5003855608662279,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 882,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 1.0658444107952918,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 882,
+   "season": 2013,
+   "constructor_id": "lotus-f1",
+   "driver_i": "kimi-raikkonen",
+   "driver_j": "romain-grosjean",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.6591502025850926,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 882,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.3093631460221559,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 882,
+   "season": 2013,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.2259936148613894,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 882,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.3394332297409276,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 882,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.3293355716020012,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 882,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.0,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 883,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.4819400011078668,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 883,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -0.3978954539275919,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 883,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.3335123798013861,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 883,
+   "season": 2013,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -0.6884184487756381,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 883,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -0.4891583896090259,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 883,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.047476156297037,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 883,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.0696370497230488,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 884,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.6229467600078207,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 884,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 1,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 1.4163452071479543,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 884,
+   "season": 2013,
+   "constructor_id": "lotus-f1",
+   "driver_i": "kimi-raikkonen",
+   "driver_j": "romain-grosjean",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 3.3150349025486254,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 884,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -1.588770778532484,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 884,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -0.9245611392101138,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 884,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -3.2485050937490376,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 885,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 1.718271248449143,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 885,
+   "season": 2013,
+   "constructor_id": "ferrari",
+   "driver_i": "felipe-massa",
+   "driver_j": "fernando-alonso",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -1.7483782601323237,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 885,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 1,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.4213414786438587,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 885,
+   "season": 2013,
+   "constructor_id": "lotus-f1",
+   "driver_i": "kimi-raikkonen",
+   "driver_j": "romain-grosjean",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 1,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 1.4868021450906153,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 885,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.6383613312373768,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 885,
+   "season": 2013,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -0.3414358065121556,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 885,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -0.9791455139311708,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 885,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -1.6800143923806097,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 887,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.8539139372389173,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 887,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -0.3445110090171323,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 887,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 1.1060109217169745,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 887,
+   "season": 2013,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.7328870234104474,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 887,
+   "season": 2013,
+   "constructor_id": "mercedes",
+   "driver_i": "lewis-hamilton",
+   "driver_j": "nico-rosberg",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.1928213454394425,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 887,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -0.8596341855839235,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 887,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.9717327617671224,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 887,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.0152671756021679,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 888,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.3919687596335486,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 888,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.6996371359564064,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 888,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.250321973080746,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 888,
+   "season": 2013,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -0.2876237090286703,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 888,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.8552942426005544,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 888,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.6214583372280349,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 888,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.1059426530547781,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 889,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -5.5025414285947525,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 889,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -0.1632818165988586,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 889,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.1766337971722207,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 889,
+   "season": 2013,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.6084122555350967,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 889,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -2.1233462878961675,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 889,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.0137865597480478,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 889,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.2920847174410279,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 890,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.1815354694960243,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 890,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.1705792459919352,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 890,
+   "season": 2013,
+   "constructor_id": "lotus-f1",
+   "driver_i": "kimi-raikkonen",
+   "driver_j": "romain-grosjean",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.2808957458364695,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 890,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.452554262481904,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 890,
+   "season": 2013,
+   "constructor_id": "mercedes",
+   "driver_i": "lewis-hamilton",
+   "driver_j": "nico-rosberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -0.4846459756876397,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 890,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 1,
+   "pace_gap": -0.529406772882378,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 890,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.4535954567971112,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 891,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.1931332063936396,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 891,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.1518288115654722,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 891,
+   "season": 2013,
+   "constructor_id": "lotus-f1",
+   "driver_i": "kimi-raikkonen",
+   "driver_j": "romain-grosjean",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -0.6720539159931437,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 891,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.0918442386383961,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 891,
+   "season": 2013,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.2437288839927485,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 891,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.2969350840743537,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 891,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.1732099287088422,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 891,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.5992463875535529,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 892,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.0069397972615453,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 892,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.2911505538839375,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 892,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.1511178562174975,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 892,
+   "season": 2013,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -0.003049911806948,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 892,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.3691725204189637,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 892,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.5184086373036346,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 893,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.3410143986233448,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 893,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.6523546701701212,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 893,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.6741432350921899,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 893,
+   "season": 2013,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.1642849352509187,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 893,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -0.2338088509597344,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 893,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.594111147440649,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 893,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -0.0869064615332013,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 894,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.4375923405046372,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 894,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -0.0338289077072236,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 894,
+   "season": 2013,
+   "constructor_id": "lotus-f1",
+   "driver_i": "kimi-raikkonen",
+   "driver_j": "romain-grosjean",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 1,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.8793764178870234,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 894,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 1.334053638158495,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 894,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -1.1615100728635357,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 894,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.3257122721687633,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 894,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.7675450928498373,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 896,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.1044324193437399,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 896,
+   "season": 2013,
+   "constructor_id": "ferrari",
+   "driver_i": "felipe-massa",
+   "driver_j": "fernando-alonso",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -1.249250784200163,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 896,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.3593350119719144,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 896,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.8646657380801797,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 896,
+   "season": 2013,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -0.1803757807260244,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 896,
+   "season": 2013,
+   "constructor_id": "mercedes",
+   "driver_i": "lewis-hamilton",
+   "driver_j": "nico-rosberg",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "positive_q3_time",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.5198311556058273,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 896,
+   "season": 2013,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": 0.5741098039146562,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 896,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 1,
+   "pace_gap": -1.5519756455164777,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 897,
+   "season": 2013,
+   "constructor_id": "caterham",
+   "driver_i": "charles-pic",
+   "driver_j": "giedo-van-der-garde",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.5415452345300721,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 897,
+   "season": 2013,
+   "constructor_id": "force-india",
+   "driver_i": "adrian-sutil",
+   "driver_j": "paul-di-resta",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -0.8935110243217387,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 897,
+   "season": 2013,
+   "constructor_id": "lotus-f1",
+   "driver_i": "heikki-kovalainen",
+   "driver_j": "romain-grosjean",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 2,
+   "pace_gap": -1.4918170651042462,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 897,
+   "season": 2013,
+   "constructor_id": "marussia",
+   "driver_i": "jules-bianchi",
+   "driver_j": "max-chilton",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": 0.6587133836329478,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 897,
+   "season": 2013,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 2,
+   "pace_gap": -0.0441733641801244,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 897,
+   "season": 2013,
+   "constructor_id": "sauber",
+   "driver_i": "esteban-gutierrez",
+   "driver_j": "nico-hulkenberg",
+   "previous_stage_i": 0,
+   "previous_stage_j": 3,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 3,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "positive_q3_time",
+   "last_common_stage": 1,
+   "pace_gap": -1.5837487257166285,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 897,
+   "season": 2013,
+   "constructor_id": "williams",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "valtteri-bottas",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 2,
+   "stage_basis_i": "source_backed_rules_and_final_classification",
+   "stage_basis_j": "source_backed_rules_and_final_classification",
+   "last_common_stage": 1,
+   "pace_gap": -0.6626229335476543,
+   "source_ids": [
+    "2013_preseason_rules",
+    "2013_official_index"
+   ]
+  },
+  {
+   "event_id": 914,
+   "season": 2014,
+   "constructor_id": "force-india",
+   "driver_i": "nico-hulkenberg",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 2,
+   "pace_gap": -0.044635611843167,
+   "source_ids": [
+    "2014_usa_report"
+   ]
+  },
+  {
+   "event_id": 914,
+   "season": 2014,
+   "constructor_id": "lotus-f1",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "romain-grosjean",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 1,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 1,
+   "pace_gap": 1.0802628666205012,
+   "source_ids": [
+    "2014_usa_report"
+   ]
+  },
+  {
+   "event_id": 914,
+   "season": 2014,
+   "constructor_id": "red-bull",
+   "driver_i": "daniel-ricciardo",
+   "driver_j": "sebastian-vettel",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 1,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 1,
+   "pace_gap": 0.8133690619580067,
+   "source_ids": [
+    "2014_usa_report"
+   ]
+  },
+  {
+   "event_id": 914,
+   "season": 2014,
+   "constructor_id": "sauber",
+   "driver_i": "adrian-sutil",
+   "driver_j": "esteban-gutierrez",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 1,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 1,
+   "pace_gap": 0.705612523915421,
+   "source_ids": [
+    "2014_usa_report"
+   ]
+  },
+  {
+   "event_id": 914,
+   "season": 2014,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniil-kvyat",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 1,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 1,
+   "pace_gap": 0.3168743127543832,
+   "source_ids": [
+    "2014_usa_report"
+   ]
+  },
+  {
+   "event_id": 915,
+   "season": 2014,
+   "constructor_id": "force-india",
+   "driver_i": "nico-hulkenberg",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 1,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 1,
+   "pace_gap": 0.3168341495919169,
+   "source_ids": [
+    "2014_brazil_report",
+    "2014_brazil_preliminary_classification"
+   ]
+  },
+  {
+   "event_id": 915,
+   "season": 2014,
+   "constructor_id": "lotus-f1",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "romain-grosjean",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 1,
+   "pace_gap": -0.2717129279622652,
+   "source_ids": [
+    "2014_brazil_report",
+    "2014_brazil_preliminary_classification"
+   ]
+  },
+  {
+   "event_id": 915,
+   "season": 2014,
+   "constructor_id": "sauber",
+   "driver_i": "adrian-sutil",
+   "driver_j": "esteban-gutierrez",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 2,
+   "pace_gap": -0.7070806827318111,
+   "source_ids": [
+    "2014_brazil_report",
+    "2014_brazil_preliminary_classification"
+   ]
+  },
+  {
+   "event_id": 915,
+   "season": 2014,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniil-kvyat",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 1,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 1,
+   "pace_gap": 0.86015739830352,
+   "source_ids": [
+    "2014_brazil_report",
+    "2014_brazil_preliminary_classification"
+   ]
+  },
+  {
+   "event_id": 916,
+   "season": 2014,
+   "constructor_id": "caterham",
+   "driver_i": "kamui-kobayashi",
+   "driver_j": "will-stevens",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 1,
+   "pace_gap": 0.5294929727167403,
+   "source_ids": [
+    "2014_abu_dhabi_report"
+   ]
+  },
+  {
+   "event_id": 916,
+   "season": 2014,
+   "constructor_id": "force-india",
+   "driver_i": "nico-hulkenberg",
+   "driver_j": "sergio-perez",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 2,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 2,
+   "pace_gap": -0.141724072338131,
+   "source_ids": [
+    "2014_abu_dhabi_report"
+   ]
+  },
+  {
+   "event_id": 916,
+   "season": 2014,
+   "constructor_id": "lotus-f1",
+   "driver_i": "pastor-maldonado",
+   "driver_j": "romain-grosjean",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 1,
+   "stage_j": 1,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 1,
+   "pace_gap": -0.0894819831333474,
+   "source_ids": [
+    "2014_abu_dhabi_report"
+   ]
+  },
+  {
+   "event_id": 916,
+   "season": 2014,
+   "constructor_id": "mclaren",
+   "driver_i": "jenson-button",
+   "driver_j": "kevin-magnussen",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 2,
+   "pace_gap": 0.31655365454683,
+   "source_ids": [
+    "2014_abu_dhabi_report"
+   ]
+  },
+  {
+   "event_id": 916,
+   "season": 2014,
+   "constructor_id": "sauber",
+   "driver_i": "adrian-sutil",
+   "driver_j": "esteban-gutierrez",
+   "previous_stage_i": 0,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 2,
+   "stage_j": 1,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 1,
+   "pace_gap": 0.0710237667586215,
+   "source_ids": [
+    "2014_abu_dhabi_report"
+   ]
+  },
+  {
+   "event_id": 916,
+   "season": 2014,
+   "constructor_id": "toro-rosso",
+   "driver_i": "daniil-kvyat",
+   "driver_j": "jean-eric-vergne",
+   "previous_stage_i": 3,
+   "previous_stage_j": 0,
+   "previous_last_common_stage": 0,
+   "stage_i": 3,
+   "stage_j": 2,
+   "stage_basis_i": "reviewed_original_event_participation_not_final_position",
+   "stage_basis_j": "reviewed_original_event_participation_not_final_position",
+   "last_common_stage": 2,
+   "pace_gap": 0.1223756693701472,
+   "source_ids": [
+    "2014_abu_dhabi_report"
+   ]
+  }
+ ]
+}

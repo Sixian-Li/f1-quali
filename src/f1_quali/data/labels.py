@@ -32,8 +32,10 @@ def stage_limits(season, round_number, qualifying_format, eligible_field_size=No
     if 2017 <= season <= 2025:
         return 15, 10, "fia_2017_sporting;fia_2024_sporting"
     if season == 2026:
-        field = 22 if eligible_field_size is None or pd.isna(eligible_field_size) else int(
-            eligible_field_size
+        field = (
+            22
+            if eligible_field_size is None or pd.isna(eligible_field_size)
+            else int(eligible_field_size)
         )
         if field not in {20, 22, 24}:
             raise ValueError("2026 eligible field requires reviewed 20/22/24-car rule")
@@ -78,13 +80,14 @@ def _eligibility(row, size, limits, exclusion):
     return eligible, "positive_time_only_classification_stage_ambiguous"
 
 
-def build_labels(data):
+def build_labels(data, *, limits=stage_limits):
     """Create event/driver/stage rows with nullable eligibility and task flags.
 
     ``complete_pace`` means all eligible entrants have an interpretable timing
     outcome (valid time or a known no-time), not that all have a valid time.
     Invalid final labels and source gaps remain unknown; they never become zeros.
     Every consumer must apply its own annual cutoff and first-five exclusion.
+    ``limits`` supplies the reviewed stage quotas (2010--2015 use their own rules).
     """
     events, q = _checked_events(data)
     lookup = {(r.event_id, r.driver_id): r for _, r in q.iterrows()}
@@ -98,7 +101,7 @@ def build_labels(data):
         if not set(event_q.driver_id).issubset(set(roster.driver_id)):
             raise ValueError("Result outside actual entrant roster")
         exclusion = bool(event_q.classification_status.isin(EXCLUSIONS).any())
-        q2, q3, evidence = stage_limits(
+        q2, q3, evidence = limits(
             int(event.season),
             int(event["round"]),
             event.qualifying_format,
