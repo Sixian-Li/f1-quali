@@ -14,9 +14,14 @@ jobs:
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.13'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
       - run: python -m pip install -r requirements.lock
       - run: python -m pip install --no-deps --no-build-isolation -e .
       - run: python -m ruff check src tests scripts
+      - run: python scripts/build_rating_languages.py --check
+      - run: node scripts/test_rating_pages.mjs
       - run: python -m pytest -W error
       - run: python -m build --no-isolation
       - name: Install wheel in a separate environment and run outside the repository
