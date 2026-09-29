@@ -22,6 +22,7 @@ configs/v6.json
 docs/.nojekyll
 docs/PLOTLY-LICENSE.txt
 docs/data_and_reproduction.md
+docs/en.html
 docs/index.html
 docs/method.md
 docs/rating_explorer.md
@@ -36,9 +37,12 @@ ratings/2026-round-14.json
 ratings/README.md
 release-files.txt
 requirements.lock
+scripts/build_rating_languages.py
 scripts/export_leaderboard.py
+scripts/rating_page_en.json
 scripts/report_benchmarks.py
 scripts/report_m1r1_benchmarks.py
+scripts/test_rating_pages.mjs
 src/f1_quali/__init__.py
 src/f1_quali/baselines/__init__.py
 src/f1_quali/baselines/course.py
