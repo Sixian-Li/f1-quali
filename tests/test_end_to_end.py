@@ -19,7 +19,7 @@ from f1_quali.pipeline import forecast
 @pytest.fixture(scope="module")
 def fitted(tmp_path_factory):
     path = tmp_path_factory.mktemp("fitted")
-    run_demo(path)
+    run_demo(path, method="v6")
     return path
 
 

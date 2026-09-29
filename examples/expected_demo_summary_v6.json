@@ -3,10 +3,10 @@
   "kind": "synthetic",
   "last_event_top3": [
     "synthetic-driver-19",
-    "synthetic-driver-13",
+    "synthetic-driver-12",
     "synthetic-driver-18"
   ],
-  "method": "m1r1",
+  "method": "v6",
   "performance_evidence": false,
   "prediction_rows": 120,
   "year": 2024

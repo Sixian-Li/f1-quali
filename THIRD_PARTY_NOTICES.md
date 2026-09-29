@@ -48,4 +48,4 @@ versions are recorded in `requirements.lock`.
 The course-style baseline reconstructs the approach used in the author's earlier
 STATS 507 project, with explicit prediction cutoffs and same-season rolling fits.
 It is not a redistributed copy of the original course project. Experimental FastF1
-downloads used during research are not necessary for this selected v6 release.
+downloads used during research are not necessary for this release.

@@ -1,5 +1,6 @@
 {
   "data_cutoff": "2026-09-15T00:00:00Z",
+  "early_seasons": "2010-2015 retrospective reconstruction; actual session clocks unknown",
   "evaluation_status": "all displayed years have already been inspected",
   "f1db": {
     "release_published_at": "2026-09-13T17:19:19Z",
@@ -8,13 +9,31 @@
   },
   "files": {
     "baseline_comparison.csv": "b3dc5096c0e4bb501ed10455c67df6320ad78046d00abf30999a09a8e12edae7",
+    "m1r1_baseline_comparison.csv": "7b76f1810bfd86541cb393ed4d0f1431337fcef130f9f093ddb23254b2ecad9c",
+    "m1r1_training_years.csv": "4b6a38c8ca118fb5f5cffe19f34fe13f8904e1ca759481d45d00646fcb57fee4",
+    "m1r1_verification.json": "7261ee218430de1754f0ed51524e5c22c6dd0b2456962f6c9ebb0346f3992874",
+    "m1r1_yearly.csv": "4c4ce2b1dcd2a9cb99af0a7d7b456525d98dd06602a887b70d1cc01d1c06f879",
     "refactor_verification.json": "f52987e6228887d0503a86cd905aecc960c99a840d5df20b6861a4c8ab5fc271",
     "source_acquisition.json": "6825ef3264930990e6abaec3f8235ef9bf8d799faa50a7d992fd8f1f2c12fc9b",
     "training_years.csv": "6aa5b88504dfcd12b124b2123381d20ad202f6f0d64d6d5cad546e90cf9bad0b",
     "v6_yearly.csv": "2392808cd05553dd851a1113f06b9c12faa9e28b479f9f5d5ea3e990672a5e6d"
   },
-  "method": "memory_h12_mean_median_50_50",
+  "method": "m1r1",
+  "previous_method": {
+    "files": [
+      "v6_yearly.csv",
+      "training_years.csv",
+      "baseline_comparison.csv",
+      "refactor_verification.json"
+    ],
+    "method": "memory_h12_mean_median_50_50",
+    "research_lock": "763e7f1871a6a6d3",
+    "source_scorecard_manifest_sha256": "c931600e62e46fc6bcb0b5e2fb0208a19ce1c08c2e1964ae2722170d7e586a06"
+  },
   "raw_data_distributed": false,
-  "research_lock": "763e7f1871a6a6d3",
-  "source_scorecard_manifest_sha256": "c931600e62e46fc6bcb0b5e2fb0208a19ce1c08c2e1964ae2722170d7e586a06"
+  "research_lock": "m1r1_full_era_de17567786cf",
+  "seasons": [
+    2010,
+    2026
+  ]
 }
