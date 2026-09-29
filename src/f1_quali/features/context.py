@@ -57,7 +57,10 @@ def current_season(data, season):
     )
 
 
-def build_features(data, event, bundle, cfg, *, cutoff=None, roster=None):
+def build_features(
+    data, event, bundle, cfg, *, cutoff=None, roster=None, admit_practice=eligible_practice
+):
+    """``admit_practice`` selects weekend sessions; 2010--2015 use reviewed phase order."""
     verify_bundle(bundle)
     cutoff = pd.Timestamp(event.prediction_cutoff if cutoff is None else cutoff)
     if cutoff.tzinfo is None or pd.isna(cutoff):
@@ -91,7 +94,7 @@ def build_features(data, event, bundle, cfg, *, cutoff=None, roster=None):
     history = history[
         history.rank_percentile.notna() & history.prediction_cutoff.lt(cutoff)
     ].reset_index(drop=True)
-    practice = eligible_practice(data, int(event.event_id), cutoff)
+    practice = admit_practice(data, int(event.event_id), cutoff)
     latest = practice.drop_duplicates(["driver_id", "constructor_id"], keep="last")
     out = ent[["event_id", "season", "round", "driver_id", "constructor_id", "roster_status"]]
     out = out.merge(

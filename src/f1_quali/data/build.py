@@ -49,7 +49,8 @@ def fetch_evidence(cache, source, offline):
     )
 
 
-def official_warmup(db, cache, *, offline):
+def official_warmup(db, cache, *, offline, early_tables=False):
+    """Reviewed 2010--2015 evidence; ``early_tables`` also returns events/results."""
     races = db.table("races")
     races = races[races.year.between(2010, 2015)].sort_values(["year", "round"])
     drivers = db.table("drivers")
@@ -168,7 +169,7 @@ def official_warmup(db, cache, *, offline):
     paragraphs = parse_page(fetch_evidence(cache, supplemental, offline)).paragraphs
     if not all(f"{name} - DNS" in paragraphs for name in ["Will Stevens", "Roberto Merhi"]):
         raise ValueError("2015 DNS evidence changed")
-    pairs, achievements, _, _ = build_early_tables(
+    pairs, achievements, early_events, results = build_early_tables(
         races, qualifying, race_results, grid, pd.DataFrame(official), pd.DataFrame(events), reviews
     )
 
@@ -187,7 +188,8 @@ def official_warmup(db, cache, *, offline):
             frame[column] = pd.to_datetime(frame[column], utc=True)
         return frame
 
-    return canonical_roundtrip(pairs), canonical_roundtrip(achievements)
+    frames = [pairs, achievements, *([early_events, results] if early_tables else [])]
+    return tuple(canonical_roundtrip(frame) for frame in frames)
 
 
 def build_dataset(output, cache, *, offline=False):
