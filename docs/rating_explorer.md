@@ -1,38 +1,70 @@
-# Interactive driver rating history
+# Interactive RM research rating history
 
 **[Open the chart](https://sixian-li.github.io/f1-quali/)** to compare any of the
-84 drivers with available m1r1 snapshots from 2010–2026. Search by name or
-abbreviation, select multiple drivers, filter years, zoom, choose raw or smoothed
-curves, and export the selected viewport as CSV. The interface is in Chinese;
+84 drivers with available **RM** snapshots from 2010–2026. Search by name or
+abbreviation, select multiple drivers, filter years, zoom, adjust two smoothing
+windows and export the selected viewport as CSV. The interface is in Chinese;
 driver names and abbreviations are searchable in English.
 
 The published snapshot contains **7,248 points**: 7,226 historical pre-qualifying
 ratings across 343 events, plus 22 current ratings after **2026 Round 14**. The
 current cutoff is **2026-09-25 11:00 UTC**. This is a fixed snapshot, not a live feed.
-The scores use the selected [m1r1 method](method.md), with the same current values
-as the [22-driver leaderboard](../ratings/README.md).
 
-## Reading the chart
+## RM and the package's selected model
 
+RM is a research variant of [m1r1](method.md):
+
+- **R: more room for rookie changes.** The season-level innovation variance is
+  multiplied by `1 + 7 * 2^(-n / 20)`, where `n` counts prior main-qualifying
+  appearances at the start of the year. This permits larger moves in either
+  direction; it does not automatically award points to rookies.
+- **M: more weight on recent final positions.** The achievement mean uses a
+  three-month half-life. Its reliability still uses a one-year half-life and prior
+  mass 20; the achievement weight remains 0.6. Driver admission and the bounded
+  shared correction rules follow the same structure as m1r1, with annual rules
+  refitted for this variant on earlier years.
+
+This publication updates the **chart snapshot only**. The Python package's
+selected method, CLI, [22-driver leaderboard](../ratings/README.md), and published
+prediction benchmarks remain **m1r1**. They therefore need not match RM scores.
+The package does not provide an RM training command; the page displays saved RM
+outputs from the research implementation.
+
+RM remains a research candidate for discussion. The comparison used 2017–2022 for
+validation and 2023–2026 as already-seen diagnostics, not an untouched test set.
+Higher responsiveness increases early-career volatility, and prediction metrics
+were mixed; 2026 Top 3 selections did not improve in the research comparison.
+A smoother-looking curve is not evidence of better forecasts.
+
+## Reading and controlling the chart
+
+- The initial view shows the usual eight drivers in 2025–2026 with raw scores.
+  Select other drivers or years, or use **ANT / RUS · 2026** for that pairing.
 - Circles show the rating available before the corresponding qualifying session.
   The final diamonds include the Round 14 results. Historical points do not use
   future results; the last point of an old season is not its post-season rating.
 - Missing events and seasons are left blank. Dotted lines join consecutive seasons
   when the driver was present at both boundary events; annual fitted rules may change.
-- The optional smoothing applies two trailing three-point simple moving averages
-  to each driver's observed snapshots. Short initial windows use available points;
-  years do not reset the window and absences are not filled. Tooltips and the table
-  retain raw values. Smoothing does not alter the model.
+- Select **两次均线（可调）** to set the first and second trailing simple-moving-average
+  windows independently. The second pass averages the first pass's output.
+  Defaults are **3 / 3**; **1** bypasses that pass. Larger windows are smoother and
+  more delayed. Short initial windows use available points; years do not reset the
+  window and absences are not filled. The latest endpoint also enters the average.
+- Smoothing uses each driver's full prior history before applying the viewport
+  filter, so zooming does not restart it. Tooltips and the table retain raw values.
+  CSV includes raw, smoothed and displayed scores plus both window settings.
+  Smoothing only affects display; it does not change ratings or the model.
 - Dates in 2010–2015 are historical ordering proxies, not verified actual qualifying
   timestamps. Pre-2010 evidence is excluded, so the early history starts from a
   neutral prior. Scores are not a definitive cross-era ranking or win probabilities.
 
-## Sharing and publication
+## Sharing, sources and publication
 
 Share the chart URL directly. Alternatively, download `docs/index.html` and open
 it locally in a browser. All chart data, JavaScript and styles are embedded; no
 Python environment, account, external fonts or online chart service is required.
-When redistributing the HTML, retain its source attribution and the accompanying
+The complete Plotly license and source attribution are embedded in the HTML and
+must be retained when sharing it. The license is also in
 [Plotly license](PLOTLY-LICENSE.txt).
 
 GitHub Pages publishes the `main` branch's `/docs` directory. `.nojekyll` keeps the
@@ -41,10 +73,12 @@ its cutoff labels and this note, followed by a commit to `main`; the page does n
 fetch races or retrain anything. Research archives, fitted model files and private
 work logs are not included in this publication.
 
-The source HTML was checked against the locked historical scores and current
-leaderboard. It contains exactly the original embedded data, application code and
-styles; this public copy adds project and license links in the footer. Source HTML
-SHA-256: `f1191c29e1b9fc354febd66122a5e1e4f073a5fc02b59ad3273414edcb511d9c`.
+All RM points were checked against the source comparison, with exactly matching
+raw scores, default 3/3 smoothing, time and driver identities, and gap markers.
+The public copy preserves the standalone RM file's embedded data, application
+code and styles and adds project links in the footer. Offline source HTML
+SHA-256: `6dc9c03b70687aed8356a8c0755f06efad64c40f148e7db0fc5d59a50159d629`.
+The prior m1r1 page remains available in Git history.
 
 Historical identities and racing facts come from F1DB `v2026.14.0`; ratings are
 calculated by this project. See [third-party notices](../THIRD_PARTY_NOTICES.md)
