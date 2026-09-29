@@ -1,3 +1,4 @@
+.gitattributes
 .github/workflows/tests.yml
 .gitignore
 CONTRIBUTING.md
@@ -18,8 +19,12 @@ benchmarks/training_years.csv
 benchmarks/v6_yearly.csv
 configs/m1r1.json
 configs/v6.json
+docs/.nojekyll
+docs/PLOTLY-LICENSE.txt
 docs/data_and_reproduction.md
+docs/index.html
 docs/method.md
+docs/rating_explorer.md
 docs/research_journey.md
 docs/results_and_limitations.md
 examples/README.md

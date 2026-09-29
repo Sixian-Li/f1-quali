@@ -2,8 +2,9 @@
 
 Original code and documentation in this repository are licensed under MIT,
 copyright 2026 Sixian Li. This does not relicense external datasets or source
-documents. No source data archive, official HTML/PDF collection, original course
-repository, or third-party library implementation is bundled.
+documents. No source data archive, official HTML/PDF collection or original course
+repository is bundled. The standalone rating chart embeds Plotly.js under its
+MIT license, as described below.
 
 ## F1DB
 
@@ -40,6 +41,11 @@ collection. Downloading or separately redistributing those materials is subject
 to the source's terms. This project is independent and has no official affiliation.
 
 ## Software and course-method reference
+
+The standalone chart at `docs/index.html` embeds **Plotly.js 3.1.0**, copyright
+2012–2025 Plotly, Inc., under the MIT license. The complete notice is included in
+[docs/PLOTLY-LICENSE.txt](docs/PLOTLY-LICENSE.txt). The library is embedded unchanged
+from its distributed minified bundle, so the chart also works offline.
 
 NumPy, pandas, SciPy, PyArrow, Requests and development tools are installed as
 dependencies, not vendored. Their own license notices remain applicable; exact
