@@ -6,6 +6,10 @@
 
 **22 drivers · m1r1 · sorted from highest to lowest composite rating**
 
+The [interactive chart](https://sixian-li.github.io/f1-quali/) displays the separate
+**RM research snapshot**. This table remains the selected **m1r1** output, so its
+scores differ from the chart. [About RM and the chart](../docs/rating_explorer.md).
+
 [Back to the project](../README.md#driver-ratings) · [Download the score snapshot](2026-round-14-m1r1.json) · [Rating method](../docs/method.md#driver-ratings)
 
 This is the latest published rating snapshot in this repository, computed with the
