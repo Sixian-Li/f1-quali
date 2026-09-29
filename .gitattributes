@@ -1,0 +1,2 @@
+# Generated HTML preserves whitespace inside the vendored Plotly shader strings.
+docs/index.html linguist-generated=true -whitespace
