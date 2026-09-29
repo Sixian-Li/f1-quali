@@ -1,4 +1,4 @@
-"""The selected method and annual independently determined rating parameters."""
+"""The previous release method v6 and its annual rating parameters (``--method v6``)."""
 
 import json
 from importlib.resources import files

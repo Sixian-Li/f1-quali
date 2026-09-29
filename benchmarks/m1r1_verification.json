@@ -1,0 +1,111 @@
+{
+  "annual_models": {
+    "model_json_exactly_equal": 17,
+    "years": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  },
+  "baseline": {
+    "note": "The public baseline skips 3 events without usable practice (967, 1029, 1091); the research comparison imputed them.",
+    "rolling_ols_events_equal_to_research": 170
+  },
+  "clean_cli_replay": {
+    "all_checks_equal": true,
+    "benchmark_csvs_byte_identical": true,
+    "commands": "data, full-era, verify, prepare, train/evaluate 2010-2026, ratings, report scripts"
+  },
+  "dataset": {
+    "admitted_reviewed_early_pace_pairs": 136,
+    "command": "f1-quali data --offline; f1-quali full-era --offline",
+    "early_events": 115,
+    "early_pace_pairs": 1164,
+    "modern_canonical_equal_to_research_input": true,
+    "rows": {
+      "early_pairs": 1298,
+      "entries": 7226,
+      "events": 343,
+      "practice": 20332,
+      "qualifying": 7226,
+      "sessions": 1610
+    },
+    "tables_exactly_equal": [
+      "events",
+      "entries",
+      "qualifying",
+      "practice",
+      "sessions",
+      "drivers",
+      "calendar",
+      "early_pairs"
+    ]
+  },
+  "forecast_path": {
+    "equal_to_historical_replay": true,
+    "events_checked": [
+      1163,
+      1100
+    ],
+    "new_event_functional_check": "2026 R15 FP3 input, no results"
+  },
+  "fresh_holdout": false,
+  "predictions": {
+    "all_columns_exactly_equal": true,
+    "maximum_probability_difference": 0.0,
+    "rows": 7226,
+    "rows_2026": 308
+  },
+  "prepared": {
+    "feature_rows": 7226,
+    "network_snapshots": 343,
+    "tables_exactly_equal": [
+      "labels",
+      "pairs",
+      "complete_achievements",
+      "individual_achievements",
+      "quarantined_achievements",
+      "innovations",
+      "auxiliary_pairs",
+      "anchor_features",
+      "features"
+    ]
+  },
+  "ratings": {
+    "driver_layout_rows": 990,
+    "epochs_checked": [
+      "current_2026_r14 (cutoff 2026-09-25T11:00Z)",
+      "year_end_2025",
+      "year_end_2019",
+      "year_end_2012"
+    ],
+    "maximum_layout_score_difference": 0.0,
+    "maximum_score_difference": 0.0,
+    "ranks_equal": true
+  },
+  "remote_ci_executed": false,
+  "research_lock": "m1r1_full_era_de17567786cf",
+  "scope": "Public m1r1 implementation versus the locked research run m1r1_full_era_de17567786cf (artifacts/full_era_comparison_de17567786cf), same verified raw cache, macOS arm64, Python 3.13, OPENBLAS_NUM_THREADS=1.",
+  "v6_path_unchanged": {
+    "annual_models_equal": 11,
+    "predictions_equal": true,
+    "prepared_features_labels_equal": true,
+    "rating_files_byte_identical": 228,
+    "reference": "v6 release refactor outputs (lock 763e7f1871a6a6d3)"
+  },
+  "verified_at": "2026-09-28"
+}
