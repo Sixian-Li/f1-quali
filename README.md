@@ -6,7 +6,7 @@
 
 [![Python 3.13](https://img.shields.io/badge/Python-3.13-3776AB?style=flat-square)](https://www.python.org/) [![MIT License](https://img.shields.io/badge/License-MIT-2D8A6E?style=flat-square)](https://github.com/Sixian-Li/f1-quali/blob/main/LICENSE) [![Selected model m1r1](https://img.shields.io/badge/Model-m1r1-E10600?style=flat-square)](https://github.com/Sixian-Li/f1-quali/blob/main/docs/method.md)
 
-[RM interactive chart](https://sixian-li.github.io/f1-quali/) · [m1r1 ratings](https://github.com/Sixian-Li/f1-quali/blob/main/ratings/README.md) · [Rating method](#driver-ratings) · [Quick start](#quick-start) · [Results](#results) · [Documentation](#documentation)
+[RM chart · English](https://sixian-li.github.io/f1-quali/en.html) · [中文](https://sixian-li.github.io/f1-quali/) · [m1r1 ratings](https://github.com/Sixian-Li/f1-quali/blob/main/ratings/README.md) · [Rating method](#driver-ratings) · [Quick start](#quick-start) · [Results](#results) · [Documentation](#documentation)
 
 </div>
 
@@ -15,10 +15,12 @@ F1 Quali estimates **driver qualifying ability across seasons** and predicts
 their own right, and they also give the prediction model historical context.
 Every rating and prediction has an explicit information cutoff.
 
-**[Explore the RM research rating chart →](https://sixian-li.github.io/f1-quali/)**
+**Explore the RM rating chart: [English](https://sixian-li.github.io/f1-quali/en.html) · [中文](https://sixian-li.github.io/f1-quali/)**
 Compare any of 84 drivers with data from 2010–2026, through **2026 Round 14**.
 Select years, zoom, set each of two trailing moving-average windows independently,
-and export your selection as CSV. No installation or account is required.
+and export your selection as CSV. Switch languages in the page header; your
+driver selection, years, zoom and smoothing settings are shared when browser
+storage is available. No installation or account is required.
 RM allows greater changes for less-experienced drivers and places more weight on
 recent qualifying results. It is a research snapshot for discussion; the Python
 package, leaderboard and prediction results below continue to use **m1r1**.
