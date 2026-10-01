@@ -21,6 +21,10 @@ Select years, zoom, set each of two trailing moving-average windows independentl
 and export your selection as CSV. Switch languages in the page header; your
 driver selection, years, zoom and smoothing settings are shared when browser
 storage is available. No installation or account is required.
+The chart maps historical RM percentiles to a normal display scale with
+**mean/median 6.5 and standard deviation 2**. Scores may exceed 10 or fall below 0.
+Both moving averages are calculated on original RM scores before this mapping;
+hover and CSV retain those original scores.
 RM allows greater changes for less-experienced drivers and places more weight on
 recent qualifying results. It is a research snapshot for discussion; the Python
 package, leaderboard and prediction results below continue to use **m1r1**.
