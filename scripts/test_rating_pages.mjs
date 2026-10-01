@@ -3,20 +3,25 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
-import {resolve} from 'node:path';
+import {basename,resolve} from 'node:path';
 import vm from 'node:vm';
 
 const root=resolve(import.meta.dirname,'..');
 const hash=text=>createHash('sha256').update(text).digest('hex');
-const originalDataHash='cfa7cd535d5e0dfb224b6abf936725735ba6b77a07b57444fe03ed5ffd37a199';
+// Pinned from the previously published RM snapshot, before adding the display mapping.
+const originalRecordsHash='542acd4f91676cf012c278616cd0ba86fb5098c02905817ffddadcd9d57a016c';
+const mappingHash='6082ba7c2ec86228452b035b9f89c4a0a2bbfc6d6ea9a09452ba66eee1fcffe8';
 const originalPlotlyHash='122e3be346d66616944d0b83eaaf7242581508c3c1cfa0995a17af0d83eff770';
+const expectedMean=6.5,expectedSD=2;
 const paths={zh:process.argv[2]??resolve(root,'docs/index.html'),en:process.argv[3]??resolve(root,'docs/en.html')};
 const pages=Object.fromEntries(Object.entries(paths).map(([lang,path])=>{
   const html=readFileSync(path,'utf8');
   const raw=html.match(/<script type="application\/json" id="ratings-data">(.*?)<\/script>/s)[1];
   const scripts=Array.from(html.matchAll(/<script>([\s\S]*?)<\/script>/g),m=>m[1]);
   const template=html.replace(/<script\b[^>]*>.*?<\/script>/gs,'');
-  assert.equal(hash(raw),originalDataHash,'Every saved RM point and metadata must stay identical');
+  const parsed=JSON.parse(raw);
+  assert.equal(hash(JSON.stringify({drivers:parsed.drivers,slots:parsed.slots})),originalRecordsHash,'All original RM scores, default smoothing, identities and gaps are preserved');
+  assert.equal(hash(JSON.stringify(parsed.mapping)),mappingHash,'The reviewed frozen mapping is unchanged');
   assert.equal(hash(scripts[0]),originalPlotlyHash,'The bundled library is unchanged');
   assert.equal(scripts.length,2);
   assert(!/<script\b[^>]*\bsrc=/i.test(html));
@@ -25,8 +30,8 @@ const pages=Object.fromEntries(Object.entries(paths).map(([lang,path])=>{
   assert(!html.includes('/Users/'));assert(!html.includes('artifacts/'));
   assert.match(html,/Permission is hereby granted, free of charge/);
   assert.match(template,/2026-09-25 11:00 UTC/);
-  assert.match(template,/id="language-zh" href="index.html"/);
-  assert.match(template,/id="language-en" href="en.html"/);
+  assert(template.includes(`id="language-zh" href="${basename(paths.zh)}"`));
+  assert(template.includes(`id="language-en" href="${basename(paths.en)}"`));
   assert.equal((template.match(/aria-current="page"/g)||[]).length,1);
   assert.match(template,new RegExp(`id="language-${lang}"[^>]*aria-current="page"`));
   assert.match(template,new RegExp(`<html lang="${lang==='zh'?'zh-CN':'en'}">`));
@@ -90,6 +95,23 @@ async function launch(lang,storage=new Map()) {
 const average=(values,n)=>values.map((_,i)=>{
   const window=values.slice(Math.max(0,i-n+1),i+1);return window.reduce((a,b)=>a+b,0)/window.length;
 });
+const knots=data.mapping.knots;
+const interpolate=value=>{
+  let upper=knots.findIndex(k=>k[0]>=value);
+  if(upper>=0 && knots[upper][0]===value)return knots[upper][1];
+  if(upper<0)upper=knots.length-1;
+  upper=Math.max(1,upper);
+  const a=knots[upper-1],b=knots[upper];
+  return a[1]+(value-a[0])*(b[1]-a[1])/(b[0]-a[0]);
+};
+assert.equal(data.mapping.mean,expectedMean);assert.equal(data.mapping.sd,expectedSD);
+assert.equal(data.mapping.cap,null);assert.equal(data.mapping.sampleCount,7226);
+assert.equal(data.mapping.excludedCurrentEndpoints,22);
+assert.equal(data.mapping.id,'rm-normal-95a8937f20a9e29a');
+assert.equal(data.mapping.retrospectiveDisplayOnly,true);
+assert.equal(data.mapping.smoothingOrder,'smooth_RM_then_map');
+assert.equal(knots.length,7139);
+assert(knots.every((k,i)=>k.every(Number.isFinite)&&(i===0||(k[0]>knots[i-1][0]&&k[1]>knots[i-1][1]&&k[2]>knots[i-1][2]))));
 const rawBefore=JSON.stringify(data.drivers.map(d=>d.ratings));
 for(const lang of ['zh','en']) {
   const {api,get,context,errors,click,change,storage,quick}=await launch(lang);
@@ -98,10 +120,21 @@ for(const lang of ['zh','en']) {
   assert.equal(api.state.selected.size,8);assert.equal(traces().length,8);
   assert.equal(api.state.from,2025);assert.equal(api.state.to,2026);
   assert.equal(api.state.firstWindow,3);assert.equal(api.state.secondWindow,3);
+  for(const knot of knots)assert.equal(api.mapScore(knot[0]),knot[1]);
+  assert(api.mapScore(knots.at(-1)[0])>expectedMean+3*expectedSD);
+  assert(api.mapScore(knots.at(-1)[0]+.01)>knots.at(-1)[1]);
+  assert(api.mapScore(knots[0][0]-.01)<knots[0][1]);
+  for(const driver of data.drivers)for(const p of driver.ratings.RM) {
+    assert(Math.abs(api.mapScore(p[1])-interpolate(p[1]))<1e-10);
+    assert(Math.abs(api.mapScore(p[4])-interpolate(p[4]))<1e-10);
+  }
+  const past=[12,25,17,40,15];
+  assert.deepEqual(Array.from(api.smoothScores(past,3,2)),Array.from(api.smoothScores([...past,99],3,2)).slice(0,-1));
+
   await change('smoothing','smooth');await change('sma-first',7,'input');await change('sma-second',2,'input');
   for(const trace of traces()) {
     const driver=data.drivers.find(d=>d.id===trace.meta.driver);
-    const expected=average(average(driver.ratings.RM.map(p=>p[1]),7),2);
+    const expected=average(average(driver.ratings.RM.map(p=>p[1]),7),2).map(interpolate);
     Array.from(trace.y).filter(v=>v!==null).forEach((v,i)=>assert(Math.abs(v-expected[i])<1e-10));
   }
   await change('sma-first',0,'input');assert.equal(api.state.firstWindow,7);
@@ -113,9 +146,17 @@ for(const lang of ['zh','en']) {
   const rows=api.exportRows();assert.equal(rows.length,30);
   assert(rows.every(r=>r[0]==='RM'&&r[4]===2026&&r[15]===7&&r[16]===2));
   const endpoints=rows.filter(r=>r[6]==='current_after_round');assert.equal(endpoints.length,2);
-  assert.equal(endpoints.find(r=>r[1]==='kimi-antonelli')[10].toFixed(2),'84.34');
-  assert.equal(endpoints.find(r=>r[1]==='george-russell')[10].toFixed(2),'86.64');
-  assert.match(api.csvText(),/"first_sma_window","second_sma_window"/);
+  assert.equal(endpoints.find(r=>r[1]==='kimi-antonelli')[10].toFixed(2),(expectedMean+expectedSD*1.001039931876027).toFixed(2));
+  assert.equal(endpoints.find(r=>r[1]==='george-russell')[10].toFixed(2),(expectedMean+expectedSD*1.154602384743077).toFixed(2));
+  assert.match(api.csvText(),/"first_sma_window","second_sma_window","rm_raw_score","rm_smoothed_score"/);
+  assert.equal(endpoints.find(r=>r[1]==='kimi-antonelli')[17].toFixed(2),'84.34');
+  assert.equal(endpoints.find(r=>r[1]==='george-russell')[17].toFixed(2),'86.64');
+  assert(rows.every(r=>r[19]===expectedMean && r[20]===expectedSD && r[21]===data.mapping.id && r[22]==='smooth_RM_then_map'));
+  for(const row of rows) {
+    assert(Math.abs(row[10]-interpolate(row[17]))<1e-10);
+    assert(Math.abs(row[11]-interpolate(row[18]))<1e-10);
+  }
+
   await context.Plotly.relayout(api.graph,{'xaxis.range[0]':'2026-06-01','xaxis.range[1]':'2026-09-26'});
   assert(api.exportRows().every(r=>Date.parse(r[7])>=Date.parse('2026-06-01')));
   const other=lang==='zh'?'en':'zh';
@@ -129,17 +170,23 @@ for(const lang of ['zh','en']) {
     for(const id of ['driver-count','source-note','mode-note','selection-summary','summary-body','driver-list','selected-chips']) {
       assert(!/[\u4e00-\u9fff]/.test(get(id).textContent+get(id).innerHTML),id);
     }
-    assert.match(api.graph.layout.yaxis.title.text,/Qualifying rating/);
-    assert(traces().every(t=>t.hovertemplate.includes('Raw')));
+    assert.match(api.graph.layout.yaxis.title.text,/Mapped rating/);
+    assert(traces().every(t=>t.hovertemplate.includes('Mapped')));
     assert(traces().flatMap(t=>t.customdata).filter(Boolean).every(d=>!/[\u4e00-\u9fff]/.test(d.join(' '))));
   }
-  await change('y-scale','fixed');assert.deepEqual(Array.from(api.graph.layout.yaxis.range),[1,100]);
+  await change('y-scale','fixed');assert.deepEqual(Array.from(api.graph.layout.yaxis.range),[Math.floor(knots[0][1]-.2),Math.ceil(knots.at(-1)[1]+.2)]);
   await click('reset-zoom');assert.equal(new Date(api.state.range[0]).getUTCMonth(),0);
   await change('driver-filter','all');await change('driver-search','安东内利','input');
   assert.match(get('driver-list').innerHTML,/Kimi Antonelli/);assert.doesNotMatch(get('driver-list').innerHTML,/Lewis Hamilton/);
   await change('driver-search','Raikkonen','input');assert.match(get('driver-list').innerHTML,/Räikkönen/);
   await change('driver-search','','input');await click('clear');assert.equal(get('empty-chart').hidden,false);
   await click('select-visible');assert.equal(traces().length,84);
+  await change('smoothing','raw');
+  assert(traces().flatMap(t=>Array.from(t.y)).some(v=>v>10));
+  if(knots[0][1]<0)assert(traces().flatMap(t=>Array.from(t.y)).some(v=>v!==null && v<0));
+  assert(api.graph.layout.yaxis.range[1]>knots.at(-1)[1]);
+  assert(api.graph.layout.yaxis.range[0]<knots[0][1]);
+
   quick[0].click();await api.settled;
   assert.equal(traces().find(t=>t.meta.driver==='andre-lotterer').x.length,1);
   const alonso=data.drivers.find(d=>d.id==='fernando-alonso');
@@ -152,6 +199,6 @@ for(const lang of ['zh','en']) {
   assert.equal(JSON.stringify(api.data.drivers.map(d=>d.ratings)),rawBefore);
 }
 console.log(JSON.stringify({status:'PASS',scope:'actual_application_logic_not_browser_render',languages:['zh-CN','en'],
-  drivers:84,points_per_language:7248,original_RM_data_exact:true,Plotly_bundle_exact:true,
+  drivers:84,points_per_language:7248,original_RM_data_exact:true,Plotly_bundle_exact:true,normal_mean:expectedMean,normal_sd:expectedSD,uncapped:true,reference_points:7226,all_knots_verified:true,smooth_before_mapping:true,
   language_switch_preserves_controls_and_zoom:true,localized_static_dynamic_and_accessibility_text:true,
   causal_smoothing_and_CSV_equal:true,all_drivers_gaps_search_and_shortcuts:true},null,2));

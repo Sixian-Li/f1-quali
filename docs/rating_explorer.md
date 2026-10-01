@@ -13,6 +13,35 @@ The published snapshot contains **7,248 points**: 7,226 historical pre-qualifyin
 ratings across 343 events, plus 22 current ratings after **2026 Round 14**. The
 current cutoff is **2026-09-25 11:00 UTC**. This is a fixed snapshot, not a live feed.
 
+## Display scale: mean 6.5, standard deviation 2
+
+The chart uses a frozen historical-percentile mapping to a normal distribution
+with **mean and median 6.5, standard deviation 2**. It is not a score out of 10:
+there is no upper or lower cap. The reference sample spans approximately
+**−1.12 to 14.12**; the top 1% threshold is approximately **11.15**.
+
+The reference pools the **7,226 pre-qualifying RM ratings** from 2010 Round 1
+through 2026 Round 14, with equal weight per driver-event. The 22 extra current
+endpoints are excluded from fitting the scale. For a raw score `x`, tied scores
+share the midrank percentile:
+
+```text
+p = (number below x + 0.5 × number equal to x) / 7,226
+mapped score = 6.5 + 2 × inverse_standard_normal_CDF(p)
+```
+
+The 7,139 unique raw scores define fixed mapping knots. Values between knots use
+linear interpolation in raw-score/mapped-score space; values outside the
+reference continue the nearest segment's slope. Selecting drivers, years or
+smoothing windows does not refit this reference. Ties are preserved, so the
+reference's actual population standard deviation is approximately 1.999816.
+
+This transformation preserves ordering but changes score differences. It is a
+retrospective display calibration using the whole reference period, not a feature
+that was available to historical forecasts. The original cutoff-aware RM scores
+remain embedded unchanged; the mapping never enters the prediction model.
+Mapping ID: `rm-normal-95a8937f20a9e29a`.
+
 ## RM and the package's selected model
 
 RM is a research variant of [m1r1](method.md):
@@ -41,11 +70,13 @@ A smoother-looking curve is not evidence of better forecasts.
 
 ## Reading and controlling the chart
 
-- The initial view shows the usual eight drivers in 2025–2026 with raw scores.
+- The initial view shows the usual eight drivers in 2025–2026 with unsmoothed
+  mapped scores.
   Select other drivers or years, or use **ANT / RUS · 2026** for that pairing.
-- Circles show the rating available before the corresponding qualifying session.
-  The final diamonds include the Round 14 results. Historical points do not use
-  future results; the last point of an old season is not its post-season rating.
+- Circles show mapped pre-qualifying rating snapshots. The final diamonds include
+  the Round 14 results. The underlying historical RM ratings do not use future
+  results; their display scale uses the full-period reference described above.
+  The last point of an old season is not its post-season rating.
 - Missing events and seasons are left blank. Dotted lines join consecutive seasons
   when the driver was present at both boundary events; annual fitted rules may change.
 - Select **Two-pass SMA / 两次均线（可调）** to set the first and second trailing simple-moving-average
@@ -53,10 +84,15 @@ A smoother-looking curve is not evidence of better forecasts.
   Defaults are **3 / 3**; **1** bypasses that pass. Larger windows are smoother and
   more delayed. Short initial windows use available points; years do not reset the
   window and absences are not filled. The latest endpoint also enters the average.
-- Smoothing uses each driver's full prior history before applying the viewport
-  filter, so zooming does not restart it. Tooltips and the table retain raw values.
-  CSV includes raw, smoothed and displayed scores plus both window settings.
-  Smoothing only affects display; it does not change ratings or the model.
+- Both averages operate on the **original RM scores**, and the result is then
+  mapped to the new display scale. Smoothing uses each driver's full prior
+  history before applying the viewport filter, so zooming does not restart it.
+  A smoothed curve need not itself have mean 6.5 or standard deviation 2.
+- The chart, driver list and table use mapped scores; the table always shows
+  unsmoothed mapped scores. Hover also reports the original RM score. CSV retains
+  mapped raw/smoothed scores, original RM raw/smoothed scores, the display mode,
+  both windows, mapping parameters and version, and missing-teammate-evidence
+  flags. Filtering and smoothing do not change the model.
 - Dates in 2010–2015 are historical ordering proxies, not verified actual qualifying
   timestamps. Pre-2010 evidence is excluded, so the early history starts from a
   neutral prior. Scores are not a definitive cross-era ranking or win probabilities.
@@ -78,14 +114,15 @@ its cutoff labels and this note, followed by a commit to `main`; the page does n
 fetch races or retrain anything. Research archives, fitted model files and private
 work logs are not included in this publication.
 
-All RM points were checked against the source comparison, with exactly matching
-raw scores, default 3/3 smoothing, time and driver identities, and gap markers.
-Both language pages preserve the standalone RM file's embedded rating data
-exactly. Translations, language links, shared viewport preferences and responsive
-header styling are presentation changes; the rating calculations and saved
-values are unchanged. Original offline source HTML
-SHA-256: `6dc9c03b70687aed8356a8c0755f06efad64c40f148e7db0fc5d59a50159d629`.
-The prior m1r1 page remains available in Git history.
+All RM points retain exactly matching original scores, default 3/3 smoothing,
+time and driver identities, and gap markers. Both language pages use the same
+frozen mapping and apply it only to derived display values. The published pages
+match the reviewed offline mean-6.5/SD-2 files except for the language-link
+filenames. Original Chinese source HTML SHA-256:
+`1147e43bfd57fbd7d0428f244710b295e26a22fa981dadce5602ddde4a0e3955`;
+English source SHA-256:
+`2992e39dcc2f7d880a724a5cdc9d08a1156910627a516aeaa5dd13299b89c887`.
+The previous original-scale RM and m1r1 pages remain available in Git history.
 
 The Chinese page is the source for shared markup, styles and application logic.
 After an interface edit, update `scripts/rating_page_en.json` and run:
@@ -98,9 +135,10 @@ node scripts/test_rating_pages.mjs
 
 The builder leaves the bundled Plotly library and rating JSON untouched and
 fails on missing or stale translations. The offline JavaScript checks execute
-both pages' actual application scripts with DOM and Plotly test doubles, compare
-their data with the original RM snapshot hash, and verify language switching,
-smoothing, CSV and zoom behavior. They do not replace browser rendering checks.
+both pages' actual application scripts with DOM and Plotly test doubles, check
+the original RM records and frozen mapping against pinned hashes, and verify all
+mapping knots, smoothing-before-mapping, uncapped axes, language switching, CSV
+and zoom behavior. They do not replace browser rendering checks.
 
 Historical identities and racing facts come from F1DB `v2026.14.0`; ratings are
 calculated by this project. See [third-party notices](../THIRD_PARTY_NOTICES.md)
