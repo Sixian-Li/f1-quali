@@ -1,0 +1,193 @@
+{
+  "annual_models": {
+    "models": 17,
+    "numeric_max_abs_error": 0.0,
+    "only_added_field": "method=rm",
+    "years": [
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  },
+  "artifact_identity_differences": [],
+  "checked_environment": {
+    "machine": "arm64",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "pyarrow": "24.0.0",
+    "python": "3.13.9",
+    "scipy": "1.18.1",
+    "system": "Darwin"
+  },
+  "comparison_policy": "Exact numeric equality; public model adds method=rm and prediction method label RM becomes rm. Timestamp storage units normalize to the same UTC instants.",
+  "display": {
+    "current_22_match_chart_exact": true,
+    "id": "rm-normal-95a8937f20a9e29a",
+    "independent_scipy_max_abs_error": 3.552713678800501e-15,
+    "knots": 7139,
+    "mean": 6.5,
+    "prediction_inputs_unchanged": true,
+    "rebuilt_knots_exact": true,
+    "reference_points": 7226,
+    "retrospective_display_only": true,
+    "same_reference_as_chart": true,
+    "sd": 2
+  },
+  "inputs": {
+    "annual_profiles": {
+      "changed_identity_columns": [],
+      "compared_columns": 5,
+      "numeric_max_abs_error": 0.0,
+      "rows": 1428
+    },
+    "auxiliary_pairs": {
+      "exact": true,
+      "rows": 3489
+    },
+    "complete_achievements": {
+      "exact": true,
+      "rows": 5082
+    },
+    "control_initializer": {
+      "changed_identity_columns": [],
+      "compared_columns": 68,
+      "numeric_max_abs_error": 0.0,
+      "rows": 7226
+    },
+    "dataset/calendar": {
+      "exact": true,
+      "rows": 343
+    },
+    "dataset/drivers": {
+      "exact": true,
+      "rows": 82
+    },
+    "dataset/early_pairs": {
+      "exact": true,
+      "rows": 1298
+    },
+    "dataset/entries": {
+      "exact": true,
+      "rows": 7226
+    },
+    "dataset/events": {
+      "exact": true,
+      "rows": 343
+    },
+    "dataset/practice": {
+      "exact": true,
+      "rows": 20332
+    },
+    "dataset/qualifying": {
+      "exact": true,
+      "rows": 7226
+    },
+    "dataset/sessions": {
+      "exact": true,
+      "rows": 1610
+    },
+    "features": {
+      "changed_identity_columns": [],
+      "compared_columns": 68,
+      "numeric_max_abs_error": 0.0,
+      "rows": 7226
+    },
+    "individual_achievements": {
+      "exact": true,
+      "rows": 7088
+    },
+    "innovations": {
+      "exact": true,
+      "rows": 6978
+    },
+    "labels": {
+      "exact": true,
+      "rows": 21678
+    },
+    "pairs": {
+      "exact": true,
+      "rows": 3612
+    },
+    "rating_networks": {
+      "individually_admitted_neutral_additions_verified": 1,
+      "numeric_max_abs_error": 0.0,
+      "snapshots": 343
+    }
+  },
+  "method": "rm",
+  "outputs": {
+    "endpoint_2019": {
+      "changed_identity_columns": [],
+      "compared_columns": 79,
+      "numeric_max_abs_error": 0.0,
+      "rows": 20
+    },
+    "endpoint_2022": {
+      "changed_identity_columns": [],
+      "compared_columns": 79,
+      "numeric_max_abs_error": 0.0,
+      "rows": 20
+    },
+    "endpoint_2025": {
+      "changed_identity_columns": [],
+      "compared_columns": 79,
+      "numeric_max_abs_error": 0.0,
+      "rows": 20
+    },
+    "endpoint_2026": {
+      "changed_identity_columns": [],
+      "compared_columns": 79,
+      "numeric_max_abs_error": 0.0,
+      "rows": 22
+    },
+    "event_metrics": {
+      "changed_identity_columns": [],
+      "compared_columns": 46,
+      "numeric_max_abs_error": 0.0,
+      "rows": 343
+    },
+    "predictions": {
+      "changed_identity_columns": [],
+      "compared_columns": 92,
+      "numeric_max_abs_error": 0.0,
+      "rows": 7226
+    },
+    "raw_probability_metrics": {
+      "changed_identity_columns": [],
+      "compared_columns": 46,
+      "numeric_max_abs_error": 0.0,
+      "rows": 343
+    }
+  },
+  "package_version": "0.3.0",
+  "reference_case": "rating_responsiveness_53cb454c565c/RM",
+  "reference_case_manifest_sha256": "2bf1e66b19a70af8d50013775a775754a3e5d1b0dd52ef0c0f0475295dcf9a71",
+  "scope_limitations": [
+    "Numerical equivalence was checked on macOS arm64; cross-platform CI is a separate check.",
+    "Historical years have already been inspected; this audit is not an untouched prediction test.",
+    "The original verified source cache is not distributed; the recorded fresh-source checksum limitation remains."
+  ],
+  "source": {
+    "current_rating_cutoff": "2026-09-25T11:00:00Z",
+    "f1db_sha256": "8a92b898bc237bd3b0a86fe5665ebe0e8f8328f126e2422ca9946d175d66dfb4",
+    "f1db_version": "v2026.14.0",
+    "fresh_remote_acquisition_verified": false,
+    "last_result": "2026 R14",
+    "original_verified_cache_used": true
+  },
+  "status": "PASS"
+}

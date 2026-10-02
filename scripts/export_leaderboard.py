@@ -1,9 +1,9 @@
 """Turn `f1-quali ratings` output into a dated public leaderboard snapshot.
 
-Example (after the documented m1r1 workflow):
+Example (after the documented RM workflow):
 
     python scripts/export_leaderboard.py --ratings runs/ratings \
-        --data data/full_era --cache data/raw --output ratings/2026-round-14-m1r1.json
+        --data data/full_era --cache data/raw --output ratings/2026-round-14-rm.json
 
 Driver names come from the dataset; team and event display names from the pinned
 F1DB release in the cache. The JSON keeps full precision; the printed Markdown
@@ -32,6 +32,9 @@ def main():
     args = parser.parse_args()
     verify(args.ratings, "ratings")
     snapshot = json.loads((args.ratings / "ratings.json").read_text())
+    method = snapshot["method"]
+    if method not in {"rm", "m1r1"}:
+        raise ValueError("Expected an RM or m1r1 rating snapshot")
     table = pd.read_parquet(args.ratings / "ratings.parquet")
     data, _ = load_full_era(args.data)
     source = resource("sources")["f1db"]
@@ -53,14 +56,16 @@ def main():
             "achievement_bonus_internal": float(row.achievement_bonus),
             "rule_correction_internal": float(row.joint_driver_delta),
             "teammate_comparisons": int(row.teammate_comparisons),
+            **({"mapped_rating": float(row.mapped_score)} if method == "rm" else {}),
         }
         for row in table.itertuples()
     ]
     manifest = json.loads((args.ratings / "manifest.json").read_text())
     output = {
         "schema": "f1-quali.rating-leaderboard.v1",
-        "method": "m1r1",
-        "research_lock": "m1r1_full_era_de17567786cf",
+        "method": method,
+        "research_lock": ("rating_responsiveness_53cb454c565c/RM" if method == "rm"
+                          else "m1r1_full_era_de17567786cf"),
         "season": int(event.season),
         "after_round": int(event["round"]),
         "after_event_id": int(event.event_id),
@@ -77,7 +82,9 @@ def main():
         "display_decimals": 2,
         "rating_definition": (
             "teammate ability plus fixed 0.6 x individually admitted final-qualifying "
-            "achievement (one-year memory, no floor), with Top3-trained shared driver "
+            + ("achievement (three-month mean, one-year reliability, no floor), "
+               if method == "rm" else "achievement (one-year memory, no floor), ")
+            + "with Top3-trained shared driver "
             "corrections; includes car/seat effects"
         ),
         "teammate_ability_definition": "teammate network ability with the shared correction",
@@ -97,14 +104,22 @@ def main():
             "original_raw_cache_distributed": False,
         },
         "drivers": drivers,
+        **({"display_mapping": snapshot["display_mapping"]} if method == "rm" else {}),
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n")
-    print("| Rank | Driver | Team | **Rating / 100** | Teammate ability / 100 | Comparisons |")
-    print("| ---: | --- | --- | ---: | ---: | ---: |")
+    if method == "rm":
+        print("| Rank | Driver | Team | **Mapped rating** | Original RM / 100 | Teammate ability / 100 | Comparisons |")
+        print("| ---: | --- | --- | ---: | ---: | ---: | ---: |")
+    else:
+        print("| Rank | Driver | Team | **Rating / 100** | Teammate ability / 100 | Comparisons |")
+        print("| ---: | --- | --- | ---: | ---: | ---: |")
     for d in drivers:
+        mapped = f"**{d['mapped_rating']:.2f}** | " if method == "rm" else ""
+        raw = (f"{d['composite_rating']:.2f}" if method == "rm"
+               else f"**{d['composite_rating']:.2f}**")
         print(
-            f"| {d['rank']} | {d['driver']} | {d['team']} | **{d['composite_rating']:.2f}** | "
+            f"| {d['rank']} | {d['driver']} | {d['team']} | {mapped}{raw} | "
             f"{d['teammate_ability']:.2f} | {d['teammate_comparisons']} |"
         )
 

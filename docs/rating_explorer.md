@@ -1,4 +1,4 @@
-# Interactive RM research rating history
+# Interactive RM rating history
 
 **[English](https://sixian-li.github.io/f1-quali/en.html) · [中文版](https://sixian-li.github.io/f1-quali/)** — compare any of the
 84 drivers with available **RM** snapshots from 2010–2026. Search by name or
@@ -42,9 +42,9 @@ that was available to historical forecasts. The original cutoff-aware RM scores
 remain embedded unchanged; the mapping never enters the prediction model.
 Mapping ID: `rm-normal-95a8937f20a9e29a`.
 
-## RM and the package's selected model
+## RM and the Python package
 
-RM is a research variant of [m1r1](method.md):
+RM is the default from version 0.3.0, derived from [m1r1](method.md):
 
 - **R: more room for rookie changes.** The season-level innovation variance is
   multiplied by `1 + 7 * 2^(-n / 20)`, where `n` counts prior main-qualifying
@@ -56,13 +56,13 @@ RM is a research variant of [m1r1](method.md):
   shared correction rules follow the same structure as m1r1, with annual rules
   refitted for this variant on earlier years.
 
-This publication updates the **chart snapshot only**. The Python package's
-selected method, CLI, [22-driver leaderboard](../ratings/README.md), and published
-prediction benchmarks remain **m1r1**. They therefore need not match RM scores.
-The package does not provide an RM training command; the page displays saved RM
-outputs from the research implementation.
+The default Python/CLI workflow and [22-driver leaderboard](../ratings/README.md)
+now use **RM**, including the same fixed display mapping. The chart still displays
+saved snapshots and does not train in the browser. See [the RM implementation](rm.md)
+and [reproduction commands](data_and_reproduction.md). The original
+[m1r1 leaderboard](../ratings/m1r1.md) and method remain available for comparison.
 
-RM remains a research candidate for discussion. The comparison used 2017–2022 for
+RM was selected for its rating response; this is not a claim of universal predictive improvement. The comparison used 2017–2022 for
 validation and 2023–2026 as already-seen diagnostics, not an untouched test set.
 Higher responsiveness increases early-career volatility, and prediction metrics
 were mixed; 2026 Top 3 selections did not improve in the research comparison.
@@ -94,8 +94,8 @@ A smoother-looking curve is not evidence of better forecasts.
   both windows, mapping parameters and version, and missing-teammate-evidence
   flags. Filtering and smoothing do not change the model.
 - Dates in 2010–2015 are historical ordering proxies, not verified actual qualifying
-  timestamps. Pre-2010 evidence is excluded, so the early history starts from a
-  neutral prior. Scores are not a definitive cross-era ranking or win probabilities.
+  timestamps. Pre-2010 results are excluded from rating observations; career counts only
+  set each driver’s annual prior variance, whose mean is neutral. Scores are not a definitive cross-era ranking or win probabilities.
 
 ## Sharing, sources and publication
 
@@ -116,9 +116,9 @@ work logs are not included in this publication.
 
 All RM points retain exactly matching original scores, default 3/3 smoothing,
 time and driver identities, and gap markers. Both language pages use the same
-frozen mapping and apply it only to derived display values. The published pages
-match the reviewed offline mean-6.5/SD-2 files except for the language-link
-filenames. Original Chinese source HTML SHA-256:
+frozen mapping and apply it only to derived display values. The rating records and mapping remain those of the reviewed offline
+mean-6.5/SD-2 files; the package-status notes and language-link filenames have
+since been updated. Historical Chinese source HTML SHA-256:
 `1147e43bfd57fbd7d0428f244710b295e26a22fa981dadce5602ddde4a0e3955`;
 English source SHA-256:
 `2992e39dcc2f7d880a724a5cdc9d08a1156910627a516aeaa5dd13299b89c887`.

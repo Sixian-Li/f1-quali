@@ -78,7 +78,8 @@ def _structure(pairs, cfg):
     return keys, lookup, design, prior
 
 
-def fit_ratings(observations, cutoff, cfg, *, target_event_id, penalty=0.5, achievements=None):
+def fit_ratings(observations, cutoff, cfg, *, target_event_id, penalty=0.5, achievements=None,
+                annual_variance=None):
     """Fit independent historical teammate evidence with a fixed result penalty."""
     cfg = copy.deepcopy(cfg)
     for key in ["lifetime_sd", "innovation_sd", "layout_sd", "prior_weight"]:
@@ -97,6 +98,10 @@ def fit_ratings(observations, cutoff, cfg, *, target_event_id, penalty=0.5, achi
     if len(pairs) and pairs.season.gt(cutoff.year).any():
         raise ValueError("A future season cannot enter a historical lifetime rating")
     keys, lookup, design, prior = _structure(pairs, cfg)
+    if annual_variance is not None:
+        from f1_quali.ratings.rookie import adjusted_prior
+
+        prior = adjusted_prior(keys, prior, cfg, annual_variance)
     event_weights = (
         pairs.recency_weight.to_numpy()
         / pairs.groupby("event_id").event_id.transform("size").to_numpy()

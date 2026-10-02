@@ -1,0 +1,1026 @@
+{
+  "achievement_beta": 0.6,
+  "achievement_memory": {
+    "admission": "individual",
+    "floor": 0.0,
+    "mass_half_life": 1.0,
+    "mean_half_life": 0.25,
+    "prior_mass": 20.0
+  },
+  "alpha": {
+    "pole": 3.0,
+    "q2": 0.3,
+    "q3": 3.0,
+    "top3": 0.3
+  },
+  "description": "RM: rookie annual variance 1 + 7 * 2^(-prior_main_Q_appearances / 20), three-month achievement mean memory, one-year reliability, fixed beta 0.6; no pair correction or returning-driver decay.",
+  "first_optimized_ordinal": 6,
+  "history_half_life_events": 6.0,
+  "joint_rules": {
+    "active": [
+      0,
+      1,
+      2,
+      4,
+      5
+    ],
+    "settings": {
+      "anchor_weight": 0.05,
+      "driver_anchor_scale": 0.1,
+      "driver_cap": 0.2,
+      "driver_prior_mass": 6.0,
+      "fast_half_life": 0.5,
+      "layout_anchor_scale": 0.025,
+      "layout_cap": 0.075,
+      "layout_prior_mass": 3.0,
+      "memory_floor": 0.25,
+      "outcome_penalty": 0.25,
+      "outcome_tau": 0.4,
+      "pace_sigma": 0.4,
+      "rule_ridge": 0.05,
+      "shared_half_life": 2.0,
+      "slow_half_life": 4.0,
+      "student_df": 4.0,
+      "teammate_weight": 0.1
+    }
+  },
+  "memory_center": "mean_median_50_50",
+  "memory_half_life": 12.0,
+  "method": "rm",
+  "minimum_events": 12,
+  "predecessor": {
+    "method": "m1r1",
+    "research_lock": "m1r1_full_era_de17567786cf"
+  },
+  "rating_years": {
+    "2010": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 2.5,
+      "composite_calibration_slope": 2.5,
+      "config": {
+        "ability_sd": 0.2031333500308033,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.5,
+        "half_life_years": 4.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.1,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "initial_constants_not_future_fit": true,
+      "parameters_available_before": "2010-01-01T00:00:00+00:00",
+      "penalty": 0.5
+    },
+    "2011": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 2.5,
+      "composite_calibration_slope": 2.5,
+      "config": {
+        "ability_sd": 0.2031333500308033,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.5,
+        "half_life_years": 4.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.1,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "initial_constants_not_future_fit": true,
+      "parameters_available_before": "2011-01-01T00:00:00+00:00",
+      "penalty": 0.5
+    },
+    "2012": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 2.5,
+      "composite_calibration_slope": 2.5,
+      "config": {
+        "ability_sd": 0.2031333500308033,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.5,
+        "half_life_years": 4.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.1,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "initial_constants_not_future_fit": true,
+      "parameters_available_before": "2012-01-01T00:00:00+00:00",
+      "penalty": 0.5
+    },
+    "2013": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 2.5,
+      "composite_calibration_slope": 2.5,
+      "config": {
+        "ability_sd": 0.2031333500308033,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.5,
+        "half_life_years": 4.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.1,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "initial_constants_not_future_fit": true,
+      "parameters_available_before": "2013-01-01T00:00:00+00:00",
+      "penalty": 0.5
+    },
+    "2014": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 2.5,
+      "composite_calibration_slope": 2.5,
+      "config": {
+        "ability_sd": 0.2031333500308033,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.5,
+        "half_life_years": 4.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.1,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "initial_constants_not_future_fit": true,
+      "parameters_available_before": "2014-01-01T00:00:00+00:00",
+      "penalty": 0.5
+    },
+    "2015": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 2.5,
+      "composite_calibration_slope": 2.5,
+      "config": {
+        "ability_sd": 0.2031333500308033,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.5,
+        "half_life_years": 4.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.1,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "initial_constants_not_future_fit": true,
+      "parameters_available_before": "2015-01-01T00:00:00+00:00",
+      "penalty": 0.5
+    },
+    "2016": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 2.5,
+      "composite_calibration_slope": 2.5,
+      "config": {
+        "ability_sd": 0.2031333500308033,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.5,
+        "half_life_years": 4.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.1,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "parameters_available_before": "2016-01-01T00:00:00+00:00",
+      "penalty": 0.5
+    },
+    "2017": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 2.5,
+      "composite_calibration_slope": 2.5,
+      "config": {
+        "ability_sd": 0.2031333500308033,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.5,
+        "half_life_years": 4.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.1,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "parameters_available_before": "2017-01-01T00:00:00+00:00",
+      "penalty": 0.5
+    },
+    "2018": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 2.5,
+      "composite_calibration_slope": 2.5,
+      "config": {
+        "ability_sd": 0.2031333500308033,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.5,
+        "half_life_years": 4.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.1,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "parameters_available_before": "2018-01-01T00:00:00+00:00",
+      "penalty": 0.5
+    },
+    "2019": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 2.5,
+      "composite_calibration_slope": 2.5,
+      "config": {
+        "ability_sd": 0.2031333500308033,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.5,
+        "half_life_years": 4.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.1,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "parameters_available_before": "2019-01-01T00:00:00+00:00",
+      "penalty": 0.5
+    },
+    "2020": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 3.0760188684632097,
+      "composite_calibration_slope": 3.129438197760324,
+      "config": {
+        "ability_sd": 0.21055482263138342,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.25,
+        "half_life_years": 2.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.25,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.5,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "parameters_available_before": "2020-01-01T00:00:00+00:00",
+      "penalty": 0.5
+    },
+    "2021": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 3.687280214924828,
+      "composite_calibration_slope": 2.348686821838168,
+      "config": {
+        "ability_sd": 0.2624780692593293,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.25,
+        "half_life_years": 2.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.25,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "parameters_available_before": "2021-01-01T00:00:00+00:00",
+      "penalty": 0.5
+    },
+    "2022": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 3.7546373460497526,
+      "composite_calibration_slope": 2.572474314719211,
+      "config": {
+        "ability_sd": 0.21055482263138342,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.25,
+        "half_life_years": 2.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.25,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.5,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "parameters_available_before": "2022-01-01T00:00:00+00:00",
+      "penalty": 0.25
+    },
+    "2023": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 3.5077074818862592,
+      "composite_calibration_slope": 2.9438732603330493,
+      "config": {
+        "ability_sd": 0.2624780692593293,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.25,
+        "half_life_years": 2.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.25,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "parameters_available_before": "2023-01-01T00:00:00+00:00",
+      "penalty": 0.25
+    },
+    "2024": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 3.5077074818862592,
+      "composite_calibration_slope": 2.9438732603330493,
+      "config": {
+        "ability_sd": 0.2624780692593293,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.25,
+        "half_life_years": 2.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.25,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "parameters_available_before": "2024-01-01T00:00:00+00:00",
+      "penalty": 0.25
+    },
+    "2025": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 3.5077074818862592,
+      "composite_calibration_slope": 2.9438732603330493,
+      "config": {
+        "ability_sd": 0.2624780692593293,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.25,
+        "half_life_years": 2.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.25,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "parameters_available_before": "2025-01-01T00:00:00+00:00",
+      "penalty": 0.25
+    },
+    "2026": {
+      "achievement_beta": 0.6,
+      "calibration_slope": 3.5077074818862592,
+      "composite_calibration_slope": 2.9438732603330493,
+      "config": {
+        "ability_sd": 0.2624780692593293,
+        "achievement_prior_mass": 20.0,
+        "calibration": "positive_slope_no_intercept_unweighted_logloss_on_past_oos_pairs",
+        "calibration_min_pairs": 50,
+        "calibration_slope_bounds": [
+          0.05,
+          12.5
+        ],
+        "display_ability_scale": 0.4,
+        "display_layout_scale": 0.1,
+        "floor": 0.25,
+        "half_life_years": 2.0,
+        "initial_innovation_sd": 0.1,
+        "initial_lambda": 0.5,
+        "initial_rho": 0.9,
+        "innovation_sd": 0.25,
+        "innovation_sd_candidates": [
+          0.1,
+          0.25
+        ],
+        "lambda_candidates": [
+          0.25,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "layout_sd": 0.1,
+        "lifetime_sd": 0.6,
+        "maximum_absolute_gap_log_pct": 8.0,
+        "outcome_tau": 0.4,
+        "pace_sigma": 0.4,
+        "prior_weight": 0.1,
+        "rho": 0.9,
+        "rho_candidates": [
+          0.5,
+          0.9
+        ],
+        "selection_max_year": 2022,
+        "selection_metric": "event_mean_pace_absolute_error_divided_by_sigma_plus_unweighted_outcome_logloss",
+        "student_df": 4,
+        "temporal_sd": 0.25,
+        "variants": [
+          "last_common",
+          "q1_only",
+          "all_common",
+          "last_common_no_result"
+        ]
+      },
+      "parameters_available_before": "2026-01-01T00:00:00+00:00",
+      "penalty": 0.25
+    }
+  },
+  "research_lock": "rating_responsiveness_53cb454c565c/RM",
+  "rookie_variance": {
+    "boost": 7.0,
+    "half_life_appearances": 20.0,
+    "session_type": "Q",
+    "timing": "before_January_1"
+  },
+  "seasons": [
+    2010,
+    2026
+  ]
+}

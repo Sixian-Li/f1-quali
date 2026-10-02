@@ -1,4 +1,4 @@
-# Maintaining the selected m1r1
+# Maintaining RM and the preserved baselines
 
 Install the locked Python 3.13 environment as described in the README, then run:
 
@@ -17,7 +17,7 @@ Preserve these boundaries when changing the implementation:
   future-season statistics must not affect earlier features, ratings or fits.
 - Driver, constructor, layout and session identities remain explicit; a practice
   substitute is not silently assigned to the regular driver.
-- Rating networks update per event and never read prediction results. m1r1's learned
+- Rating networks update per event and never read prediction results. RM/m1r1's learned
   correction rules are fitted inside each annual model on earlier seasons only.
 - The 2010–2015 reconstruction never invents session or publication times.
 - Missing source rows are not elimination labels. Report complete-event and
@@ -25,7 +25,9 @@ Preserve these boundaries when changing the implementation:
 - Years already inspected do not become untouched test sets again.
 - Keep source versions, reviews, checksums and reasons for missing values.
 
-The previous method v6 stays runnable for reproduction; do not change its numbers.
+The previous m1r1 and v6 methods stay runnable for reproduction; preserve their
+numbers. RM career counts must use only evidence available before each year, and
+the retrospective normal display mapping must never enter model fitting or prediction.
 Changing the selected statistical method requires a separately named configuration,
 predeclared comparison and new evidence; it is not a packaging fix. Keep numerical
 refactor checks separate from claims about predictive improvement. New source

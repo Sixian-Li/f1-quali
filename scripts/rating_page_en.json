@@ -1,17 +1,13 @@
 {
   "html": {
-    "2010–2015按赛事顺序回顾重建，日期不代表已核实的实际排位时刻。2010前成绩未纳入，早期车手从中性先验开始，不宜把曲线直接当作无条件可比的历史排名。": "2010–2015 is reconstructed retrospectively in event order; dates are not verified actual qualifying times. Results before 2010 are excluded, so early drivers start from a neutral prior. These curves should not be treated as an unconditional all-time ranking.",
     "2010–2026 · 截至 R14": "2010–2026 · Through R14",
     "2019 起": "Since 2019",
     "2026 R14 阵容": "2026 R14 field",
-    "F1 Quali · RM 研究分享版 · 仅展示已保存的评分，筛选和平滑不会改变模型。": "F1 Quali · RM research chart · Displays saved ratings; filtering and smoothing do not change the model.",
     "Leclerc、HAM、安东内利…": "Leclerc, HAM, Antonelli…",
     "RM · 6.5 刻度": "RM · 6.5 scale",
     "RM · 历史百分位评分": "RM · Historical percentile ratings",
     "RM · 最后映射分": "RM · Latest mapped score",
     "RM仍保留新人较大的年度变化空间，以及三个月的近期排位成绩均值半衰期。综合分包含全场成绩信息，不等同于纯同车圈速能力。": "RM retains greater annual variation for less experienced drivers and a three-month half-life for the personal qualifying-result mean. It combines field-wide results with teammate evidence, rather than measuring same-car pace alone.",
-    "RM是供讨论的研究版本：2017–2022为验证期，2023–2026为已见回放。它尚未替代正式m1r1；新人较大的波动、部分预测指标未改善等限制仍然存在，曲线更平滑不代表预测更准确。": "RM is a research version for discussion: 2017–2022 is validation, and 2023–2026 is already-seen replay. It has not replaced the package’s selected m1r1 model. Greater rookie volatility and mixed predictive results remain limitations. A smoother curve does not mean a more accurate forecast.",
-    "m1r1 原始榜单": "m1r1 leaderboard",
     "“两次均线”先在原RM分数上做两次后向均值，最后映射至6.5刻度。两个窗口可分别设置，默认3／3，1跳过该次；每位车手独立计算，只使用当前及此前已有评分点，不足窗口时用已有点，跨年和缩放不重置，缺席不补点。最新菱形同样参与平滑；平滑后的显示分不要求仍具有均值6.5、标准差2。": "Two-pass SMA applies both trailing averages to the original RM scores, then maps the result to the 6.5 scale. Set each window separately; defaults are 3/3 and 1 skips a pass. Each driver uses only their current and preceding saved snapshots. Short windows use the available points, year boundaries and zoom do not reset the calculation, and absences are not filled. The latest diamond also enters the smoothing. Smoothed display scores need not retain mean 6.5 and SD 2.",
     "。本项目整理身份、重建历史信息边界并计算派生评分；这些分数不是F1DB原始输出，也不代表其认可。项目独立于F1／FIA。": ". This project reconciles identities, reconstructs historical information cutoffs and calculates derived ratings. These ratings are not original F1DB outputs and do not imply its endorsement. This project is independent of F1 and the FIA.",
     "两次均线窗口": "Two moving-average windows",
@@ -57,7 +53,6 @@
     "来源与许可": "Sources and licenses",
     "清空": "Clear",
     "点": "points",
-    "研究方案 · 截至 2026 R14": "Research model · Through 2026 R14",
     "第一次均线": "First average",
     "第二次均线": "Second average",
     "纵轴": "Y-axis",
@@ -75,7 +70,12 @@
     "重置缩放": "Reset zoom",
     "项目代码": "Project code",
     "首值": "First",
-    "首次显示常用8位车手的2025–2026轨迹；可选择“全部”查看2010起历史，或用“ANT / RUS · 2026”快速对照。虚线表示相邻赛季的参数过渡，缺席期间不连线；最后可用评分不等于退役后的最终评价。": "The initial view shows the usual eight drivers in 2025–2026. Choose “All years” for history from 2010, or “ANT / RUS · 2026” for that pairing. Dotted lines mark parameter transitions between consecutive seasons; lines do not bridge absences. A driver’s last available snapshot is not a final post-retirement assessment."
+    "首次显示常用8位车手的2025–2026轨迹；可选择“全部”查看2010起历史，或用“ANT / RUS · 2026”快速对照。虚线表示相邻赛季的参数过渡，缺席期间不连线；最后可用评分不等于退役后的最终评价。": "The initial view shows the usual eight drivers in 2025–2026. Choose “All years” for history from 2010, or “ANT / RUS · 2026” for that pairing. Dotted lines mark parameter transitions between consecutive seasons; lines do not bridge absences. A driver’s last available snapshot is not a final post-retirement assessment.",
+    "F1 Quali · RM 评分图 · 仅展示已保存的评分，筛选和平滑不会改变模型。": "F1 Quali · RM rating chart · Displays saved ratings; filtering and smoothing do not change the model.",
+    "RM 评分 · 截至 2026 R14": "RM ratings · Through 2026 R14",
+    "RM是0.3.0的默认模型，m1r1保留可选。2017–2022为验证期，2023–2026为已见回放；新人较大的波动、部分预测指标未改善等限制仍然存在，曲线更平滑不代表预测更准确。": "RM is the default model in 0.3.0; m1r1 remains optional. 2017–2022 is validation and 2023–2026 is already-seen replay. Greater rookie volatility and mixed predictive results remain limitations. A smoother curve does not mean a more accurate forecast.",
+    "RM 最新榜单": "Latest RM leaderboard",
+    "2010–2015按赛事顺序回顾重建，日期不代表已核实的实际排位时刻。2010前成绩仅用于统计生涯出场次数，不作为评分观测；早期状态从中性先验开始，不宜把曲线直接当作无条件可比的历史排名。": "2010–2015 is reconstructed retrospectively in event order; dates are not verified actual qualifying times. Pre-2010 results count only toward career experience, not rating observations. Early states start from a neutral prior. These curves are not an unconditional all-time ranking."
   },
   "javascript": {
     "`RM 研究方案 · ${data.meta.driverCount} 位车手 · 共 ${data.meta.pointCount.toLocaleString()} 个快照 · 所有数据和绘图组件随本页面保存，可断网使用。`": "`RM research model · ${data.meta.driverCount} drivers · ${data.meta.pointCount.toLocaleString('en-US')} snapshots · All data and chart components are included in this page for offline use.`",

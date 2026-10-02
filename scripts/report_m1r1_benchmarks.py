@@ -1,4 +1,4 @@
-"""Pair m1r1 evaluations with the rolling baselines; summarize annual training traces.
+"""Pair RM or m1r1 evaluations with rolling baselines; summarize annual training traces.
 
 Inputs are the documented workflow's outputs: ``runs/models/<year>``,
 ``runs/evaluations/<year>`` and the ``baseline`` command's directory.
@@ -16,12 +16,14 @@ TASKS = ("q2", "q3", "top3", "pole")
 PERIODS = {"validation_2017_2022": (2017, 2022), "seen_2023_2026": (2023, 2026)}
 
 
-def comparison(evaluations, baselines):
+def comparison(evaluations, baselines, method_name="m1r1"):
     method = pd.concat(
         [pd.read_parquet(p) for p in sorted(evaluations.glob("*/event_metrics.parquet"))],
         ignore_index=True,
     )
     method = method[method.season_event_ordinal.ge(6)]
+    if set(method.model) != {method_name}:
+        raise ValueError("Evaluation method does not match the requested report")
     rows = []
     for name, base in baselines.groupby("model", sort=True):
         joined = method.merge(base, on="event_id", suffixes=("", "_baseline"), validate="1:1")
@@ -41,9 +43,9 @@ def comparison(evaluations, baselines):
                         "baseline_hits": int(
                             (part[f"{task}_overlap_baseline"] * quota).round().sum()
                         ),
-                        "m1r1_hits": int((part[f"{task}_overlap"] * quota).round().sum()),
+                        f"{method_name}_hits": int((part[f"{task}_overlap"] * quota).round().sum()),
                         "baseline_value": part[f"{task}_overlap_baseline"].mean(),
-                        "m1r1_value": part[f"{task}_overlap"].mean(),
+                        f"{method_name}_value": part[f"{task}_overlap"].mean(),
                     }
                 )
             part = group[group.complete_rank & group.complete_rank_baseline]
@@ -54,7 +56,7 @@ def comparison(evaluations, baselines):
                     "baseline": name,
                     "events": len(part),
                     "baseline_value": part.rank_mae_baseline.mean(),
-                    "m1r1_value": part.rank_mae.mean(),
+                    f"{method_name}_value": part.rank_mae.mean(),
                 }
             )
     return pd.DataFrame(rows)
@@ -94,14 +96,15 @@ def main():
     parser.add_argument("--evaluations", type=Path, required=True)
     parser.add_argument("--baselines", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--method", choices=["rm", "m1r1"], default="m1r1")
     args = parser.parse_args()
     verify(args.baselines, "baselines")
     baselines = pd.read_parquet(args.baselines / "event_metrics.parquet")
     args.output.mkdir(parents=True, exist_ok=True)
-    comparison(args.evaluations, baselines).to_csv(
-        args.output / "m1r1_baseline_comparison.csv", index=False
+    comparison(args.evaluations, baselines, args.method).to_csv(
+        args.output / f"{args.method}_baseline_comparison.csv", index=False
     )
-    training(args.models).to_csv(args.output / "m1r1_training_years.csv", index=False)
+    training(args.models).to_csv(args.output / f"{args.method}_training_years.csv", index=False)
     print(args.output)
 
 
