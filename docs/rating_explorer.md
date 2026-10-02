@@ -2,10 +2,11 @@
 
 **[English](https://sixian-li.github.io/f1-quali/en.html) · [中文版](https://sixian-li.github.io/f1-quali/)** — compare any of the
 84 drivers with available **RM** snapshots from 2010–2026. Search by name or
-abbreviation, select multiple drivers, filter years, zoom, adjust two smoothing
-windows and export the selected viewport as CSV. Both languages include the
+abbreviation, select multiple drivers, filter years, zoom and export the selected
+viewport as CSV. Every displayed rating uses **fixed SMA 3 → SMA 4 → mapping**.
+Both languages include the
 controls, hover labels, help text and source notes. Use **中文 / English** in the
-header to switch; selected drivers, years, zoom and moving-average windows carry
+header to switch; selected drivers, years and zoom carry
 over when browser storage is available. Names, abbreviations and supported
 Chinese aliases are searchable in either version.
 
@@ -33,10 +34,11 @@ mapped score = 6.5 + 2 × inverse_standard_normal_CDF(p)
 The 7,139 unique raw scores define fixed mapping knots. Values between knots use
 linear interpolation in raw-score/mapped-score space; values outside the
 reference continue the nearest segment's slope. Selecting drivers, years or
-smoothing windows does not refit this reference. Ties are preserved, so the
+zooming does not refit this reference. Ties are preserved, so the
 reference's actual population standard deviation is approximately 1.999816.
 
-This transformation preserves ordering but changes score differences. It is a
+The pointwise normal mapping preserves ordering but changes score differences;
+the fixed prior smoothing can change the ordering at a given snapshot. It is a
 retrospective display calibration using the whole reference period, not a feature
 that was available to historical forecasts. The original cutoff-aware RM scores
 remain embedded unchanged; the mapping never enters the prediction model.
@@ -57,7 +59,9 @@ RM is the default from version 0.3.0, derived from [m1r1](method.md):
   refitted for this variant on earlier years.
 
 The default Python/CLI workflow and [22-driver leaderboard](../ratings/README.md)
-now use **RM**, including the same fixed display mapping. The chart still displays
+use **RM**, including the same frozen normal mapping. The Python exports and
+Markdown leaderboard retain unsmoothed scores; the page includes fixed 3→4
+smoothing in its display definition. The chart still displays
 saved snapshots and does not train in the browser. See [the RM implementation](rm.md)
 and [reproduction commands](data_and_reproduction.md). The original
 [m1r1 leaderboard](../ratings/m1r1.md) and method remain available for comparison.
@@ -70,29 +74,37 @@ A smoother-looking curve is not evidence of better forecasts.
 
 ## Reading and controlling the chart
 
-- The initial view shows the usual eight drivers in 2025–2026 with unsmoothed
-  mapped scores.
+- The initial view shows the usual eight drivers in 2025–2026 with the final
+  smoothed and mapped scores.
   Select other drivers or years, or use **ANT / RUS · 2026** for that pairing.
-- Circles show mapped pre-qualifying rating snapshots. The final diamonds include
+- Historical snapshots precede qualifying; the final endpoints include
   the Round 14 results. The underlying historical RM ratings do not use future
   results; their display scale uses the full-period reference described above.
   The last point of an old season is not its post-season rating.
-- Missing events and seasons are left blank. Dotted lines join consecutive seasons
+- Solid spline curves connect snapshots within a season without repeated point
+  markers. The curve shape is a visual connection; hover and CSV refer to actual
+  snapshot times and scores. Isolated snapshots retain a small dot so that single
+  appearances remain visible.
+- Missing events and seasons are left blank. Dashed lines join consecutive seasons
   when the driver was present at both boundary events; annual fitted rules may change.
-- Select **Two-pass SMA / 两次均线（可调）** to set the first and second trailing simple-moving-average
-  windows independently. The second pass averages the first pass's output.
-  Defaults are **3 / 3**; **1** bypasses that pass. Larger windows are smoother and
-  more delayed. Short initial windows use available points; years do not reset the
-  window and absences are not filled. The latest endpoint also enters the average.
+- The two trailing simple-moving-average windows are fixed at **3 then 4**.
+  The second pass averages the first pass's output. There is no raw/smoothed
+  switch or editable window; legacy saved window preferences are ignored.
+  Short initial windows use available points; years do not reset the window and
+  absences are not filled. The latest endpoint also enters the average.
 - Both averages operate on the **original RM scores**, and the result is then
   mapped to the new display scale. Smoothing uses each driver's full prior
   history before applying the viewport filter, so zooming does not restart it.
   A smoothed curve need not itself have mean 6.5 or standard deviation 2.
-- The chart, driver list and table use mapped scores; the table always shows
-  unsmoothed mapped scores. Hover also reports the original RM score. CSV retains
+- Curves, hover, the driver list and the table use the same final score. Hover
+  shows the event and cutoff once, followed by each driver's name, constructor
+  and final rating, with a prior flag when applicable. With more than 12 selected
+  drivers, hover shows the closest driver; short screens show as many rows as fit
+  and direct the reader to the table for the rest. CSV retains
   mapped raw/smoothed scores, original RM raw/smoothed scores, the display mode,
-  both windows, mapping parameters and version, and missing-teammate-evidence
-  flags. Filtering and smoothing do not change the model.
+  the fixed windows, mapping parameters and version, missing-teammate-evidence
+  flags, and display policy `rm-display-sma3-sma4-v1`. Filtering and this display
+  transformation do not change the model.
 - Dates in 2010–2015 are historical ordering proxies, not verified actual qualifying
   timestamps. Pre-2010 results are excluded from rating observations; career counts only
   set each driver’s annual prior variance, whose mean is neutral. Scores are not a definitive cross-era ranking or win probabilities.
@@ -114,9 +126,11 @@ its cutoff labels and this note, followed by a commit to `main`; the page does n
 fetch races or retrain anything. Research archives, fitted model files and private
 work logs are not included in this publication.
 
-All RM points retain exactly matching original scores, default 3/3 smoothing,
-time and driver identities, and gap markers. Both language pages use the same
-frozen mapping and apply it only to derived display values. The rating records and mapping remain those of the reviewed offline
+All RM records retain their original scores, legacy 3/3 fields, times, driver
+identities and gap markers. The page derives fixed 3/4 scores from the original
+RM values; it does not use or overwrite those legacy smoothing fields. Both
+languages use the same frozen mapping and apply it only to derived display
+values. The rating records and mapping remain those of the reviewed offline
 mean-6.5/SD-2 files; the package-status notes and language-link filenames have
 since been updated. Historical Chinese source HTML SHA-256:
 `1147e43bfd57fbd7d0428f244710b295e26a22fa981dadce5602ddde4a0e3955`;
@@ -137,8 +151,10 @@ The builder leaves the bundled Plotly library and rating JSON untouched and
 fails on missing or stale translations. The offline JavaScript checks execute
 both pages' actual application scripts with DOM and Plotly test doubles, check
 the original RM records and frozen mapping against pinned hashes, and verify all
-mapping knots, smoothing-before-mapping, uncapped axes, language switching, CSV
-and zoom behavior. They do not replace browser rendering checks.
+mapping knots, fixed smoothing-before-mapping, consistency across display
+surfaces, compact hover, curve/gap inputs, uncapped axes, legacy preference
+migration, language switching, CSV and zoom behavior. They do not replace browser
+rendering checks.
 
 Historical identities and racing facts come from F1DB `v2026.14.0`; ratings are
 calculated by this project. See [third-party notices](../THIRD_PARTY_NOTICES.md)
