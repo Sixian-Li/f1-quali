@@ -17,14 +17,16 @@ Every rating and prediction has an explicit information cutoff.
 
 **Explore the RM rating chart: [English](https://sixian-li.github.io/f1-quali/en.html) · [中文](https://sixian-li.github.io/f1-quali/)**
 Compare any of 84 drivers with data from 2010–2026, through **2026 Round 14**.
-Select years, zoom, set each of two trailing moving-average windows independently,
-and export your selection as CSV. Switch languages in the page header; your
-driver selection, years, zoom and smoothing settings are shared when browser
+Select years, zoom and export your selection as CSV. All displayed ratings use
+fixed trailing moving averages of **3 then 4 snapshots** before the display mapping.
+Switch languages in the page header; your driver selection, years and zoom are shared when browser
 storage is available. No installation or account is required.
 The chart maps historical RM percentiles to a normal display scale with
 **mean/median 6.5 and standard deviation 2**. Scores may exceed 10 or fall below 0.
-Both moving averages are calculated on original RM scores before this mapping;
-hover and CSV retain those original scores.
+The curves, hover, driver list and table share this final display score.
+Hover groups event information once; CSV also retains original scores.
+Solid curves show each season, dashed lines connect consecutive seasons, and
+absences remain blank. Ordinary snapshots have no point markers.
 RM allows greater changes for less-experienced drivers and places more weight on
 recent qualifying results. **RM is also the default Python/CLI method in 0.3.0**;
 the chart and leaderboard now use the same model and display mapping.

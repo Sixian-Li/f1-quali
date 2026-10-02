@@ -13,7 +13,7 @@
 Results include qualifying through **2026 R14, 12 September**, with an exclusive
 information cutoff of **25 September 2026, 11:00 UTC**. The roster and team names
 are those of R14. This fixed snapshot matches the chart's current diamonds;
-smoothing the chart changes its displayed curve, not this unsmoothed table.
+the chart includes fixed 3→4 smoothing in its display scores; this table remains unsmoothed.
 
 | Rank | Driver | Team at R14 | **Mapped rating** | Original RM / 100 | Teammate ability / 100 | Comparisons |
 | ---: | --- | --- | ---: | ---: | ---: | ---: |
