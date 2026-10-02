@@ -6,7 +6,8 @@
    expected demo output need no Formula 1 data.
 2. **Fixed historical reproduction:** obtain the pinned external source bytes,
    rebuild canonical tables, prepare eventwise ratings/features, and fit the recorded
-   annual models. The complete m1r1 workflow was checked against the author's
+   annual models. RM is the default from 0.3.0; its audit is recorded in
+   [RM verification](../benchmarks/rm_verification.json). The earlier complete m1r1 workflow was checked against the author's
    unpublished research implementation (lock `m1r1_full_era_de17567786cf`) using
    verified cached raw files: all dataset tables, prepared inputs, 17 annual models,
    7,226 historical predictions and the published ratings matched exactly
@@ -58,11 +59,11 @@ done
 python scripts/report_benchmarks.py --evaluations runs/evaluations --output runs/scorecard
 f1-quali baseline --data data/canonical --years $(seq 2016 2026) --output runs/baselines
 python scripts/report_m1r1_benchmarks.py --models runs/models --evaluations runs/evaluations \
-  --baselines runs/baselines --output runs/scorecard
+  --method rm --baselines runs/baselines --output runs/scorecard
 f1-quali ratings --prepared runs/prepared --model runs/models/2026 \
   --cutoff 2026-09-25T11:00:00Z --output runs/ratings
 python scripts/export_leaderboard.py --ratings runs/ratings --data data/full_era \
-  --cache data/raw --output runs/2026-round-14-m1r1.json
+  --cache data/raw --output runs/2026-round-14-rm.json
 ```
 
 `--offline` reads only the existing verified cache and never downloads; omit it to
@@ -71,11 +72,22 @@ attempt a fresh download. No experiments or original course directory are requir
 (343 events, 7,226 entrant rows, 20,332 practice rows) and stores 1,298 early teammate
 rows (1,249 outcome-usable, 1,164 with admitted pace, including the 136 reviewed
 additions). `prepare` refits the teammate network before every event (a few minutes
-single-threaded); each annual fit takes seconds.
+single-threaded); each annual fit takes seconds. RM also retains the original
+control anchors for annual initialization, so preparation fits both networks.
+
+`full-era` additionally writes sealed `experience.parquet` and `experience.json`
+from the pinned F1DB main-Q participation history, including pre-2010 counts.
+These supply RM annual variance profiles frozen before January 1; pre-2010 results
+do not enter rating observations or model training. Rebuild full-era data into a
+new directory if an older dataset lacks these files. RM refuses unknown career
+coverage instead of assuming zero experience. `rookie_profiles.parquet` in the
+prepared artifact records each count and multiplier; see [RM](rm.md).
 
 `ratings` refits the network at the cutoff for the roster of the latest event with
 results before it, applies the annual model's correction rules and writes the general
-leaderboard plus a driver-by-layout table. Use the model of the cutoff's season; a
+leaderboard plus a driver-by-layout table. RM outputs keep `ability_score` on the
+original scale and add `mapped_score` using the chart’s frozen mean-6.5/SD-2
+reference. The display scale never enters the predictor. Use the model of the cutoff's season; a
 year-end table uses a cutoff such as `2025-12-31T23:59:59.999999999Z` with
 `runs/models/2025`.
 
@@ -85,6 +97,20 @@ coefficients, correction rules and training traces; its surrounding manifest rec
 integrity. Model loading needs neither the research code base nor a particular CPU
 architecture. Dependencies are pinned, but other platforms still require actual
 numerical validation.
+
+### Preserved m1r1 baseline
+
+```sh
+f1-quali demo --method m1r1 --output demo-m1r1
+f1-quali prepare --method m1r1 --data data/full_era --output runs/m1r1/prepared
+f1-quali train --prepared runs/m1r1/prepared --year 2026 --output runs/m1r1/models/2026
+f1-quali evaluate --prepared runs/m1r1/prepared --model runs/m1r1/models/2026 \
+  --output runs/m1r1/evaluations/2026
+```
+
+For its full scorecard, repeat the annual loop above using these directories and
+pass `--method m1r1` to `scripts/report_m1r1_benchmarks.py`. Keep each method’s
+prepared data and annual models together; mismatched artifacts are rejected.
 
 ### Previous method v6
 
@@ -115,7 +141,10 @@ results absent until they are available; set the event's result status according
 Register a new driver identity even when their rating history is empty. Preserve
 practice substitutes as distinct drivers. Append these rows to the full-era tables and
 save a new dataset with `save_full_era` (or `save_dataset` for v6); do not edit a
-sealed dataset in place.
+sealed dataset in place. RM datasets must also carry the reviewed career
+experience rows and their provenance. For a newly registered driver, establish
+known career coverage explicitly; update the year-start profile by re-preparing
+and retraining any affected annual model before using new identities.
 
 ```sh
 f1-quali predict --data data/full-era-with-new-event --prepared runs/prepared \
@@ -123,7 +152,7 @@ f1-quali predict --data data/full-era-with-new-event --prepared runs/prepared \
   --output runs/new-forecast
 ```
 
-m1r1 prediction reads the rating evidence and teammate innovations from the prepared
+RM/m1r1 prediction reads the rating evidence and teammate innovations from the prepared
 history. If the dataset contains any result available before the cutoff that the
 prepared history lacks, the command refuses; re-run `prepare` on a dataset that
 includes the new results first. `EVENT_ID` is the event's integer `event_id`; the
@@ -145,7 +174,7 @@ timestamps remain null with an explicit retrospective membership basis; they are
 not invented timestamps. Session availability uses documented reconstruction rules
 and decision buffers. Scheduled times are not measured session start/end times.
 
-For m1r1, 2010–2015 is a retrospective reconstruction: actual session clocks and
+For RM and m1r1, 2010–2015 is a retrospective reconstruction: actual session clocks and
 original publication times are unknown and stay null, practice is admitted by
 reviewed session order, results are available from race date + 36 hours, and rosters
 are post-event actual participants. Actual session timestamps are never invented. In

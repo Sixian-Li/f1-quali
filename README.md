@@ -4,9 +4,9 @@
 
 **Formula 1 driver ratings & qualifying predictions**
 
-[![Python 3.13](https://img.shields.io/badge/Python-3.13-3776AB?style=flat-square)](https://www.python.org/) [![MIT License](https://img.shields.io/badge/License-MIT-2D8A6E?style=flat-square)](https://github.com/Sixian-Li/f1-quali/blob/main/LICENSE) [![Selected model m1r1](https://img.shields.io/badge/Model-m1r1-E10600?style=flat-square)](https://github.com/Sixian-Li/f1-quali/blob/main/docs/method.md)
+[![Python 3.13](https://img.shields.io/badge/Python-3.13-3776AB?style=flat-square)](https://www.python.org/) [![MIT License](https://img.shields.io/badge/License-MIT-2D8A6E?style=flat-square)](https://github.com/Sixian-Li/f1-quali/blob/main/LICENSE) [![Selected model RM](https://img.shields.io/badge/Model-RM-E10600?style=flat-square)](https://github.com/Sixian-Li/f1-quali/blob/main/docs/rm.md)
 
-[RM chart · English](https://sixian-li.github.io/f1-quali/en.html) · [中文](https://sixian-li.github.io/f1-quali/) · [m1r1 ratings](https://github.com/Sixian-Li/f1-quali/blob/main/ratings/README.md) · [Rating method](#driver-ratings) · [Quick start](#quick-start) · [Results](#results) · [Documentation](#documentation)
+[RM chart · English](https://sixian-li.github.io/f1-quali/en.html) · [中文](https://sixian-li.github.io/f1-quali/) · [RM ratings](https://github.com/Sixian-Li/f1-quali/blob/main/ratings/README.md) · [Rating method](#driver-ratings) · [Quick start](#quick-start) · [Results](#results) · [Documentation](#documentation)
 
 </div>
 
@@ -26,8 +26,8 @@ The chart maps historical RM percentiles to a normal display scale with
 Both moving averages are calculated on original RM scores before this mapping;
 hover and CSV retain those original scores.
 RM allows greater changes for less-experienced drivers and places more weight on
-recent qualifying results. It is a research snapshot for discussion; the Python
-package, leaderboard and prediction results below continue to use **m1r1**.
+recent qualifying results. **RM is also the default Python/CLI method in 0.3.0**;
+the chart and leaderboard now use the same model and display mapping.
 [Chart method, controls and limitations](docs/rating_explorer.md).
 
 ## Driver ratings
@@ -40,16 +40,20 @@ and the contribution of each driver's own final qualifying positions.
 | --- | :---: | --- |
 | **Driver ability** | **1&nbsp;–&nbsp;100** | Long-term teammate-relative performance, with season-level changes in form. |
 | **Circuit affinity** | **1&nbsp;–&nbsp;10** | A driver's additional strength or weakness at a particular circuit layout. |
-| **Composite qualifying rating** | **1&nbsp;–&nbsp;100** | Driver ability plus a bounded bonus for recent final qualifying positions. |
+| **Original RM composite** | **1&nbsp;–&nbsp;100** | Driver ability plus a bounded bonus for recent final qualifying positions. |
+| **Displayed RM rating** | **Mean 6.5, SD 2** | A fixed normal-percentile mapping of the original composite; values can exceed 10. |
 
 - **Comparable performances.** Teammate pace is compared in the last common
   qualifying segment: Q3 if both reach Q3, or Q1 if one is eliminated there.
   Final qualifying order and position gaps also contribute.
 - **Long-term context.** Teammate links across seasons (from 2010) help account for
   the strength of the opposition, with a weight floor that keeps old comparisons.
+- **More room for rookie changes.** Annual-state variance is larger when a driver
+  has fewer prior qualifying appearances, allowing faster changes in either direction.
 - **Recent results matter most.** The final-position bonus uses each driver's own
   valid results, even when another entrant in that session was disqualified. It has
-  no permanent floor: its average and reliability both fade with a one-year half-life.
+  no permanent floor: its average has a three-month half-life, while reliability
+  retains a one-year half-life and prior mass 20.
 - **Small learned corrections.** Five shared rules, fitted on earlier seasons against
   Top 3 prediction accuracy, nudge ability and circuit affinity using each driver's
   recent teammate surprises. They are bounded and have no per-driver parameters.
@@ -57,14 +61,14 @@ and the contribution of each driver's own final qualifying positions.
 The displayed scores are **rating scales, not win percentages**. The composite
 rating includes some car and seat effects; the teammate ability component remains
 separately available. Sunday race results are not rating targets.
-[Read the rating method →](https://github.com/Sixian-Li/f1-quali/blob/main/docs/method.md#driver-ratings)
+[Read the RM method →](docs/rm.md)
 
 ### Current driver ratings (2026)
 
 > **[View all 22 driver ratings — after 2026 Round 14 →](https://github.com/Sixian-Li/f1-quali/blob/main/ratings/README.md)**
 >
 > Spanish Grand Prix · sorted by composite rating · includes teammate ability,
-> team and the snapshot cutoff. Top three: Verstappen 96.73, Leclerc 89.26, Norris 88.71.
+> team and the snapshot cutoff. Top three on the mapped scale: Verstappen 10.94, Norris 9.58, Leclerc 9.07.
 
 ## How predictions work
 
@@ -81,12 +85,12 @@ Brier model trained jointly with the rating corrections, and pole an event-level
 softmax. Each annual model is fitted only on earlier seasons (back to 2010), with the
 first five events of each season excluded from fitting while inference remains available.
 
-The selected method is **m1r1**. Compared with the previous release method v6, it
-keeps the teammate network, the 18 inputs and the current-season summaries, and
-changes how ratings use final qualifying positions (individual admission, one-year
-memory, fixed weight 0.6), adds the Top 3-trained corrections, and trains on
-2010–2025 instead of 2016–2025. v6 remains available with `--method v6`.
-Package version `0.2.0` identifies this implementation.
+The selected method is **RM**, package version **0.3.0**. It preserves m1r1's
+18 prediction inputs, annual shared correction rules, and four-pool heads, while
+adding career-dependent annual variance and a shorter achievement mean memory.
+The original **m1r1** and **v6** remain available through `--method m1r1` and
+`--method v6` on `prepare` and `demo`. Other commands follow the input artifact's
+method. [RM details and compatibility](docs/rm.md).
 
 ## Quick start
 
@@ -100,7 +104,7 @@ python -m pip install --no-deps --no-build-isolation -e .
 f1-quali demo --output demo-run
 ```
 
-The demo generates fictional data, builds driver ratings, fits an annual m1r1 model
+The demo generates fictional data, builds driver ratings, fits an annual RM model
 and produces **120 predictions across six events**.
 
 | Explore | Output |
@@ -121,24 +125,27 @@ exact finishing order. Lower rank MAE is better.
 | Period · events | Method | Q2 | Q3 | Top 3 | Pole | Rank MAE ↓ |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | 2017–2022 validation · 72 | Rolling OLS | 88.13% | 76.30% | 69.44% | 36.11% | 2.888 |
-| 2017–2022 validation · 72 | **m1r1** | 90.87% | 83.15% | 79.17% | 47.22% | 2.292 |
+| 2017–2022 validation · 72 | **RM** | 90.87% | 82.88% | 79.63% | 47.22% | 2.297 |
 | 2023–2026 already seen · 48 | Rolling OLS | 83.57% | 77.08% | 57.64% | 27.08% | 3.283 |
-| 2023–2026 already seen · 48 | **m1r1** | 86.18% | 78.13% | 62.50% | 39.58% | 3.020 |
-| 2026 · 8¹ | Rolling OLS | 91.41% | 88.75% | 58.33% | 37.50% | 2.011 |
-| 2026 · 8¹ | **m1r1** | 93.75% | 88.75% | 50.00% | 25.00% | 1.784 |
+| 2023–2026 already seen · 48 | **RM** | 86.04% | 77.92% | 63.89% | 39.58% | 3.012 |
+| 2026 · 8 | Rolling OLS | 91.41% | 88.75% | 58.33% | 37.50% | 2.011 |
+| 2026 · 8 | **RM** | 93.75% | 87.50% | 50.00% | 37.50% | 1.784 |
 
-¹ 2026 data through R14. Validation Q2/Q3 use 73 events.
+2026 data are through R14. Validation Q2/Q3 use 73 complete events; the other
+validation metrics use 72. Each task keeps its own denominator.
 
-m1r1 finds **171 of 216** Top 3 slots in validation (OLS 150) and **90 of 144**
-afterwards (OLS 83), but 2026 remains weaker on Top 3 and pole. All displayed years
-have been inspected during research; they are not untouched tests. Against v6,
-2016–2017 now have fitted models (training starts in 2010); from 2018 the yearly
-Top 3 and pole results move in both directions and probability scores are mixed.
+RM finds **172 of 216** Top 3 slots in validation (OLS 150) and **92 of 144**
+afterwards (OLS 83). In 2026 it still finds only **12 of 24**, versus OLS's 14.
+Relative to m1r1, RM's 2026 pole hits rise from 2 to 3 of 8, while Q3 hits fall
+from 71 to 70 of 80 and Top3 normalized Brier worsens from 0.688519 to 0.692681.
+The choice of RM reflects the preferred rating response, not a clean sweep of
+prediction metrics. All displayed years have already been inspected during research.
 
-[Full yearly scorecard](https://github.com/Sixian-Li/f1-quali/blob/main/benchmarks/m1r1_yearly.csv) ·
-[Baseline comparison](https://github.com/Sixian-Li/f1-quali/blob/main/benchmarks/m1r1_baseline_comparison.csv) ·
-[Training years](https://github.com/Sixian-Li/f1-quali/blob/main/benchmarks/m1r1_training_years.csv) ·
-[Results and limitations](https://github.com/Sixian-Li/f1-quali/blob/main/docs/results_and_limitations.md)
+[RM yearly scorecard](benchmarks/rm_yearly.csv) ·
+[Baseline comparison](benchmarks/rm_baseline_comparison.csv) ·
+[Training years](benchmarks/rm_training_years.csv) ·
+[Preserved m1r1 scorecard](benchmarks/m1r1_yearly.csv) ·
+[Results and limitations](docs/results_and_limitations.md)
 
 ## Data and reproduction
 
@@ -177,7 +184,7 @@ review and a new data identity. No raw source archive or pretrained model is bun
 The package is a research workflow rather than an automatic live feed.
 
 See [data and reproduction](https://github.com/Sixian-Li/f1-quali/blob/main/docs/data_and_reproduction.md)
-for the full workflow, cutoff contract, new-event predictions and the v6 commands.
+for the full workflow, cutoff contract, new-event predictions and m1r1/v6 commands.
 
 </details>
 
@@ -185,7 +192,8 @@ for the full workflow, cutoff contract, new-event predictions and the v6 command
 
 | Guide | Contents |
 | --- | --- |
-| [Method](https://github.com/Sixian-Li/f1-quali/blob/main/docs/method.md) | Rating definitions, historical weighting, features, models and losses. |
+| [RM method](docs/rm.md) | Rookie variance, recent-result memory, fixed display mapping and compatibility. |
+| [Shared method and m1r1](docs/method.md) | Rating definitions, historical weighting, features, models and losses. |
 | [Data and reproduction](https://github.com/Sixian-Li/f1-quali/blob/main/docs/data_and_reproduction.md) | Source versions, availability rules and the complete workflow. |
 | [Results and limitations](https://github.com/Sixian-Li/f1-quali/blob/main/docs/results_and_limitations.md) | Yearly performance, evaluation boundaries and weaknesses. |
 | [Research journey · 研究回顾](https://github.com/Sixian-Li/f1-quali/blob/main/docs/research_journey.md) | Why the project evolved from OLS to ratings, pool prediction and m1r1, in Chinese. |
@@ -203,14 +211,16 @@ python -m build --no-isolation
 runs offline tests, package builds and the demo on Linux and macOS. Full historical
 replay is a separate release check and does not run in ordinary CI.
 
-The m1r1 port reproduced **all 2010–2026 dataset tables, 343 eventwise rating
-snapshots and 7,226 input rows, all 17 annual model records, all 7,226 historical
-predictions and the current and year-end driver ratings** against the author's
-unpublished research implementation (lock `m1r1_full_era_de17567786cf`), with zero
-difference in the tested macOS arm64 environment.
-[m1r1 verification](https://github.com/Sixian-Li/f1-quali/blob/main/benchmarks/m1r1_verification.json) ·
-[v6 verification](https://github.com/Sixian-Li/f1-quali/blob/main/benchmarks/refactor_verification.json) ·
-[Contributing](https://github.com/Sixian-Li/f1-quali/blob/main/CONTRIBUTING.md)
+The RM port independently rebuilt the fixed data, **1,428 annual experience
+profiles, 343 eventwise rating networks, 7,226 input rows, all 17 annual models,
+7,226 historical predictions, and 82 ratings across four endpoint snapshots**.
+All compared numbers match the chosen research RM case exactly in the tested
+macOS arm64 environment. The public model adds its method identity; this is a
+numerical migration check, not evidence of future forecast accuracy.
+[RM verification](benchmarks/rm_verification.json) ·
+[Preserved m1r1 verification](benchmarks/m1r1_verification.json) ·
+[v6 verification](benchmarks/refactor_verification.json) ·
+[Contributing](CONTRIBUTING.md)
 
 </details>
 

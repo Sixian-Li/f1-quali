@@ -476,10 +476,12 @@ def build_full_era(canonical, cache, output, *, offline=False):
         "modern_dataset_manifest_sha256": sha256((Path(canonical) / "manifest.json").read_bytes()),
     }
     data = Dataset(*[final[name] for name in TABLES], provenance)
-    return save_full_era(output, data, pairs)
+    from f1_quali.data.experience import from_f1db
+
+    return save_full_era(output, data, pairs, experience=from_f1db(db))
 
 
-def save_full_era(directory, data, early_pairs):
+def save_full_era(directory, data, early_pairs, *, experience=None):
     """Seal a 2010+ dataset; ``early_pairs`` holds 2010--2015 teammate evidence."""
     validate(data)
     directory = Path(directory)
@@ -506,6 +508,10 @@ def save_full_era(directory, data, early_pairs):
         )
     write_json(directory / "provenance.json", data.manifest)
     write_json(directory / "coverage.json", coverage)
+    if experience is not None:
+        from f1_quali.data.experience import save
+
+        save(directory, *experience)
     return seal(
         directory,
         kind="dataset",
