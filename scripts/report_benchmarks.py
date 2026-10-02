@@ -38,7 +38,8 @@ def main():
     methods = set(events.model)
     if len(methods) != 1:
         raise ValueError("Evaluations mix methods")
-    name = "m1r1_yearly.csv" if methods == {"m1r1"} else "v6_yearly.csv"
+    prefix = next(iter(methods))
+    name = f"{prefix}_yearly.csv" if prefix in {"rm", "m1r1"} else "v6_yearly.csv"
     args.output.mkdir(parents=True, exist_ok=True)
     pd.concat(frames, ignore_index=True).to_csv(args.output / name, index=False)
     print(args.output / name)

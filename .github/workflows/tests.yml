@@ -32,4 +32,5 @@ jobs:
           "$RUNNER_TEMP/f1quali-wheel/bin/python" -m pip install --no-deps dist/*.whl
           cd "$RUNNER_TEMP"
           "$RUNNER_TEMP/f1quali-wheel/bin/f1-quali" demo --output "$RUNNER_TEMP/f1quali-demo"
+          "$RUNNER_TEMP/f1quali-wheel/bin/f1-quali" demo --method m1r1 --output "$RUNNER_TEMP/f1quali-demo-m1r1"
           "$RUNNER_TEMP/f1quali-wheel/bin/f1-quali" demo --method v6 --output "$RUNNER_TEMP/f1quali-demo-v6"

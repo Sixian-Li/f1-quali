@@ -1,6 +1,8 @@
 # Method
 
-The selected method is **m1r1**. Section [Previous method: v6](#previous-method-v6)
+The default in 0.3.0 is **[RM](rm.md)**. This page documents the shared pipeline
+and the preserved **m1r1** baseline; RM changes the annual variance prior and
+achievement mean memory as specified in its method note. Section [Previous method: v6](#previous-method-v6)
 lists what changed relative to the first release; `--method v6` still runs it.
 
 ## Prediction boundary

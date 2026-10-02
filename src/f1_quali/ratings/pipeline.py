@@ -64,7 +64,7 @@ def evidence(data, config, early=None, *, cutoff=None, target_event_id=None):
     return pairs, achievements
 
 
-def rating_snapshot(event, pairs, achievements, config, *, cutoff=None):
+def rating_snapshot(event, pairs, achievements, config, *, cutoff=None, annual_variance=None):
     year = int(event.season)
     parameters = config["rating_years"].get(str(year))
     if parameters is None:
@@ -81,6 +81,7 @@ def rating_snapshot(event, pairs, achievements, config, *, cutoff=None):
         target_event_id=int(event.event_id),
         penalty=parameters["penalty"],
         achievements=achievements,
+        annual_variance=annual_variance,
     )
     bundle = freeze_bundle(
         fit,
@@ -93,6 +94,10 @@ def rating_snapshot(event, pairs, achievements, config, *, cutoff=None):
             "policy": "frozen_annual_parameters_eventwise_states",
         },
     )
+    if annual_variance is not None:
+        from f1_quali.ratings.rookie import adjust_forecast_variance
+
+        bundle = adjust_forecast_variance(bundle, annual_variance, canonical_hash)
     return with_achievement_bonus(
         bundle,
         parameters["achievement_beta"],

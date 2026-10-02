@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from f1_quali import m1r1
+from f1_quali import m1r1, rm
 from f1_quali.data.core import Dataset
 from f1_quali.data.full_era import save_full_era
 from f1_quali.data.portable import save_dataset
@@ -110,12 +110,21 @@ def synthetic_dataset(seed=20260926, history_events=20, target_events=6):
     )
 
 
-def run_demo(output, progress=None, *, method="m1r1"):
+def run_demo(output, progress=None, *, method="rm"):
     output = Path(output)
     data = synthetic_dataset()
-    if method == "m1r1":
-        save_full_era(output / "dataset", data, pd.DataFrame())
-        m1r1.prepare(output / "dataset", output / "prepared", progress=progress)
+    if method in m1r1.JOINT_METHODS:
+        experience = None
+        if method == "rm":
+            appearances = data.qualifying[["event_id", "driver_id", "session_type"]].copy()
+            appearances["available_at"] = data.qualifying.label_available_at
+            experience = (appearances, {"known_drivers": data.drivers.driver_id.tolist(),
+                                       "source_version": "synthetic-v1",
+                                       "availability_basis": "synthetic_Q_completion",
+                                       "scope": "synthetic_complete_career_no_earlier_appearances"})
+        save_full_era(output / "dataset", data, pd.DataFrame(), experience=experience)
+        engine = rm if method == "rm" else m1r1
+        engine.prepare(output / "dataset", output / "prepared", progress=progress)
         m1r1.train(output / "prepared", 2024, output / "model")
         m1r1.evaluate(output / "prepared", output / "model", output / "evaluation")
     elif method == "v6":

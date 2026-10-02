@@ -96,6 +96,11 @@ def verify(directory, kind=None):
         required |= {"early_pairs.parquet", "early_achievements.parquet"}
     if identity["kind"] == "dataset" and identity["metadata"].get("full_era"):
         required |= {"early_pairs.parquet"}
+    if identity["kind"] == "prepared" and identity["metadata"].get("method") == "rm":
+        required |= {"rookie_profiles.parquet", "experience_source.json",
+                     "anchor_features.parquet", "pairs.parquet", "innovations.parquet",
+                     "auxiliary_pairs.parquet", "complete_achievements.parquet",
+                     "individual_achievements.parquet"}
     missing = sorted(required - set(identity["sha256"]))
     if missing:
         raise ValueError(f"Manifest does not cover required files: {', '.join(missing)}")

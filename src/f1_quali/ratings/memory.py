@@ -142,7 +142,8 @@ def memory_statistics(rows, cutoff, memory):
     answer = {}
     for row in parts.itertuples():
         mass = mass_summary[row.driver_id]["weight_mass"]
-        centered = row.weighted_centered_mean * mass / (prior + mass)
+        reliability = mass / (prior + mass)
+        centered = row.weighted_centered_mean * reliability
         answer[row.driver_id] = {
             **mean_summary[row.driver_id],
             "weight_mass": mass,

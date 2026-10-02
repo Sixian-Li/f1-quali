@@ -35,7 +35,7 @@ from f1_quali.ratings.pipeline import rating_snapshot
 @pytest.fixture(scope="module")
 def fitted(tmp_path_factory):
     path = tmp_path_factory.mktemp("m1r1")
-    run_demo(path)
+    run_demo(path, method="m1r1")
     return path
 
 
@@ -299,7 +299,7 @@ def test_early_supplement_rejects_changed_pairs():
         admit_early_pace(pairs, pd.DataFrame(), supplement)
 
 
-@pytest.mark.parametrize("name", ["m1r1", "v6"])
+@pytest.mark.parametrize("name", ["rm", "m1r1", "v6"])
 def test_repository_configs_match_packaged_resources(name):
     from importlib.resources import files
     from pathlib import Path
