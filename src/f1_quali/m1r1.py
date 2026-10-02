@@ -1,12 +1,13 @@
-"""The selected m1r1 method: 2010--2026 data, ratings and four-pool prediction.
+"""Shared RM/m1r1 pipeline: 2010--2026 data, ratings and four-pool prediction.
 
 Pipeline, for every event in season/round order:
 
 1. Refit the teammate network strictly before the event (fixed annual
    parameters; the achievement component uses complete sessions and beta 0.6).
    These anchor snapshots also define post-event teammate "innovations".
-2. Rebuild only the achievement component with m1r1 memory: individually
-   admitted results, no permanent floor, one-year half-lives, fixed beta 0.6.
+2. Rebuild the achievement component: individually admitted results, no permanent
+   floor, fixed beta 0.6; m1r1 uses one-year mean/reliability and RM uses a
+   three-month mean. RM additionally scales the network's annual variance.
 3. Summarize each driver's earlier innovations; the annual model's shared rules
    turn them into bounded driver and driver-by-layout corrections.
 
@@ -49,6 +50,7 @@ from f1_quali.models.joint import (
 )
 from f1_quali.models.pools import fit_pool_models
 from f1_quali.ratings.achievements import qualifying_achievements
+from f1_quali.ratings.core import canonical_hash
 from f1_quali.ratings.memory import individual_achievements, rebuild_achievement
 from f1_quali.ratings.pipeline import rating_snapshot
 from f1_quali.ratings.rolling import fit_ratings, freeze_bundle, predictor_bundle
@@ -56,6 +58,24 @@ from f1_quali.ratings.rolling import with_achievement_bonus as add_bonus
 
 METHOD = "m1r1"
 VARIANT = "composite_early"
+JOINT_METHODS = ("m1r1", "rm")
+
+
+def load_joint_config(path):
+    method = json.loads(Path(path).read_text()).get("method")
+    if method == "rm":
+        from f1_quali.rm import load_rm_config
+
+        return load_rm_config(path)
+    return load_m1r1_config(path)
+
+
+def _annual_variance(prepared, config):
+    if config["method"] != "rm":
+        return None
+    from f1_quali.data.experience import factors
+
+    return factors(pd.read_parquet(Path(prepared) / "rookie_profiles.parquet"))
 
 
 def load_m1r1_config(path=None):
@@ -136,22 +156,36 @@ def prepare(dataset, output, config=None, *, progress=None):
     write_frame(output / "individual_achievements.parquet", individual)
     write_frame(output / "quarantined_achievements.parquet", quarantined)
     evidence_sha256 = sha256((output / "individual_achievements.parquet").read_bytes())
-    anchors, rows = {}, []
+    variance = None
+    if config["method"] == "rm":
+        from f1_quali.data.experience import prepare_profiles
+
+        drivers = set(data.entries.driver_id) | set(pairs.driver_i) | set(pairs.driver_j)
+        variance = prepare_profiles(dataset, output, config, drivers)
+    anchors, base_anchors, rows = {}, {}, []
     events = data.events.sort_values(["season", "round"])
     for i, event in enumerate(events.itertuples(), 1):
-        anchor = rating_snapshot(event, pairs, complete, config)
+        base = rating_snapshot(event, pairs, complete, config)
+        base_anchors[int(event.event_id)] = base
+        anchor = (rating_snapshot(event, pairs, complete, config, annual_variance=variance)
+                  if variance is not None else base)
         anchors[int(event.event_id)] = anchor
-        rows.append(_event_features(data, event, anchor, config))
+        rows.append(_event_features(data, event, base, config))
         _progress(progress, f"Rated {i}/{len(events)}: {event.season} round {event.round}")
     features = pd.concat(rows, ignore_index=True)
     features = replace_summaries(
         data, features, half_life=config["memory_half_life"], center=config["memory_center"]
     )
-    features = replace_ratings(features, {(VARIANT, k): v for k, v in anchors.items()}, VARIANT)
+    features = replace_ratings(features, {(VARIANT, k): v for k, v in base_anchors.items()}, VARIANT)
     cfg, beta = config["joint_rules"]["settings"], config["achievement_beta"]
     innovations, auxiliary = make_innovations(features, pairs, cfg)
-    features = attach_history(features, anchors, innovations, cfg)
+    features = attach_history(features, base_anchors, innovations, cfg)
     anchor_features = fixed_achievement_features(features, beta)
+    if variance is not None:
+        # RM's research fit retained the original control's feature scales and
+        # Top3 initialization, while rebuilding innovations on rookie anchors.
+        features = replace_ratings(features, {(VARIANT, k): v for k, v in anchors.items()}, VARIANT)
+        innovations, auxiliary = make_innovations(features, pairs, cfg)
     bundles = {}
     for eid in features.event_id.unique():
         bundle = rebuild_achievement(
@@ -171,7 +205,7 @@ def prepare(dataset, output, config=None, *, progress=None):
         output,
         kind="prepared",
         metadata={
-            "method": METHOD,
+            "method": config["method"],
             "dataset_manifest_sha256": sha256((Path(dataset) / "manifest.json").read_bytes()),
             "events": int(features.event_id.nunique()),
             "seasons": [int(features.season.min()), int(features.season.max())],
@@ -183,14 +217,16 @@ def prepare(dataset, output, config=None, *, progress=None):
 
 def _load_prepared(prepared):
     manifest = verify(prepared, "prepared")
-    if manifest["metadata"].get("method") != METHOD:
-        raise ValueError("Prepared inputs are not m1r1; use the v6 commands")
-    config = load_m1r1_config(Path(prepared) / "config.json")
+    if manifest["metadata"].get("method") not in JOINT_METHODS:
+        raise ValueError("Prepared inputs are not m1r1 or RM; use the v6 commands")
+    config = load_joint_config(Path(prepared) / "config.json")
+    if config["method"] != manifest["metadata"]["method"]:
+        raise ValueError("Prepared method metadata disagrees with its configuration")
     return manifest, config
 
 
 def train(prepared, year, output):
-    """Annual m1r1 predictor using only 2010..year-1 complete events."""
+    """Annual RM/m1r1 predictor using only 2010..year-1 complete events."""
     _, config = _load_prepared(prepared)
     prepared, output = Path(prepared), Path(output)
     labels = pd.read_parquet(prepared / "labels.parquet")
@@ -220,17 +256,20 @@ def train(prepared, year, output):
         maximum = task["trace"]["training_max_year"]
         if maximum is not None and maximum >= int(year):
             raise RuntimeError("Annual predictor read target-year labels")
-    model["method"] = METHOD
+    model["method"] = config["method"]
     write_json(output / "model.json", model)
     write_json(output / "config.json", config)
-    return seal(output, kind="predictor", metadata={"method": METHOD, "year": int(year)})
+    return seal(output, kind="predictor", metadata={"method": config["method"], "year": int(year)})
 
 
 def load_predictor(directory):
-    verify(directory, "predictor")
+    manifest = verify(directory, "predictor")
     model = json.loads((Path(directory) / "model.json").read_text())
-    if model.get("method") != METHOD or model["columns"] != FEATURES:
-        raise ValueError("Predictor is not an m1r1 model")
+    config = load_joint_config(Path(directory) / "config.json")
+    if (model.get("method") not in JOINT_METHODS or model["columns"] != FEATURES
+            or model["method"] != config["method"]
+            or model["method"] != manifest["metadata"]["method"]):
+        raise ValueError("Predictor is not a matching m1r1 or RM model")
     return model
 
 
@@ -246,7 +285,7 @@ def evaluate(prepared, predictor, output, *, event_id=None):
     _load_prepared(prepared)
     _check_pair(prepared, predictor)
     model = load_predictor(predictor)
-    config = load_m1r1_config(Path(prepared) / "config.json")
+    config = load_joint_config(Path(prepared) / "config.json")
     features = pd.read_parquet(Path(prepared) / "features.parquet")
     labels = pd.read_parquet(Path(prepared) / "labels.parquet")
     rows = features[features.season.eq(model["trace"]["year"])]
@@ -260,7 +299,7 @@ def evaluate(prepared, predictor, output, *, event_id=None):
         target = labels[labels.event_id.eq(eid)]
         # Quotas come from reviewed rules, never from the target finishing order.
         q2, q3 = int(target.q2_quota.iloc[0]), int(target.q3_quota.iloc[0])
-        predictions.append(predict_heads(model, group, q2, q3).assign(model=METHOD))
+        predictions.append(predict_heads(model, group, q2, q3).assign(model=config["method"]))
     frame = pd.concat(predictions, ignore_index=True)
     write_frame(Path(output) / "predictions.parquet", frame)
     write_frame(Path(output) / "event_metrics.parquet", score_events(frame, labels))
@@ -269,7 +308,8 @@ def evaluate(prepared, predictor, output, *, event_id=None):
         score_events(frame, labels, probability_prefix="raw_p_"),
     )
     return seal(
-        output, kind="evaluation", metadata={"method": METHOD, "scope": "historical_reconstruction"}
+        output, kind="evaluation",
+        metadata={"method": config["method"], "scope": "historical_reconstruction"}
     )
 
 
@@ -288,7 +328,7 @@ def forecast(dataset, prepared, predictor, event_id, cutoff, output):
     """Predict one modern event at an explicit cutoff from a prepared history."""
     _load_prepared(prepared)
     _check_pair(prepared, predictor)
-    config = load_m1r1_config(Path(prepared) / "config.json")
+    config = load_joint_config(Path(prepared) / "config.json")
     model = load_predictor(predictor)
     data, _ = load_full_era(dataset)
     found = data.events[data.events.event_id.eq(event_id)]
@@ -309,7 +349,8 @@ def forecast(dataset, prepared, predictor, event_id, cutoff, output):
             "Prepared history is older than the dataset at this cutoff; re-run prepare"
         )
     pairs, complete, individual, innovations, digest = _evidence(prepared)
-    anchor = rating_snapshot(event, pairs, complete, config, cutoff=cutoff)
+    anchor = rating_snapshot(event, pairs, complete, config, cutoff=cutoff,
+                             annual_variance=_annual_variance(prepared, config))
     bundle = rebuild_achievement(anchor, individual, config["achievement_memory"], digest)
     features = _event_features(data, event, bundle, config, cutoff=cutoff)
     features = replace_summaries(
@@ -326,7 +367,7 @@ def forecast(dataset, prepared, predictor, event_id, cutoff, output):
         event.qualifying_format,
         event.get("eligible_field_size"),
     )
-    prediction = predict_heads(model, features, q2, q3).assign(model=METHOD)
+    prediction = predict_heads(model, features, q2, q3).assign(model=config["method"])
     write_frame(Path(output) / "predictions.parquet", prediction)
     write_json(Path(output) / "ratings.json", bundle)
     generated = utc_now()
@@ -340,7 +381,7 @@ def forecast(dataset, prepared, predictor, event_id, cutoff, output):
             "model_manifest_sha256": sha256((Path(predictor) / "manifest.json").read_bytes()),
         },
     )
-    return seal(output, kind="forecast", metadata={"method": METHOD})
+    return seal(output, kind="forecast", metadata={"method": config["method"]})
 
 
 def driver_ratings(prepared, predictor, cutoff, *, layouts=True):
@@ -352,7 +393,7 @@ def driver_ratings(prepared, predictor, cutoff, *, layouts=True):
     """
     _load_prepared(prepared)
     _check_pair(prepared, predictor)
-    config = load_m1r1_config(Path(prepared) / "config.json")
+    config = load_joint_config(Path(prepared) / "config.json")
     model = load_predictor(predictor)
     cutoff = pd.Timestamp(cutoff)
     if cutoff.tzinfo is None:
@@ -369,6 +410,7 @@ def driver_ratings(prepared, predictor, cutoff, *, layouts=True):
         raise ValueError("Use the annual model and a cutoff in the roster's season")
     pairs, complete, individual, innovations, digest = _evidence(prepared)
     parameters = config["rating_years"][str(year)]
+    variance = _annual_variance(prepared, config)
     fit = fit_ratings(
         pairs,
         cutoff - pd.Timedelta(nanoseconds=1),
@@ -376,6 +418,7 @@ def driver_ratings(prepared, predictor, cutoff, *, layouts=True):
         target_event_id=-year,
         penalty=parameters["penalty"],
         achievements=complete,
+        annual_variance=variance,
     )
     anchor = freeze_bundle(
         fit,
@@ -384,6 +427,10 @@ def driver_ratings(prepared, predictor, cutoff, *, layouts=True):
         variant="full_era_endpoint",
         selection_provenance={"annual_parameters_only": True},
     )
+    if variance is not None:
+        from f1_quali.ratings.rookie import adjust_forecast_variance
+
+        anchor = adjust_forecast_variance(anchor, variance, canonical_hash)
     anchor = add_bonus(
         anchor,
         config["achievement_beta"],
@@ -442,6 +489,13 @@ def export_ratings(prepared, predictor, cutoff, output, *, names=None):
         "joint_history_events",
     ]
     table = general.sort_values(["rank", "driver_id"])[columns].reset_index(drop=True)
+    method = load_predictor(predictor)["method"]
+    display = None
+    if method == "rm":
+        from f1_quali.ratings.display import map_score
+
+        display = json.loads(files("f1_quali").joinpath("resources/rm_display_scale.json").read_text())
+        table["mapped_score"] = [map_score(v, display["knots"]) for v in table.ability_score]
     comparisons = {d: bundle["base"].get(d, {}).get("comparisons", 0) for d in table.driver_id}
     table["teammate_comparisons"] = table.driver_id.map(comparisons).astype(int)
     if names is not None:
@@ -452,7 +506,7 @@ def export_ratings(prepared, predictor, cutoff, output, *, names=None):
     write_json(
         output / "ratings.json",
         {
-            "method": METHOD,
+            "method": method,
             "cutoff": pd.Timestamp(cutoff).isoformat(),
             "last_result_event_id": int(general.last_result_event_id.iloc[0]),
             "season": int(general.season.iloc[0]),
@@ -461,6 +515,9 @@ def export_ratings(prepared, predictor, cutoff, output, *, names=None):
             ],
             "rating_bundle_sha256": bundle["bundle_sha256"],
             "drivers": json.loads(table.to_json(orient="records")),
+            **({"display_mapping": {k: display[k] for k in ["id", "mean", "sd", "cap",
+                                                            "retrospectiveDisplayOnly"]}}
+               if display is not None else {}),
         },
     )
-    return seal(output, kind="ratings", metadata={"method": METHOD})
+    return seal(output, kind="ratings", metadata={"method": method})

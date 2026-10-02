@@ -1,6 +1,6 @@
 """Data-to-rating-to-prediction pipeline for the previous release method v6.
 
-The selected m1r1 method lives in :mod:`f1_quali.m1r1`; both share these engines.
+RM and m1r1 use :mod:`f1_quali.m1r1`; all methods share these engines.
 """
 
 import json

@@ -1,11 +1,15 @@
 # Fixed benchmark summaries
 
-These small files document the selected m1r1 method, the previous release method v6,
+These small files document the selected RM method, the preserved m1r1 and v6 baselines,
 and their limitations. They contain no raw source archive, pretrained weights,
 driver-level prediction dump or experiment grid.
 
 | File | Contents |
 | --- | --- |
+| `rm_yearly.csv` | 2010–2026 RM metrics, coverage, first-five and raw-probability scopes |
+| `rm_training_years.csv` | Annual RM fit counts, heads and shared correction rules |
+| `rm_baseline_comparison.csv` | RM against OLS/practice on identical complete events |
+| `rm_verification.json` | Standalone RM numerical comparison with the chosen research run |
 | `m1r1_yearly.csv` | 2010–2026 m1r1 metrics and task-specific counts; main, first-five, all-event and raw-probability scopes |
 | `m1r1_training_years.csv` | Annual m1r1 training years, event counts, head types and learned correction rules |
 | `m1r1_baseline_comparison.csv` | Rolling OLS and practice baselines against m1r1 on identical complete events, per year and for 2017–2022 / 2023–2026 |
@@ -23,7 +27,7 @@ error only. The practice baseline uses the course feature's FP2, then FP3, then 
 preference among sessions available at the cutoff. Baselines skip events without a
 usable practice time; comparisons use only events both methods scored.
 
-The source cutoff is 2026-09-15, through 2026 R14. For m1r1, 2010–2015 is a
+The source cutoff is 2026-09-15, through 2026 R14. For RM and m1r1, 2010–2015 is a
 retrospective reconstruction used for ratings and predictor training; 2010 has no
 earlier training data and uses uniform priors. For v6, 2010–2015 supplied rating
 warmup only. Validation and later periods have already been inspected. Consult
@@ -36,9 +40,10 @@ and referenced official sources. They are derived evaluation results, not origin
 source tables. Attribution and source terms are detailed in
 [third-party notices](../THIRD_PARTY_NOTICES.md).
 
-To reproduce the m1r1 files, run the documented full workflow; `scripts/report_benchmarks.py`
-writes `m1r1_yearly.csv` from m1r1 evaluations (or `v6_yearly.csv` from v6 ones), and
-`scripts/report_m1r1_benchmarks.py` writes the baseline comparison and training table.
+To reproduce the RM or m1r1 files, run the documented full workflow; `scripts/report_benchmarks.py`
+writes the method-specific `rm_yearly.csv`, `m1r1_yearly.csv` or `v6_yearly.csv`, and
+`scripts/report_m1r1_benchmarks.py` writes the baseline comparison and training table
+(use `--method rm` for RM; its compatibility default remains m1r1).
 The v6 `baseline_comparison.csv` and `training_years.csv` were assembled by the
 research code. The raw-probability scope keeps the same final hard selections,
 changing only the probabilities used by Brier and log-loss metrics.
